@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://senger.com.au/sitemap.xml
