@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-<title>Senger Engineering | Mechanical Engineering &amp; Shop Drawings, Perth</title>
-<meta name="description" content="Mechanical engineering consultancy in Perth. First-principles design, FEA verification and manufacture-ready documentation for industrial, mining and architectural clients across Western Australia." />
-<meta property="og:title" content="Senger Engineering | Mechanical Engineering &amp; Shop Drawings, Perth" />
-<meta property="og:description" content="Mechanical engineering consultancy in Perth. First-principles design, FEA verification and manufacture-ready documentation for industrial, mining and architectural clients across Western Australia." />
+<title>Senger Engineering | Mechanical & Structural Engineering, Perth</title>
+<meta name="description" content="Precision mechanical and structural engineering from Perth. From concept to installation, we deliver fabrication-ready documentation that protects your timeline, your budget, and your reputation." />
+<meta property="og:title" content="Senger Engineering | Mechanical & Structural Engineering, Perth" />
+<meta property="og:description" content="Precision mechanical and structural engineering from Perth. From concept to installation, we deliver fabrication-ready documentation that protects your timeline, your budget, and your reputation." />
 <meta property="og:url" content="https://senger.com.au/" />
 <meta property="og:type" content="website" />
 <link rel="canonical" href="https://senger.com.au/" />
@@ -17,152 +17,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
-<link rel="stylesheet" href="styles.css">
-
-<!-- Schema.org for SEO -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Senger Engineering",
-  "image": "https://senger.com.au/images/logo-stacked-light.png",
-  "@id": "https://senger.com.au/",
-  "url": "https://senger.com.au/",
-  "telephone": "+61413886800",
-  "email": "info@senger.com.au",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Perth",
-    "addressRegion": "WA",
-    "addressCountry": "AU"
-  },
-  "areaServed": { "@type": "State", "name": "Western Australia" },
-  "description": "Mechanical engineering consultancy delivering first-principles design, FEA verification and manufacture-ready documentation."
-}
-</script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18153072870"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-18153072870');
-</script>
-
-<!-- ============================================
-     DROPDOWN NAV CSS (inline so it works without editing style.css)
-     ============================================ -->
-<style>
-  .nav-dropdown { position: relative; display: inline-block; }
-  .nav-dd-trigger { display: inline-flex; align-items: center; gap: 6px; }
-  .nav-dd-arrow { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); opacity: 0.7; }
-  .nav-dropdown:hover .nav-dd-arrow,
-  .nav-dropdown:focus-within .nav-dd-arrow { transform: rotate(-180deg); opacity: 1; }
-
-  .nav-dd-panel {
-    position: absolute;
-    top: calc(100% + 14px);
-    left: -24px;
-    min-width: 460px;
-    background: #ffffff;
-    border: 1px solid #e5e5e5;
-    border-top: 3px solid #1F3A5F;
-    box-shadow: 0 24px 60px -12px rgba(15, 20, 25, 0.14), 0 8px 24px -8px rgba(15, 20, 25, 0.08);
-    border-radius: 4px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-6px);
-    transition: opacity 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
-                transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
-                visibility 0s linear 0.32s;
-    z-index: 100;
-  }
-  .nav-dropdown:hover .nav-dd-panel,
-  .nav-dropdown:focus-within .nav-dd-panel {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-    transition: opacity 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
-                transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
-                visibility 0s linear 0s;
-  }
-  .nav-dd-panel::before {
-    content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px;
-  }
-  .nav-dd-inner { padding: 10px; }
-  .nav-dd-item {
-    display: grid;
-    grid-template-columns: 36px 1fr;
-    gap: 14px;
-    padding: 14px 16px;
-    border-radius: 3px;
-    transition: background 0.25s ease;
-    text-decoration: none;
-    color: inherit;
-  }
-  .nav-dd-item:hover { background: #fafaf7; }
-  .nav-dd-item--lead {
-    background: #fafaf7;
-    border-bottom: 1px solid #e5e5e5;
-    border-radius: 3px 3px 0 0;
-    margin-bottom: 4px;
-    padding-bottom: 16px;
-  }
-  .nav-dd-item--lead:hover { background: #f4f4f0; }
-  .nav-dd-num {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-size: 22px;
-    color: #1F3A5F;
-    line-height: 1;
-    padding-top: 4px;
-  }
-  .nav-dd-title {
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    color: #0a0a0a;
-    letter-spacing: -0.005em;
-    margin-bottom: 4px;
-    transition: color 0.25s ease;
-  }
-  .nav-dd-item:hover .nav-dd-title { color: #1F3A5F; }
-  .nav-dd-desc {
-    font-family: 'Inter', sans-serif;
-    font-size: 12.5px;
-    line-height: 1.5;
-    color: #5a5a5a;
-  }
-
-  .mobile-sub {
-    display: flex;
-    flex-direction: column;
-    gap: 0;
-    padding: 0 0 16px 24px;
-    border-left: 1px solid rgba(255, 255, 255, 0.15);
-    margin-left: 18px;
-    margin-top: -8px;
-    margin-bottom: 12px;
-  }
-  .mobile-sub a {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
-    font-family: 'Instrument Serif', serif;
-    font-size: 22px;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.7);
-    text-decoration: none;
-    transition: color 0.25s ease;
-    border: none;
-  }
-  .mobile-sub a:hover, .mobile-sub a:focus { color: #ffffff; }
-
-  @media (max-width: 880px) {
-    .nav-dropdown .nav-dd-panel { display: none; }
-  }
-</style>
+  <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18153072870"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-18153072870');
+    </script>
 </head>
 <body>
 <div class="topbar">
@@ -172,8 +36,6 @@
   <span class="sep">|</span>
   <span>Perth, WA, Australia</span>
 </div>
-
-<!-- =============== NAV WITH DROPDOWN =============== -->
 <nav class="nav" id="nav">
   <a href="index.html" class="logo" aria-label="Senger Engineering home">
     <img src="images/logo-horizontal-transparent.png" alt="Senger Engineering" />
@@ -181,48 +43,7 @@
 
   <div class="nav-links">
     <a href="index.html" class="active">Home</a>
-
-    <div class="nav-dropdown">
-      <a href="engineering.html" class="nav-dd-trigger">
-        Engineering
-        <svg class="nav-dd-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none">
-          <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      <div class="nav-dd-panel">
-        <div class="nav-dd-inner">
-          <a href="engineering.html" class="nav-dd-item nav-dd-item--lead">
-            <div class="nav-dd-num">·</div>
-            <div>
-              <div class="nav-dd-title">Engineering practice</div>
-              <div class="nav-dd-desc">Overview of capability, workflow and standards.</div>
-            </div>
-          </a>
-          <a href="services/mechanical-engineering.html" class="nav-dd-item">
-            <div class="nav-dd-num">01</div>
-            <div>
-              <div class="nav-dd-title">Mechanical engineering</div>
-              <div class="nav-dd-desc">First-principles design, FEA verification, manufacture-ready packages.</div>
-            </div>
-          </a>
-          <a href="services/fabrication-drawings.html" class="nav-dd-item">
-            <div class="nav-dd-num">02</div>
-            <div>
-              <div class="nav-dd-title">Fabrication &amp; shop drawings</div>
-              <div class="nav-dd-desc">Manufacturing-ready drawings to AS 1100 — for the workshop.</div>
-            </div>
-          </a>
-          <a href="services/product-development.html" class="nav-dd-item">
-            <div class="nav-dd-num">03</div>
-            <div>
-              <div class="nav-dd-title">Product development</div>
-              <div class="nav-dd-desc">End-to-end mechanical product engineering. DFM, DFA, FEA.</div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-
+    <a href="engineering.html">Engineering</a>
     <a href="renders.html">Renders</a>
     <a href="projects.html">Projects</a>
     <a href="about.html">About</a>
@@ -230,7 +51,7 @@
   </div>
 
   <a href="contact.html" class="nav-cta">
-    Discuss your project
+    Request a quote
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
       <path d="M3 9 L9 3 M9 3 H5 M9 3 V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
     </svg>
@@ -241,16 +62,10 @@
   </button>
 </nav>
 
-<!-- =============== MOBILE MENU WITH SUB-ITEMS =============== -->
 <div class="mobile-menu" id="mobileMenu">
   <nav>
     <a href="index.html"><em>Home</em><span>01</span></a>
     <a href="engineering.html"><em>Engineering</em><span>02</span></a>
-    <div class="mobile-sub">
-      <a href="services/mechanical-engineering.html"><em>Mechanical engineering</em></a>
-      <a href="services/fabrication-drawings.html"><em>Fabrication drawings</em></a>
-      <a href="services/product-development.html"><em>Product development</em></a>
-    </div>
     <a href="renders.html"><em>Renders</em><span>03</span></a>
     <a href="projects.html"><em>Projects</em><span>04</span></a>
     <a href="about.html"><em>About</em><span>05</span></a>
@@ -266,23 +81,23 @@
 <header class="page-hero">
   <div class="page-hero-inner">
     <div>
-      <div class="page-hero-eyebrow">Mechanical Engineering Consultancy · Perth</div>
+      <div class="page-hero-eyebrow">Mechanical &amp; Structural Engineering · Perth</div>
       <h1 class="page-hero-title">
-        <span class="line"><span class="line-inner">Engineering that</span></span>
-        <span class="line"><span class="line-inner"><span class="it">survives</span> the</span></span>
-        <span class="line"><span class="line-inner">site walk.</span></span>
+        <span class="line"><span class="line-inner">Precision engineering</span></span>
+        <span class="line"><span class="line-inner">that <span class="it">builds</span> with</span></span>
+        <span class="line"><span class="line-inner">certainty.</span></span>
       </h1>
       <p class="page-hero-lede">
-        First-principles mechanical engineering, FEA verification and manufacture-ready documentation. Compliant with the relevant Australian Standards. Director-led delivery from a Perth-based studio for industrial, mining and architectural clients across Western Australia.
+        From concept to installation, we deliver fabrication-ready engineering documentation that protects your timeline, your budget, and your reputation.
       </p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:36px; opacity:0; animation: fadeUp 1s var(--ease) 0.8s forwards;">
         <a href="contact.html" class="btn btn-primary">
-          Discuss your project
+          Get a Free Quote
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
           </svg>
         </a>
-        <a href="projects.html" class="btn btn-ghost">View capabilities</a>
+        <a href="projects.html" class="btn btn-ghost">View projects</a>
       </div>
     </div>
 
@@ -301,14 +116,14 @@
 <div class="ticker">
   <div class="ticker-track">
     <span class="ticker-item">Mechanical engineering</span>
-    <span class="ticker-item">Fabrication drawings</span>
-    <span class="ticker-item">Product development</span>
-    <span class="ticker-item">FEA &amp; engineering calculations</span>
+    <span class="ticker-item">Structural engineering</span>
+    <span class="ticker-item">Engineering calculations</span>
+    <span class="ticker-item">CAD &amp; documentation</span>
     <span class="ticker-item">3D renders</span>
     <span class="ticker-item">Mechanical engineering</span>
-    <span class="ticker-item">Fabrication drawings</span>
-    <span class="ticker-item">Product development</span>
-    <span class="ticker-item">FEA &amp; engineering calculations</span>
+    <span class="ticker-item">Structural engineering</span>
+    <span class="ticker-item">Engineering calculations</span>
+    <span class="ticker-item">CAD &amp; documentation</span>
     <span class="ticker-item">3D renders</span>
   </div>
 </div>
@@ -319,36 +134,32 @@
     <div class="section-head reveal">
       <div class="eyebrow"><span class="num">01</span>Engineering</div>
       <div>
-        <h2 class="section-title">Engineering, documentation and visuals — <span class="it">from one studio.</span></h2>
-        <p class="section-sub">Three core services that take a project from brief through to fabrication, plus the visualisation work that supports approvals and proposals along the way.</p>
+        <h2 class="section-title">Robust, buildable design — <span class="it">grounded in fabrication.</span></h2>
+        <p class="section-sub">Four pillars of practice that protect every project from concept through installation.</p>
       </div>
     </div>
 
     <div class="services-grid">
-      <a href="services/mechanical-engineering.html" class="svc-card reveal">
+      <div class="svc-card reveal">
         <div class="svc-num">01</div>
-        <h3 class="svc-title">Mechanical <span class="it">engineering</span></h3>
-        <p class="svc-desc">First-principles design, FEA verification and manufacture-ready packages. Built around Australian Standards and the realities of fabrication.</p>
-        <div class="svc-link">Explore service →</div>
-      </a>
-      <a href="services/fabrication-drawings.html" class="svc-card reveal">
+        <h3 class="svc-title">Mechanical &amp; Structural <span class="it">engineering</span></h3>
+        <p class="svc-desc">Robust, buildable design grounded in real-world fabrication, transport, and installation.</p>
+      </div>
+      <div class="svc-card reveal">
         <div class="svc-num">02</div>
-        <h3 class="svc-title">Fabrication &amp; <span class="it">shop drawings</span></h3>
-        <p class="svc-desc">Manufacturing-ready drawings to AS 1100, with weld schedules, bolt callouts and BOMs ready for direct release to the fabricator.</p>
-        <div class="svc-link">Explore service →</div>
-      </a>
-      <a href="services/product-development.html" class="svc-card reveal">
+        <h3 class="svc-title">Manufacturing <span class="it">documentation</span></h3>
+        <p class="svc-desc">Workshop-ready drawings that reduce RFIs, prevent rework, and keep fabrication moving.</p>
+      </div>
+      <div class="svc-card reveal">
         <div class="svc-num">03</div>
-        <h3 class="svc-title">Product <span class="it">development</span></h3>
-        <p class="svc-desc">End-to-end mechanical product engineering — concept, DFM/DFA, verification, prototyping, manufacture. For founders, OEMs and industrial businesses.</p>
-        <div class="svc-link">Explore service →</div>
-      </a>
-      <a href="renders.html" class="svc-card reveal">
+        <h3 class="svc-title">Fully coordinated <span class="it">packages</span></h3>
+        <p class="svc-desc">Clear, consistent packages that align all stakeholders from start to finish.</p>
+      </div>
+      <div class="svc-card reveal">
         <div class="svc-num">04</div>
-        <h3 class="svc-title">3D renders &amp; <span class="it">visualisation</span></h3>
-        <p class="svc-desc">Photoreal renders produced from native 3D models — for sales, marketing, approvals and proposals where a drawing isn't enough.</p>
-        <div class="svc-link">Explore service →</div>
-      </a>
+        <h3 class="svc-title">Predictable <span class="it">delivery</span></h3>
+        <p class="svc-desc">Disciplined coordination and clear communication that protect timelines and budgets.</p>
+      </div>
     </div>
 
     <div class="reveal" style="margin-top:48px; text-align:center;">
@@ -376,9 +187,6 @@
     transition: background 0.5s var(--ease);
     position: relative;
     overflow: hidden;
-    text-decoration: none;
-    color: inherit;
-    display: block;
   }
   .svc-card::before {
     content: '';
@@ -413,162 +221,11 @@
     line-height: 1.65;
     color: var(--muted);
     max-width: 460px;
-    margin-bottom: 20px;
   }
-  .svc-link {
-    font-family: 'Inter', sans-serif;
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    font-weight: 600;
-    transition: letter-spacing 0.5s var(--ease);
-  }
-  .svc-card:hover .svc-link { letter-spacing: 0.2em; }
   @media (max-width: 760px) {
     .services-grid { grid-template-columns: 1fr; }
   }
 </style>
-
-
-<!-- ENGINEERING CAPABILITY (NEW SECTION) -->
-<section class="section section-soft">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow"><span class="num">02</span>Engineering Capability</div>
-      <div>
-        <h2 class="section-title">The toolkit behind <span class="it">every engagement.</span></h2>
-        <p class="section-sub">A deliberately focused capability stack — depth where it matters, no padding for the sake of a service list.</p>
-      </div>
-    </div>
-
-    <div class="cap-grid reveal-stagger">
-      <div class="cap-item"><div class="cap-num">01</div><div class="cap-name">SOLIDWORKS &amp; 3D modelling</div></div>
-      <div class="cap-item"><div class="cap-num">02</div><div class="cap-name">FEA &amp; structural simulation</div></div>
-      <div class="cap-item"><div class="cap-num">03</div><div class="cap-name">Manufacturing drawings</div></div>
-      <div class="cap-item"><div class="cap-num">04</div><div class="cap-name">Fabrication detailing</div></div>
-      <div class="cap-item"><div class="cap-num">05</div><div class="cap-name">DFM / DFA</div></div>
-      <div class="cap-item"><div class="cap-num">06</div><div class="cap-name">Modular &amp; transportable systems</div></div>
-      <div class="cap-item"><div class="cap-num">07</div><div class="cap-name">Product development &amp; iteration</div></div>
-      <div class="cap-item"><div class="cap-num">08</div><div class="cap-name">Engineering calculations</div></div>
-      <div class="cap-item"><div class="cap-num">09</div><div class="cap-name">Structural coordination</div></div>
-      <div class="cap-item"><div class="cap-num">10</div><div class="cap-name">Engineering documentation</div></div>
-    </div>
-  </div>
-</section>
-
-<style>
-  .cap-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 0;
-    border-top: 1px solid var(--line-strong, #c8c8c8);
-  }
-  .cap-item {
-    padding: 28px 20px 28px 0;
-    border-bottom: 1px solid var(--line-strong, #c8c8c8);
-    border-right: 1px solid var(--line-strong, #c8c8c8);
-    transition: background 0.4s ease;
-  }
-  .cap-item:nth-child(5n) { border-right: none; padding-right: 0; }
-  .cap-item:nth-child(5n+1) { padding-left: 0; }
-  .cap-item:not(:nth-child(5n+1)) { padding-left: 20px; }
-  .cap-num {
-    font-family: 'Instrument Serif', serif;
-    font-style: italic;
-    font-size: 14px;
-    color: var(--muted);
-    margin-bottom: 8px;
-    letter-spacing: 0.04em;
-  }
-  .cap-name {
-    font-family: var(--serif);
-    font-size: clamp(17px, 1.7vw, 20px);
-    line-height: 1.2;
-    color: var(--ink);
-    letter-spacing: -0.01em;
-  }
-  @media (max-width: 980px) {
-    .cap-grid { grid-template-columns: repeat(2, 1fr); }
-    .cap-item:nth-child(n) { border-right: none; padding-right: 0; padding-left: 0; }
-    .cap-item:nth-child(2n+1) { border-right: 1px solid var(--line-strong, #c8c8c8); padding-right: 16px; }
-    .cap-item:nth-child(2n) { padding-left: 16px; }
-  }
-  @media (max-width: 540px) {
-    .cap-grid { grid-template-columns: 1fr; }
-    .cap-item:nth-child(n) { border-right: none; padding: 24px 0; }
-  }
-</style>
-
-
-<!-- STANDARDS & COMPLIANCE (NEW SECTION) -->
-<section class="section">
-  <div class="container">
-    <div class="section-head reveal">
-      <div class="eyebrow"><span class="num">03</span>Standards &amp; Compliance</div>
-      <div>
-        <h2 class="section-title">Designed and documented <span class="it">to code.</span></h2>
-        <p class="section-sub">Every engagement is referenced to the appropriate Australian Standards. The principal codes consulted across mechanical, structural and welding work are listed below.</p>
-      </div>
-    </div>
-
-    <div class="std-strip reveal-stagger">
-      <div class="std-cell"><div class="std-c">AS 4100</div><div class="std-l">Steel structures</div></div>
-      <div class="std-cell"><div class="std-c">AS 3990</div><div class="std-l">Mechanical equipment steelwork</div></div>
-      <div class="std-cell"><div class="std-c">AS 4600</div><div class="std-l">Cold-formed steel</div></div>
-      <div class="std-cell"><div class="std-c">AS/NZS 1170</div><div class="std-l">Structural design actions</div></div>
-      <div class="std-cell"><div class="std-c">AS/NZS 1554</div><div class="std-l">Steel welding</div></div>
-      <div class="std-cell"><div class="std-c">AS/NZS 5131</div><div class="std-l">Fabrication compliance</div></div>
-      <div class="std-cell"><div class="std-c">AS 1657</div><div class="std-l">Platforms &amp; walkways</div></div>
-      <div class="std-cell"><div class="std-c">AS 1100</div><div class="std-l">Technical drawing</div></div>
-    </div>
-
-    <p class="std-note reveal">
-      <em>Additional standards consulted as required, including NCC / BCA, AS 1428 access &amp; mobility, AS 1418 cranes, AS 4024 machinery safety, and project-specific client specifications.</em>
-    </p>
-  </div>
-</section>
-
-<style>
-  .std-strip {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1px;
-    background: var(--line);
-    border: 1px solid var(--line);
-  }
-  .std-cell {
-    background: #fff;
-    padding: 28px 24px;
-    transition: background 0.3s ease, transform 0.4s ease;
-  }
-  .std-cell:hover { background: #fafaf7; transform: translateY(-2px); }
-  .std-c {
-    font-family: var(--serif);
-    font-size: 26px;
-    line-height: 1;
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
-  .std-l {
-    font-family: 'Inter', sans-serif;
-    font-size: 13px;
-    color: var(--muted);
-    line-height: 1.4;
-  }
-  .std-note {
-    margin-top: 28px;
-    font-size: 13px;
-    color: var(--muted);
-    text-align: center;
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  @media (max-width: 880px) { .std-strip { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 480px) { .std-strip { grid-template-columns: 1fr; } }
-</style>
-
 
 <!-- RENDERS TEASER -->
 <section class="section section-soft">
@@ -578,10 +235,10 @@
         <img src="images/renders-teaser.jpg" alt="Modern commercial building exterior render — Senger Engineering" style="width:100%; height:100%; object-fit:cover;" />
       </div>
       <div class="reveal">
-        <div class="eyebrow" style="margin-bottom:20px;"><span class="num">04</span>3D Visualisation</div>
+        <div class="eyebrow" style="margin-bottom:20px;"><span class="num">02</span>3D Visualisation</div>
         <h2 class="section-title" style="margin-bottom:20px;">See it before <span class="it">you build it.</span></h2>
         <p class="section-sub" style="margin-bottom:36px;">
-          Photoreal 3D renders produced from native engineering models — for client approvals, design validation, marketing and proposal support. A drawing tells you what; a render shows you why.
+          High-quality 3D renders that communicate clearly, validate design intent, and support smarter decisions from contract to construction.
         </p>
         <a href="renders.html" class="btn btn-primary">
           View our renders
@@ -621,27 +278,27 @@
 <section class="section section-dark">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow"><span class="num">05</span>Practice</div>
+      <div class="eyebrow"><span class="num">03</span>Track Record</div>
       <div>
-        <h2 class="section-title">A practice built around <span class="it">delivered work.</span></h2>
+        <h2 class="section-title">A practice built on <span class="it">delivered work.</span></h2>
       </div>
     </div>
     <div class="stats reveal-stagger">
       <div class="stat">
-        <div class="stat-num"><span class="count" data-target="15">0</span><span class="suf">+</span></div>
-        <div class="stat-label">Australian Standards routinely applied</div>
+        <div class="stat-num"><span class="count" data-target="50">0</span><span class="suf">+</span></div>
+        <div class="stat-label">Projects delivered</div>
       </div>
       <div class="stat">
-        <div class="stat-num"><span class="count" data-target="5">0</span></div>
-        <div class="stat-label">Stage engineering process</div>
+        <div class="stat-num"><span class="count" data-target="10">0</span><span class="suf">+</span></div>
+        <div class="stat-label">Years combined experience</div>
       </div>
       <div class="stat">
-        <div class="stat-text">Mining,<br>Industrial,<br>Architectural</div>
-        <div class="stat-label">Sectors served</div>
+        <div class="stat-text">Mining,<br>Construction,<br>Events &amp; more</div>
+        <div class="stat-label">Industries</div>
       </div>
       <div class="stat">
-        <div class="stat-num"><span class="count" data-target="48">0</span><span class="suf">h</span></div>
-        <div class="stat-label">Typical brief response</div>
+        <div class="stat-num">$<span class="count" data-target="50">0</span><span class="suf">M+</span></div>
+        <div class="stat-label">Project value delivered</div>
       </div>
     </div>
   </div>
@@ -651,10 +308,10 @@
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <div class="eyebrow"><span class="num">06</span>Selected Capability</div>
+      <div class="eyebrow"><span class="num">04</span>Selected Projects</div>
       <div>
         <h2 class="section-title">Recent <span class="it">work.</span></h2>
-        <p class="section-sub">A selection of capability studies across mining, industrial and architectural sectors.</p>
+        <p class="section-sub">A selection of projects delivered across mining, construction, and events sectors.</p>
       </div>
     </div>
 
@@ -687,7 +344,7 @@
 
     <div class="reveal" style="margin-top:56px; text-align:center;">
       <a href="projects.html" class="btn btn-ghost">
-        View all capabilities
+        View all projects
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
@@ -737,6 +394,14 @@
   }
   .project-title .it { font-style: italic; }
   .project:hover .project-title { color: var(--accent); }
+  .project-meta {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+    font-weight: 500;
+  }
   @media (max-width: 880px) {
     .project, .project:nth-child(n) { grid-column: span 12; }
   }
@@ -748,12 +413,12 @@
     <h2 class="reveal" style="font-family: var(--serif); font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: -0.03em; font-weight: 400; max-width: 1000px; margin: 0 auto 24px;">
       Bring us your <span style="font-style:italic; color:var(--accent);">next project.</span>
     </h2>
-    <p class="reveal" style="font-size: 17px; color: var(--muted); max-width: 580px; margin: 0 auto 40px; line-height: 1.6;">
-      Brief, sketch on a napkin, or a full specification — send what you have. Initial scoping calls are free, and a written proposal is typically returned within forty-eight hours.
+    <p class="reveal" style="font-size: 17px; color: var(--muted); max-width: 520px; margin: 0 auto 40px; line-height: 1.6;">
+      Tell us about the work — we'll respond within one business day with a scoped proposal.
     </p>
     <div class="reveal" style="display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center;">
       <a href="contact.html" class="btn btn-primary">
-        Discuss your project
+        Request a quote
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
@@ -763,12 +428,11 @@
   </div>
 </section>
 
-<!-- =============== UPDATED FOOTER =============== -->
 <footer class="footer">
   <div class="footer-grid">
     <div>
       <img class="foot-logo" src="images/logo-stacked-light.png" alt="Senger Engineering" />
-      <p class="foot-tagline">Mechanical engineering, technical documentation and shop drawings for the people who build.</p>
+      <p class="foot-tagline">Mechanical &amp; structural engineering for the people who build.</p>
     </div>
     <div class="foot-col">
       <h4>Practice</h4>
@@ -782,10 +446,11 @@
     <div class="foot-col">
       <h4>Services</h4>
       <ul>
-        <li><a href="services/mechanical-engineering.html">Mechanical engineering</a></li>
-        <li><a href="services/fabrication-drawings.html">Fabrication drawings</a></li>
-        <li><a href="services/product-development.html">Product development</a></li>
-        <li><a href="renders.html">3D renders</a></li>
+        <li>Mechanical engineering</li>
+        <li>Structural engineering</li>
+        <li>Engineering calculations</li>
+        <li>CAD &amp; documentation</li>
+        <li>3D renders</li>
       </ul>
     </div>
     <div class="foot-col">
