@@ -92,16 +92,24 @@
   </div>
 </header>
 
-<!-- HERO MARQUEE IMAGE — single big render moment -->
+<!-- HERO MARQUEE VIDEO — featured render in motion -->
 <section style="padding: 0 var(--gutter) clamp(40px, 6vh, 80px);">
   <div class="container">
-    <div class="reveal" style="aspect-ratio: 21/9; overflow: hidden; border-radius: 4px; position: relative; background: var(--bg-3);">
-      <!-- ▼ SLOT 08 · Hero render (wide cinematic) -->
-      <div class="ph" style="display:flex; align-items:flex-end; justify-content:flex-start;">
-        <div style="position: relative; padding: 28px;">
-          <div style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 6px;">Featured render</div>
-          <div style="font-family: var(--serif); font-size: clamp(20px, 2.4vw, 32px); color: var(--ink); letter-spacing: -0.015em;">SLOT 08 — wide hero render (21:9)</div>
-        </div>
+    <div class="reveal" style="aspect-ratio: 16/9; overflow: hidden; border-radius: 4px; position: relative; background: var(--bg-3);">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="metadata"
+        poster="images/video-poster.jpg"
+        style="width: 100%; height: 100%; object-fit: cover; display: block;">
+        <source src="images/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 28px; background: linear-gradient(180deg, transparent, rgba(20,22,26,0.4)); pointer-events: none;">
+        <div style="font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: rgba(255,255,255,0.8); font-weight: 500; margin-bottom: 6px;">Featured project</div>
+        <div style="font-family: var(--serif); font-size: clamp(20px, 2.4vw, 32px); color: white; letter-spacing: -0.015em;">SoMA Haus — <span style="font-style: italic;">work. live. stay.</span></div>
       </div>
     </div>
   </div>
