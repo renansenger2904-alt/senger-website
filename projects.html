@@ -4,9 +4,9 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <title>Projects | Senger Engineering</title>
-<meta name="description" content="Mechanical engineering capabilities and selected sample work — custom equipment, FEA, manufacture drawings and steel frame design. All work referenced to Australian Standards including AS 4100, AS 3990 and AS/NZS 1170." />
+<meta name="description" content="Mechanical engineering capabilities and selected sample work — FEA validation, custom equipment, manufacture drawings and steel frame design. Referenced to Australian Standards: AS 4100, AS 3990, AS/NZS 1170." />
 <meta property="og:title" content="Projects | Senger Engineering" />
-<meta property="og:description" content="Mechanical engineering capabilities and selected sample work — custom equipment, FEA, manufacture drawings and steel frame design referenced to Australian Standards." />
+<meta property="og:description" content="Mechanical engineering capabilities and selected sample work referenced to Australian Standards." />
 <meta property="og:url" content="https://senger.com.au/projects.html" />
 <meta property="og:type" content="website" />
 <link rel="canonical" href="https://senger.com.au/projects.html" />
@@ -15,7 +15,7 @@
 <link rel="apple-touch-icon" href="images/favicon-192.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="styles.css">
 
@@ -88,15 +88,89 @@
         <span class="line"><span class="line-inner">site walk.</span></span>
       </h1>
       <p class="page-hero-lede" style="margin-top: 28px;">
-        A selection of representative engagements across mining, materials handling, custom machinery and architectural engineering. Every project is engineered from first principles and referenced to the relevant Australian Standards before drawings or calculations leave the studio.
+        Sixteen capability studies across mining, materials handling, custom machinery and architectural engineering. Every design reduced to first principles, verified by hand or FEA, and documented to fabrication-ready quality before drawings leave the studio.
       </p>
     </div>
   </div>
 </header>
 
 
+<!-- HERO STATS BAND -->
+<section class="stats-band">
+  <div class="container">
+    <div class="stats-grid reveal-stagger">
+      <div class="stat">
+        <div class="stat-num">16</div>
+        <div class="stat-lbl">Capability studies on display</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">15<span class="plus">+</span></div>
+        <div class="stat-lbl">Australian Standards routinely applied</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">5</div>
+        <div class="stat-lbl">Stage engineering process</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">48<span class="plus">h</span></div>
+        <div class="stat-lbl">Typical brief response window</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .stats-band {
+    background: var(--ink, #0f1419);
+    color: #fff;
+    padding: clamp(48px, 6vw, 80px) 0;
+    border-top: 1px solid var(--line);
+  }
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(24px, 3vw, 40px);
+  }
+  .stat {
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-top: 20px;
+  }
+  .stat-num {
+    font-family: var(--serif);
+    font-size: clamp(48px, 6vw, 84px);
+    line-height: 1;
+    letter-spacing: -0.03em;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 14px;
+  }
+  .stat-num .plus {
+    font-size: 0.5em;
+    color: rgba(255,255,255,0.55);
+    margin-left: 2px;
+    font-style: italic;
+  }
+  .stat-lbl {
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    line-height: 1.45;
+    font-weight: 500;
+    max-width: 200px;
+  }
+  @media (max-width: 880px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 480px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .stat-num { font-size: 56px; }
+  }
+</style>
+
+
 <!-- APPROACH STATEMENT -->
-<section class="section-tight" style="border-top: 1px solid var(--line);">
+<section class="section-tight">
   <div class="container">
     <div class="approach-grid reveal">
       <div class="approach-label">Approach</div>
@@ -105,13 +179,12 @@
           Senger Engineering supports industrial, mining and architectural projects across Perth and Western Australia. The studio draws on direct, hands-on experience delivered through established Perth engineering firms — bringing the same rigour, documentation discipline and standards-driven workflow to independent engagements.
         </p>
         <p>
-          Every brief is reduced to first principles before geometry is committed. Loads are calculated, load paths are traced, materials are selected against the appropriate code, and the design is verified by hand or by FEA before drawings are issued. No assumptions, no shortcuts.
+          Every brief is reduced to first principles before geometry is committed. Loads are calculated, load paths traced, materials selected against the appropriate code, and the design verified by hand or by FEA before drawings are issued. No assumptions, no shortcuts.
         </p>
       </div>
     </div>
   </div>
 </section>
-
 
 <style>
   .approach-grid {
@@ -145,20 +218,105 @@
 </style>
 
 
-<!-- BIG GRID -->
+<!-- STANDARDS MARQUEE -->
+<section class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <div class="marquee-content">
+      <span>AS 4100 · Steel structures</span>
+      <span>AS 3990 · Mechanical equipment steelwork</span>
+      <span>AS/NZS 1170 · Structural design actions</span>
+      <span>AS/NZS 1554 · Structural steel welding</span>
+      <span>AS 1418 · Cranes, hoists &amp; winches</span>
+      <span>AS 4024 · Safety of machinery</span>
+      <span>AS 1657 · Platforms, walkways &amp; ladders</span>
+      <span>AS/NZS 3678 · Hot-rolled steel plate</span>
+    </div>
+    <div class="marquee-content" aria-hidden="true">
+      <span>AS 4100 · Steel structures</span>
+      <span>AS 3990 · Mechanical equipment steelwork</span>
+      <span>AS/NZS 1170 · Structural design actions</span>
+      <span>AS/NZS 1554 · Structural steel welding</span>
+      <span>AS 1418 · Cranes, hoists &amp; winches</span>
+      <span>AS 4024 · Safety of machinery</span>
+      <span>AS 1657 · Platforms, walkways &amp; ladders</span>
+      <span>AS/NZS 3678 · Hot-rolled steel plate</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .marquee-band {
+    background: var(--bg-2, #f4f4f0);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 24px 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .marquee-band::before,
+  .marquee-band::after {
+    content: "";
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 80px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .marquee-band::before { left: 0; background: linear-gradient(90deg, var(--bg-2, #f4f4f0), transparent); }
+  .marquee-band::after { right: 0; background: linear-gradient(-90deg, var(--bg-2, #f4f4f0), transparent); }
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: marquee-scroll 60s linear infinite;
+  }
+  .marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    padding-right: 56px;
+    flex-shrink: 0;
+  }
+  .marquee-content span {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 13px;
+    color: var(--ink);
+    white-space: nowrap;
+    letter-spacing: 0.02em;
+  }
+  .marquee-content span::before {
+    content: "◆";
+    color: var(--accent);
+    margin-right: 14px;
+    font-size: 0.7em;
+    vertical-align: middle;
+  }
+  @keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track { animation: none; }
+  }
+</style>
+
+
+<!-- BIG GRID — 16 PROJECTS -->
 <section class="section">
   <div class="container">
 
     <div class="grid-heading reveal">
-      <div class="grid-heading-eyebrow">Selected sample work</div>
-      <h2 class="grid-heading-title">Eight studies in <span class="it">applied</span> mechanical engineering.</h2>
+      <div class="grid-heading-eyebrow">Selected sample work · 16 studies</div>
+      <h2 class="grid-heading-title">Sixteen studies in <span class="it">applied</span> mechanical engineering.</h2>
     </div>
 
     <div class="big-grid reveal-stagger">
 
-      <!-- 01 -->
+      <!-- 01 — Membrane form-finding -->
       <article class="bg-item">
-        <div class="bg-img"><img src="images/project-20.jpg" alt="FEM Tools membrane form-finding analysis" style="width:100%; height:100%; object-fit:cover;" /></div>
+        <div class="bg-img">
+          <span class="bg-overlay-tag">01 · ANALYSIS</span>
+          <img src="images/project-20.jpg" alt="FEM Tools membrane form-finding analysis" />
+        </div>
         <div class="bg-meta">
           <div class="bg-tag">Analysis · Form-finding</div>
           <h3>Membrane <span class="it">form-finding</span> analysis</h3>
@@ -166,15 +324,18 @@
             Non-linear form-finding study of a tensile membrane structure. Surface tension distribution and anchor reactions resolved iteratively to produce a buildable geometry suitable for fabrication and rigging design.
           </p>
           <div class="bg-spec">
-            <span>FEM ANALYSIS</span>
-            <span>AS/NZS 1170</span>
+            <span class="kv"><em>Software</em> FEM Tools</span>
+            <span class="kv"><em>Code</em> AS/NZS 1170</span>
           </div>
         </div>
       </article>
 
-      <!-- 02 -->
+      <!-- 02 — Bracket FEA -->
       <article class="bg-item">
-        <div class="bg-img"><img src="images/project-21.jpg" alt="FEA bracket Von Mises validation" style="width:100%; height:100%; object-fit:cover;" /></div>
+        <div class="bg-img">
+          <span class="bg-overlay-tag">02 · FEA</span>
+          <img src="images/project-21.jpg" alt="FEA bracket Von Mises validation" />
+        </div>
         <div class="bg-meta">
           <div class="bg-tag">FEA · Validation</div>
           <h3>Bracket <span class="it">FEA</span> validation</h3>
@@ -182,31 +343,37 @@
             Static structural analysis of a welded steel bracket under combined loading. Von Mises stress field, displacement and reaction forces verified against yield criteria, with mesh refinement and convergence documented in a formal report.
           </p>
           <div class="bg-spec">
-            <span>SOLIDWORKS SIMULATION</span>
-            <span>AS 4100</span>
+            <span class="kv"><em>Software</em> SOLIDWORKS Simulation</span>
+            <span class="kv"><em>Code</em> AS 4100</span>
           </div>
         </div>
       </article>
 
-      <!-- 03 -->
+      <!-- 03 — Steel frame -->
       <article class="bg-item">
-        <div class="bg-img"><img src="images/project-22.jpg" alt="Steel frame technical drawing" style="width:100%; height:100%; object-fit:cover;" /></div>
+        <div class="bg-img">
+          <span class="bg-overlay-tag">03 · DESIGN</span>
+          <img src="images/project-22.jpg" alt="Steel frame technical drawing" />
+        </div>
         <div class="bg-meta">
           <div class="bg-tag">Design · Documentation</div>
           <h3>Steel <span class="it">frame</span> design</h3>
           <p class="bg-desc">
-            Mechanical steel frame designed to support process equipment. Member sizing checked under combined dead, live and operational loads. General arrangement and fabrication drawings issued with weld sizes, bolt schedules and surface treatment notes.
+            Mechanical steel frame supporting process equipment. Member sizing checked under combined dead, live and operational loads. Drawings issued with weld sizes, bolt schedules and surface treatment notes.
           </p>
           <div class="bg-spec">
-            <span>SOLIDWORKS · AUTOCAD</span>
-            <span>AS 4100 · AS 1554</span>
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD</span>
+            <span class="kv"><em>Code</em> AS 4100 · AS/NZS 1554</span>
           </div>
         </div>
       </article>
 
-      <!-- 04 -->
+      <!-- 04 — Custom machinery -->
       <article class="bg-item">
-        <div class="bg-img"><img src="images/project-23.jpg" alt="Custom hydraulic equipment CAD" style="width:100%; height:100%; object-fit:cover;" /></div>
+        <div class="bg-img">
+          <span class="bg-overlay-tag">04 · CUSTOM</span>
+          <img src="images/project-23.jpg" alt="Custom hydraulic equipment CAD" />
+        </div>
         <div class="bg-meta">
           <div class="bg-tag">Custom equipment</div>
           <h3>Custom <span class="it">machinery</span> design</h3>
@@ -214,15 +381,18 @@
             Bespoke industrial equipment developed from client brief to manufacture-ready package. Mechanism kinematics resolved, structural members verified and full bill of materials produced for fabrication and assembly on-site.
           </p>
           <div class="bg-spec">
-            <span>SOLIDWORKS</span>
-            <span>AS 4024 · AS 3990</span>
+            <span class="kv"><em>Software</em> SOLIDWORKS</span>
+            <span class="kv"><em>Code</em> AS 4024 · AS 3990</span>
           </div>
         </div>
       </article>
 
-      <!-- 05 -->
+      <!-- 05 — Trailer chassis -->
       <article class="bg-item">
-        <div class="bg-img"><img src="images/project-24.jpg" alt="Trailer chassis CAD design" style="width:100%; height:100%; object-fit:cover;" /></div>
+        <div class="bg-img">
+          <span class="bg-overlay-tag">05 · CHASSIS</span>
+          <img src="images/project-24.jpg" alt="Trailer chassis CAD design" />
+        </div>
         <div class="bg-meta">
           <div class="bg-tag">Chassis · Mobile equipment</div>
           <h3>Trailer <span class="it">chassis</span> engineering</h3>
@@ -230,15 +400,18 @@
             Trailer chassis structural design and verification. Frame sized for static and dynamic load cases, towing eye and axle interfaces detailed, with fabrication drawings released for a registered fabricator.
           </p>
           <div class="bg-spec">
-            <span>SOLIDWORKS · FEA</span>
-            <span>AS 4100 · ADR</span>
+            <span class="kv"><em>Software</em> SOLIDWORKS · FEA</span>
+            <span class="kv"><em>Code</em> AS 4100 · ADR</span>
           </div>
         </div>
       </article>
 
-      <!-- 06 -->
+      <!-- 06 — Modular framing -->
       <article class="bg-item">
-        <div class="bg-img"><img src="images/project-25.jpg" alt="Steel frame modular house structure" style="width:100%; height:100%; object-fit:cover;" /></div>
+        <div class="bg-img">
+          <span class="bg-overlay-tag">06 · MODULAR</span>
+          <img src="images/project-25.jpg" alt="Steel frame modular house structure" />
+        </div>
         <div class="bg-meta">
           <div class="bg-tag">Modular · Steel framing</div>
           <h3>Modular <span class="it">house</span> framing</h3>
@@ -246,31 +419,58 @@
             Light-gauge and hot-rolled steel framing for a modular dwelling, detailed for transport, lift and on-site connection. Connection capacities and lifting points verified, drawing package released for offsite fabrication.
           </p>
           <div class="bg-spec">
-            <span>SOLIDWORKS · AUTOCAD</span>
-            <span>AS 4100 · AS/NZS 1170</span>
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD</span>
+            <span class="kv"><em>Code</em> AS 4100 · AS/NZS 1170</span>
           </div>
         </div>
       </article>
 
-      <!-- 07 -->
-      <article class="bg-item">
-        <div class="bg-img"><img src="images/project-26.jpg" alt="Radial tension roof structure" style="width:100%; height:100%; object-fit:cover;" /></div>
+      <!-- 07 — FEA Von Mises (LARGE - new image) -->
+      <article class="bg-item bg-item--wide">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">07 · ANALYSIS</span>
+          <img src="images/project-fea.jpg" alt="Finite element von Mises stress analysis on steel connection" />
+        </div>
         <div class="bg-meta">
-          <div class="bg-tag">Tensile · Architectural</div>
-          <h3>Radial <span class="it">roof</span> structure</h3>
+          <div class="bg-tag">FEA · Connection check</div>
+          <h3>Steel connection <span class="it">FEA</span> &mdash; von Mises field</h3>
           <p class="bg-desc">
-            Radial cable-and-strut roof concept developed for an event venue. Geometry rationalised for fabrication, primary member forces resolved under wind and live load combinations, anchor reactions delivered to the foundation engineer.
+            Three-dimensional finite element analysis of a critical steel-to-steel connection. Solid mesh with quadratic tetrahedra, contact pairs at bolt interfaces, and refined mesh through the weld toe. Peak stress checked against yield with capacity reduction factor &phi; per AS 4100. Convergence verified across three mesh refinements.
           </p>
           <div class="bg-spec">
-            <span>FEM TOOLS · SOLIDWORKS</span>
-            <span>AS/NZS 1170</span>
+            <span class="kv"><em>Software</em> SOLIDWORKS Simulation</span>
+            <span class="kv"><em>Mesh</em> Quadratic tet, h-refined</span>
+            <span class="kv"><em>Output</em> &sigma;<sub>vM</sub> field, displacement</span>
+            <span class="kv"><em>Code</em> AS 4100 §5</span>
           </div>
         </div>
       </article>
 
-      <!-- 08 -->
+      <!-- 08 — Radial roof (new image #4 - tensile glamping) -->
       <article class="bg-item">
-        <div class="bg-img"><img src="images/project-27.jpg" alt="Industrial shed steel structure" style="width:100%; height:100%; object-fit:cover;" /></div>
+        <div class="bg-img">
+          <span class="bg-overlay-tag">08 · TENSILE</span>
+          <img src="images/project-tensile.jpg" alt="Tensile membrane glamping structure at dusk" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">Tensile · Architectural</div>
+          <h3>Tensile <span class="it">canopy</span> structure</h3>
+          <p class="bg-desc">
+            Tensile fabric canopy concept for hospitality and tourism applications. Pre-tension state established by form-finding, primary cable and mast forces resolved under wind and live load combinations, anchor reactions delivered to foundation engineer.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Software</em> FEM Tools · SOLIDWORKS</span>
+            <span class="kv"><em>Code</em> AS/NZS 1170.2</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 09 — Industrial shed -->
+      <article class="bg-item">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">09 · INDUSTRIAL</span>
+          <img src="images/project-27.jpg" alt="Industrial shed steel structure" />
+        </div>
         <div class="bg-meta">
           <div class="bg-tag">Industrial · Shed</div>
           <h3>Industrial <span class="it">shed</span> design</h3>
@@ -278,8 +478,145 @@
             Portal frame industrial shed sized for combined wind, dead and live actions. Member selection, base plate and bracing system detailed, with cleat connections and weld sizes specified on the fabrication drawings.
           </p>
           <div class="bg-spec">
-            <span>SOLIDWORKS · AUTOCAD</span>
-            <span>AS 4100 · AS/NZS 1170</span>
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD</span>
+            <span class="kv"><em>Code</em> AS 4100 · AS/NZS 1170</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10 — Portal frame erection (new image #1) -->
+      <article class="bg-item">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">10 · STRUCTURE</span>
+          <img src="images/project-portal-frame.jpg" alt="Industrial steel portal frame structure under erection at sunset" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">Portal · Erection</div>
+          <h3>Portal frame <span class="it">erection</span> package</h3>
+          <p class="bg-desc">
+            Erection-ready package for a portal frame structure: lift plan, rigging point design, sequencing notes and temporary bracing scheme. Stability verified at each stage of erection prior to permanent bracing being installed.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD</span>
+            <span class="kv"><em>Code</em> AS 4100 · AS 3828</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11 — Container building (new image #2) -->
+      <article class="bg-item">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">11 · MODULAR</span>
+          <img src="images/project-modular.jpg" alt="Two-storey shipping container modular building at dusk" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">Container · Conversion</div>
+          <h3>Shipping container <span class="it">conversion</span></h3>
+          <p class="bg-desc">
+            Engineering for a multi-level shipping-container building: openings reinforced with header and jamb sections, stair and balcony tie-ins detailed, lifting points and stack-load paths verified for transport and final stacking configuration.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD</span>
+            <span class="kv"><em>Code</em> AS 4100 · ISO 1496-1</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12 — Bolted connections detail (new image #3) - LARGE -->
+      <article class="bg-item bg-item--wide">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">12 · DETAIL</span>
+          <img src="images/project-connections.jpg" alt="Heavy-duty bolted steel connection detail" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">Connections · Detailing</div>
+          <h3>Heavy-duty <span class="it">bolted</span> connections</h3>
+          <p class="bg-desc">
+            Bolted moment and shear connection design for heavily-loaded primary steelwork. Bolt group capacity, plate bearing, block shear and local prying effects all checked against AS 4100. End plate, fin plate and cleat configurations developed to suit fabrication preference and erection sequence. Detailed shop drawings issued with hole patterns, edge distances, weld throat thicknesses and AS/NZS 1252 bolt callouts.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD</span>
+            <span class="kv"><em>Bolts</em> M20–M30 · 8.8/S · 8.8/TF</span>
+            <span class="kv"><em>Code</em> AS 4100 §9 · AS/NZS 1252</span>
+            <span class="kv"><em>Output</em> Capacity table · Shop drawings</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 13 — Welding (new image #6) -->
+      <article class="bg-item">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">13 · WELDING</span>
+          <img src="images/project-welding.jpg" alt="GMAW welding of structural steel" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">Welding · WPS</div>
+          <h3>Weld <span class="it">design</span> &amp; detailing</h3>
+          <p class="bg-desc">
+            Weld design across structural and mechanical assemblies: fillet and full-penetration welds sized to AS/NZS 1554, weld category SP/GP selected per service, NDT scope specified, and weld symbols correctly applied on shop drawings to AS 1101.3.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Process</em> GMAW · FCAW · SMAW</span>
+            <span class="kv"><em>Code</em> AS/NZS 1554.1 · 1554.5</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 14 — CAD documentation (new image #5) -->
+      <article class="bg-item">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">14 · DOCS</span>
+          <img src="images/project-cad.jpg" alt="3D CAD model on laptop with construction site in background" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">CAD · Documentation</div>
+          <h3>Shop drawings <span class="it">&amp;</span> documentation</h3>
+          <p class="bg-desc">
+            Issue-for-construction documentation packages: general arrangement, fabrication and shop drawings produced from native 3D models. Bills of materials, weld schedules and surface treatment notes included for immediate release to fabricator.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD</span>
+            <span class="kv"><em>Standard</em> AS 1100 series</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 15 — Large structure (new image #7) - LARGE -->
+      <article class="bg-item bg-item--wide">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">15 · MINING</span>
+          <img src="images/project-mining.jpg" alt="Large multi-storey steel structure for mining or industrial application" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">Mining · Multi-level</div>
+          <h3>Multi-level <span class="it">processing</span> structure</h3>
+          <p class="bg-desc">
+            Engineering support for large-scale, multi-level processing structures of the type encountered on Western Australian mine sites and bulk-handling terminals. Primary frame analysis, equipment support steelwork, access platform integration to AS 1657, and review of bracing and lateral load distribution under wind and operational dynamic loads. Drawing packages developed for fabrication, with revisions tracked and issued through to as-built.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Software</em> SOLIDWORKS · AutoCAD · FEM Tools</span>
+            <span class="kv"><em>Code</em> AS 4100 · AS 3990 · AS 1657</span>
+            <span class="kv"><em>Scope</em> Frame · platforms · supports</span>
+            <span class="kv"><em>Deliverable</em> IFC drawings · BoM · calcs</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- 16 — Steel frame original (last one) -->
+      <article class="bg-item">
+        <div class="bg-img">
+          <span class="bg-overlay-tag">16 · ROOF</span>
+          <img src="images/project-26.jpg" alt="Radial tension roof structure" />
+        </div>
+        <div class="bg-meta">
+          <div class="bg-tag">Tensile · Cable structure</div>
+          <h3>Radial <span class="it">cable</span> roof</h3>
+          <p class="bg-desc">
+            Radial cable-and-strut roof concept developed for an event venue. Geometry rationalised for fabrication, primary member forces resolved under wind and live load combinations, anchor reactions delivered to the foundation engineer for footing design.
+          </p>
+          <div class="bg-spec">
+            <span class="kv"><em>Software</em> FEM Tools · SOLIDWORKS</span>
+            <span class="kv"><em>Code</em> AS/NZS 1170</span>
           </div>
         </div>
       </article>
@@ -287,7 +624,7 @@
     </div>
 
     <p class="grid-disclaimer reveal">
-      <em>Images are representative of in-house capability. Project specifics, references and additional documentation are available on request, subject to client confidentiality.</em>
+      <em>Images are representative of in-house capability rather than client-specific deliverables. Project specifics, references and additional documentation are available on request, subject to client confidentiality.</em>
     </p>
 
   </div>
@@ -299,8 +636,9 @@
     max-width: 900px;
   }
   .grid-heading-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
     color: var(--muted);
     font-weight: 500;
@@ -319,26 +657,76 @@
   .big-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: clamp(28px, 3vw, 40px) clamp(20px, 3vw, 32px);
+    gap: clamp(32px, 3vw, 44px) clamp(20px, 3vw, 32px);
   }
-  .bg-item { display: block; }
+  .bg-item { display: block; position: relative; }
+  .bg-item--wide { grid-column: span 2; }
+
   .bg-img {
     aspect-ratio: 4/3;
-    background: var(--bg-3);
+    background: var(--bg-3, #e8e8e3);
     overflow: hidden;
     border-radius: 4px;
     margin-bottom: 18px;
+    position: relative;
   }
   .bg-img > img {
     width: 100%; height: 100%; object-fit: cover;
-    transition: transform 1.4s var(--ease);
+    transition: transform 1.6s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.6s ease;
+    display: block;
   }
-  .bg-item:hover .bg-img > img { transform: scale(1.04); }
+  .bg-item:hover .bg-img > img {
+    transform: scale(1.05);
+    filter: brightness(0.92);
+  }
 
-  .bg-meta { display: flex; flex-direction: column; gap: 10px; }
+  /* Overlay tag inside image */
+  .bg-overlay-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    z-index: 2;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.16em;
+    color: #fff;
+    background: rgba(15, 20, 25, 0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 6px 10px;
+    border-radius: 2px;
+    font-weight: 500;
+    transform: translateY(0);
+    transition: transform 0.5s var(--ease, cubic-bezier(0.2,0.8,0.2,1)),
+                background 0.5s ease;
+  }
+  .bg-item:hover .bg-overlay-tag {
+    background: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .bg-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    padding-top: 4px;
+  }
+  .bg-meta::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    height: 1px;
+    width: 32px;
+    background: var(--accent);
+    transition: width 0.6s var(--ease, cubic-bezier(0.2,0.8,0.2,1));
+  }
+  .bg-item:hover .bg-meta::before { width: 100%; }
+
   .bg-tag {
+    margin-top: 12px;
     font-size: 10px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--accent);
     font-weight: 600;
@@ -353,32 +741,46 @@
   }
   .bg-meta h3 .it { font-style: italic; }
 
+  .bg-item--wide .bg-meta h3 {
+    font-size: clamp(28px, 3vw, 36px);
+  }
+  .bg-item--wide .bg-img { aspect-ratio: 16/9; }
+
   .bg-desc {
     font-size: 14.5px;
-    line-height: 1.55;
+    line-height: 1.6;
     color: var(--muted);
     margin: 4px 0 0;
   }
+  .bg-item--wide .bg-desc { font-size: 15.5px; max-width: 800px; }
+
   .bg-spec {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px 16px;
-    padding-top: 12px;
-    margin-top: 4px;
+    gap: 10px 24px;
+    padding-top: 14px;
+    margin-top: 6px;
     border-top: 1px solid var(--line);
   }
-  .bg-spec span {
-    font-size: 10.5px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
+  .bg-spec .kv {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
     color: var(--ink);
-    font-weight: 500;
-    font-family: 'Inter', system-ui, sans-serif;
+    letter-spacing: 0.01em;
+    line-height: 1.4;
   }
-  .bg-spec span + span { color: var(--muted); }
+  .bg-spec .kv em {
+    font-style: normal;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-size: 9.5px;
+    margin-right: 8px;
+    font-weight: 500;
+  }
 
   .grid-disclaimer {
-    margin-top: clamp(40px, 5vw, 56px);
+    margin-top: clamp(48px, 5vw, 64px);
     font-size: 13px;
     color: var(--muted);
     text-align: center;
@@ -387,25 +789,28 @@
     margin-right: auto;
   }
 
-  @media (max-width: 880px) {
+  @media (max-width: 980px) {
     .big-grid { grid-template-columns: repeat(2, 1fr); }
+    .bg-item--wide { grid-column: span 2; }
   }
   @media (max-width: 540px) {
     .big-grid { grid-template-columns: 1fr; }
+    .bg-item--wide { grid-column: span 1; }
+    .bg-item--wide .bg-img { aspect-ratio: 4/3; }
     .bg-meta h3 { font-size: 22px; }
   }
 </style>
 
 
-<!-- AUSTRALIAN STANDARDS -->
-<section class="section-tight" style="background: var(--bg-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+<!-- AUSTRALIAN STANDARDS GRID -->
+<section class="section-tight" style="background: var(--bg-2, #f4f4f0); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
   <div class="container">
 
     <div class="std-head reveal">
-      <div class="std-eyebrow">Australian Standards</div>
+      <div class="std-eyebrow">Australian Standards · Reference frame</div>
       <h2 class="std-title">Designed and documented to <span class="it">code</span>.</h2>
       <p class="std-lede">
-        Senger Engineering operates within the framework of Australian Standards. The references below describe the principal codes consulted across mechanical, structural and welding work — selected per project to suit the application and client requirements.
+        Senger Engineering operates within the framework of Australian Standards. The references below describe the principal codes consulted across mechanical, structural, welding and access work — selected per project to suit the application and client specification.
       </p>
     </div>
 
@@ -437,7 +842,7 @@
 
       <div class="std-card">
         <div class="std-code">AS 1418</div>
-        <div class="std-name">Cranes, hoists and winches</div>
+        <div class="std-name">Cranes, hoists &amp; winches</div>
         <div class="std-desc">Lifting equipment, lifting points and rigging design.</div>
       </div>
 
@@ -462,7 +867,7 @@
     </div>
 
     <p class="std-foot reveal">
-      <em>Additional standards (AS 1210 pressure vessels, AS 2885 pipelines, AS 1170.4 earthquake actions, project-specific client specifications) consulted as required.</em>
+      <em>Additional standards (AS 1210 pressure vessels, AS 2885 pipelines, AS 1170.4 earthquake actions, AS/NZS 1252 high-strength bolts, project-specific client specifications) consulted as required.</em>
     </p>
 
   </div>
@@ -471,8 +876,9 @@
 <style>
   .std-head { max-width: 820px; margin-bottom: clamp(40px, 5vw, 56px); }
   .std-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
     font-weight: 500;
@@ -508,9 +914,13 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    transition: background 0.3s var(--ease);
+    transition: background 0.3s ease, transform 0.4s ease;
+    cursor: default;
   }
-  .std-card:hover { background: #fafaf7; }
+  .std-card:hover {
+    background: #fafaf7;
+    transform: translateY(-2px);
+  }
   .std-code {
     font-family: var(--serif);
     font-size: 28px;
@@ -533,11 +943,7 @@
     margin-top: auto;
   }
 
-  .std-foot {
-    margin-top: 24px;
-    font-size: 12.5px;
-    color: var(--muted);
-  }
+  .std-foot { margin-top: 24px; font-size: 12.5px; color: var(--muted); }
 
   @media (max-width: 980px) {
     .std-grid { grid-template-columns: repeat(2, 1fr); }
@@ -553,8 +959,8 @@
   <div class="container">
 
     <div class="proc-head reveal">
-      <div class="proc-eyebrow">Engineering process</div>
-      <h2 class="proc-title">From <span class="it">brief</span> to fabrication, in five stages.</h2>
+      <div class="proc-eyebrow">Engineering process · Five stages</div>
+      <h2 class="proc-title">From <span class="it">brief</span> to fabrication.</h2>
     </div>
 
     <ol class="proc-list reveal-stagger">
@@ -579,7 +985,7 @@
         <div class="proc-num">03</div>
         <div class="proc-body">
           <h3>Detailed design &amp; analysis</h3>
-          <p>3D modelling and detailing in SolidWorks. Where required, FEA is performed for stress, deflection and fatigue verification, with mesh studies and convergence documented in a formal report.</p>
+          <p>3D modelling and detailing in SOLIDWORKS. Where required, FEA is performed in SOLIDWORKS Simulation for stress, deflection and fatigue verification, with mesh studies and convergence documented in a formal report.</p>
         </div>
       </li>
 
@@ -587,7 +993,7 @@
         <div class="proc-num">04</div>
         <div class="proc-body">
           <h3>Documentation</h3>
-          <p>General arrangement, fabrication and shop drawings produced to construction-ready quality. Bills of materials, weld schedules, bolt callouts and surface treatment notes included as required for issue to fabricator.</p>
+          <p>General arrangement, fabrication and shop drawings produced to construction-ready quality in AutoCAD and SOLIDWORKS Drawings. Bills of materials, weld schedules, bolt callouts and surface treatment notes included as required for issue to fabricator.</p>
         </div>
       </li>
 
@@ -607,8 +1013,9 @@
 <style>
   .proc-head { max-width: 820px; margin-bottom: clamp(40px, 5vw, 56px); }
   .proc-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
     font-weight: 500;
@@ -673,8 +1080,99 @@
 </style>
 
 
+<!-- SOFTWARE STACK -->
+<section class="section-tight" style="background: var(--ink, #0f1419); color: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="container">
+
+    <div class="stack-grid reveal">
+      <div class="stack-head">
+        <div class="stack-eyebrow">Software stack</div>
+        <h2 class="stack-title">The <span class="it">tools</span> behind every drawing.</h2>
+      </div>
+      <div class="stack-body">
+        <div class="stack-item">
+          <div class="stack-name">SOLIDWORKS</div>
+          <div class="stack-use">3D modelling, assembly, drawings</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-name">SOLIDWORKS Simulation</div>
+          <div class="stack-use">Linear &amp; non-linear FEA, fatigue</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-name">AutoCAD</div>
+          <div class="stack-use">2D documentation, GA &amp; shop drawings</div>
+        </div>
+        <div class="stack-item">
+          <div class="stack-name">FEM Tools</div>
+          <div class="stack-use">Tensile structures, form-finding</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  .stack-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: clamp(32px, 6vw, 80px);
+    align-items: start;
+  }
+  .stack-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.55);
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+  .stack-title {
+    font-family: var(--serif);
+    font-size: clamp(28px, 3.6vw, 44px);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #fff;
+  }
+  .stack-title .it { font-style: italic; color: #8aa9c9; }
+
+  .stack-body {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+  .stack-item {
+    padding: 24px 0;
+    border-top: 1px solid rgba(255,255,255,0.18);
+    padding-right: 24px;
+  }
+  .stack-item:nth-child(-n+2) { border-top: 1px solid rgba(255,255,255,0.18); }
+  .stack-name {
+    font-family: var(--serif);
+    font-size: clamp(20px, 2.2vw, 26px);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin-bottom: 6px;
+    color: #fff;
+  }
+  .stack-use {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+  }
+
+  @media (max-width: 880px) {
+    .stack-grid { grid-template-columns: 1fr; gap: 32px; }
+    .stack-body { grid-template-columns: 1fr; }
+  }
+</style>
+
+
 <!-- DELIVERABLES -->
-<section class="section-tight" style="background: var(--bg-2); border-top: 1px solid var(--line);">
+<section class="section-tight">
   <div class="container">
 
     <div class="del-head reveal">
@@ -757,7 +1255,7 @@
           </svg>
         </div>
         <div class="del-name">3D models &amp; renders</div>
-        <div class="del-desc">Native SolidWorks files, STEP exports and visualisations.</div>
+        <div class="del-desc">Native SOLIDWORKS files, STEP exports and visualisations.</div>
       </div>
 
       <div class="del-item">
@@ -778,8 +1276,9 @@
 <style>
   .del-head { max-width: 820px; margin-bottom: clamp(32px, 4vw, 48px); }
   .del-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
     font-weight: 500;
@@ -793,7 +1292,6 @@
     letter-spacing: -0.02em;
     margin: 0;
   }
-
   .del-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -806,10 +1304,7 @@
     padding: 24px 20px 24px 0;
     border-top: 1px solid var(--ink);
   }
-  .del-icon {
-    color: var(--accent);
-    margin-bottom: 8px;
-  }
+  .del-icon { color: var(--accent); margin-bottom: 8px; }
   .del-name {
     font-family: var(--serif);
     font-size: 18px;
@@ -834,11 +1329,11 @@
 
 
 <!-- INDUSTRIES -->
-<section class="section-tight" style="border-top: 1px solid var(--line);">
+<section class="section-tight" style="background: var(--bg-2, #f4f4f0); border-top: 1px solid var(--line);">
   <div class="container">
     <div class="ind-grid reveal">
       <div>
-        <div class="ind-eyebrow">Industries</div>
+        <div class="ind-eyebrow">Industries served</div>
         <h2 class="ind-title">Built for industries that <span class="it">don't forgive</span> errors.</h2>
       </div>
       <ul class="ind-list">
@@ -861,8 +1356,9 @@
     align-items: start;
   }
   .ind-eyebrow {
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
     color: var(--muted);
     font-weight: 500;
@@ -888,18 +1384,18 @@
     grid-template-columns: 56px 1fr;
     gap: 12px;
     padding: 18px 0;
-    border-top: 1px solid var(--line);
+    border-top: 1px solid var(--line-strong, #c8c8c8);
     font-family: var(--serif);
     font-size: clamp(18px, 1.8vw, 22px);
     font-weight: 400;
     letter-spacing: -0.01em;
     color: var(--ink);
   }
-  .ind-list li:last-child { border-bottom: 1px solid var(--line); }
+  .ind-list li:last-child { border-bottom: 1px solid var(--line-strong, #c8c8c8); }
   .ind-list li span {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
     font-size: 11px;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.14em;
     color: var(--muted);
     font-weight: 500;
     padding-top: 7px;
@@ -912,7 +1408,7 @@
 
 
 <!-- CTA -->
-<section class="section-tight" style="background: var(--bg-2); border-top: 1px solid var(--line); text-align:center;">
+<section class="section-tight" style="border-top: 1px solid var(--line); text-align:center;">
   <div class="container">
     <h2 class="reveal" style="font-family: var(--serif); font-size: clamp(36px, 5.5vw, 64px); line-height: 1; letter-spacing: -0.03em; font-weight: 400; max-width: 900px; margin: 0 auto 24px;">
       Got a project? <span style="font-style:italic; color:var(--accent);">Let's talk.</span>
