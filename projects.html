@@ -21,13 +21,8 @@
 
 <!-- ============================================
      CRITICAL: Reveal animation fallback
-     This ensures content is ALWAYS visible,
-     even if reveal JS fails or doesn't trigger.
-     The animations still work when JS runs,
-     but content never stays hidden.
      ============================================ -->
 <style>
-  /* Force visibility on this page — fallback in case reveal JS fails */
   .projects-page-fix .reveal,
   .projects-page-fix .reveal-stagger,
   .projects-page-fix .reveal-stagger > * {
@@ -45,6 +40,115 @@
   gtag('js', new Date());
   gtag('config', 'AW-18153072870');
 </script>
+
+<!-- ============================================
+     DROPDOWN NAV CSS — INLINE (safe, won't touch style.css)
+     ============================================ -->
+<style>
+  .nav-dropdown { position: relative; display: inline-block; }
+  .nav-dd-trigger { display: inline-flex; align-items: center; gap: 6px; }
+  .nav-dd-arrow { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); opacity: 0.7; }
+  .nav-dropdown:hover .nav-dd-arrow,
+  .nav-dropdown:focus-within .nav-dd-arrow { transform: rotate(-180deg); opacity: 1; }
+
+  .nav-dd-panel {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: -24px;
+    min-width: 460px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-top: 3px solid #1F3A5F;
+    box-shadow: 0 24px 60px -12px rgba(15, 20, 25, 0.14), 0 8px 24px -8px rgba(15, 20, 25, 0.08);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                visibility 0s linear 0.32s;
+    z-index: 100;
+  }
+  .nav-dropdown:hover .nav-dd-panel,
+  .nav-dropdown:focus-within .nav-dd-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                visibility 0s linear 0s;
+  }
+  .nav-dd-panel::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+  .nav-dd-inner { padding: 10px; }
+  .nav-dd-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 3px;
+    transition: background 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  .nav-dd-item:hover { background: #fafaf7; }
+  .nav-dd-item--lead {
+    background: #fafaf7;
+    border-bottom: 1px solid #e5e5e5;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 4px;
+    padding-bottom: 16px;
+  }
+  .nav-dd-item--lead:hover { background: #f4f4f0; }
+  .nav-dd-num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: #1F3A5F;
+    line-height: 1;
+    padding-top: 4px;
+  }
+  .nav-dd-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0a0a0a;
+    letter-spacing: -0.005em;
+    margin-bottom: 4px;
+    transition: color 0.25s ease;
+  }
+  .nav-dd-item:hover .nav-dd-title { color: #1F3A5F; }
+  .nav-dd-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #5a5a5a;
+  }
+  .mobile-sub {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 16px 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.15);
+    margin-left: 18px;
+    margin-top: -8px;
+    margin-bottom: 12px;
+  }
+  .mobile-sub a {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    font-family: 'Instrument Serif', serif;
+    font-size: 22px;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.25s ease;
+    border: none;
+  }
+  .mobile-sub a:hover, .mobile-sub a:focus { color: #ffffff; }
+  @media (max-width: 880px) {
+    .nav-dropdown .nav-dd-panel { display: none; }
+  }
+</style>
 </head>
 <body class="projects-page-fix">
 <div class="topbar">
@@ -54,6 +158,8 @@
   <span class="sep">|</span>
   <span>Perth, WA, Australia</span>
 </div>
+
+<!-- =============== NAV WITH DROPDOWN =============== -->
 <nav class="nav" id="nav">
   <a href="index.html" class="logo" aria-label="Senger Engineering home">
     <img src="images/logo-horizontal-transparent.png" alt="Senger Engineering" />
@@ -61,7 +167,48 @@
 
   <div class="nav-links">
     <a href="index.html">Home</a>
-    <a href="engineering.html">Engineering</a>
+
+    <div class="nav-dropdown">
+      <a href="engineering.html" class="nav-dd-trigger">
+        Engineering
+        <svg class="nav-dd-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <div class="nav-dd-panel">
+        <div class="nav-dd-inner">
+          <a href="engineering.html" class="nav-dd-item nav-dd-item--lead">
+            <div class="nav-dd-num">·</div>
+            <div>
+              <div class="nav-dd-title">Engineering practice</div>
+              <div class="nav-dd-desc">Overview of capability, workflow and standards.</div>
+            </div>
+          </a>
+          <a href="mechanical-engineering" class="nav-dd-item">
+            <div class="nav-dd-num">01</div>
+            <div>
+              <div class="nav-dd-title">Mechanical engineering</div>
+              <div class="nav-dd-desc">First-principles design, FEA verification, manufacture-ready packages.</div>
+            </div>
+          </a>
+          <a href="fabrication-drawings" class="nav-dd-item">
+            <div class="nav-dd-num">02</div>
+            <div>
+              <div class="nav-dd-title">Fabrication &amp; shop drawings</div>
+              <div class="nav-dd-desc">Manufacturing-ready drawings to AS 1100 — for the workshop.</div>
+            </div>
+          </a>
+          <a href="product-development" class="nav-dd-item">
+            <div class="nav-dd-num">03</div>
+            <div>
+              <div class="nav-dd-title">Product development</div>
+              <div class="nav-dd-desc">End-to-end mechanical product engineering. DFM, DFA, FEA.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
     <a href="renders.html">Renders</a>
     <a href="projects.html" class="active">Projects</a>
     <a href="about.html">About</a>
@@ -69,7 +216,7 @@
   </div>
 
   <a href="contact.html" class="nav-cta">
-    Request a quote
+    Discuss your project
     <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
       <path d="M3 9 L9 3 M9 3 H5 M9 3 V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
     </svg>
@@ -80,10 +227,16 @@
   </button>
 </nav>
 
+<!-- =============== MOBILE MENU WITH SUB-ITEMS =============== -->
 <div class="mobile-menu" id="mobileMenu">
   <nav>
     <a href="index.html"><em>Home</em><span>01</span></a>
     <a href="engineering.html"><em>Engineering</em><span>02</span></a>
+    <div class="mobile-sub">
+      <a href="mechanical-engineering"><em>Mechanical engineering</em></a>
+      <a href="fabrication-drawings"><em>Fabrication drawings</em></a>
+      <a href="product-development"><em>Product development</em></a>
+    </div>
     <a href="renders.html"><em>Renders</em><span>03</span></a>
     <a href="projects.html"><em>Projects</em><span>04</span></a>
     <a href="about.html"><em>About</em><span>05</span></a>
@@ -1433,7 +1586,7 @@
     </p>
     <div>
       <a href="contact.html" class="btn btn-primary">
-        Request a quote
+        Discuss your project
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
@@ -1442,6 +1595,7 @@
   </div>
 </section>
 
+<!-- =============== UPDATED FOOTER =============== -->
 <footer class="footer">
   <div class="footer-grid">
     <div>
@@ -1460,11 +1614,10 @@
     <div class="foot-col">
       <h4>Services</h4>
       <ul>
-        <li>Mechanical engineering</li>
-        <li>Technical documentation</li>
-        <li>Shop &amp; fabrication drawings</li>
-        <li>FEA &amp; engineering calculations</li>
-        <li>3D renders</li>
+        <li><a href="mechanical-engineering">Mechanical engineering</a></li>
+        <li><a href="fabrication-drawings">Fabrication drawings</a></li>
+        <li><a href="product-development">Product development</a></li>
+        <li><a href="renders.html">3D renders</a></li>
       </ul>
     </div>
     <div class="foot-col">
