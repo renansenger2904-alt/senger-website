@@ -84,110 +84,59 @@
   </div>
 </header>
 
-<!-- FILTERS -->
-<section class="section-tight" style="border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
-  <div class="container">
-    <div class="filters reveal">
-      <button class="filter active" data-filter="all">All work <span>16</span></button>
-      <button class="filter" data-filter="mining">Mining <span>5</span></button>
-      <button class="filter" data-filter="construction">Construction <span>4</span></button>
-      <button class="filter" data-filter="events">Events <span>3</span></button>
-      <button class="filter" data-filter="arch">Architectural <span>4</span></button>
-    </div>
-  </div>
-</section>
-
 <style>
-  .filters {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-  .filter {
-    padding: 10px 18px;
-    border-radius: 999px;
-    border: 1px solid var(--line-2);
-    font-size: 13px;
-    color: var(--muted);
-    transition: all 0.3s var(--ease);
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 500;
-  }
-  .filter span {
-    font-size: 11px;
-    color: var(--faint);
-    font-family: var(--serif);
-    font-style: italic;
-  }
-  .filter:hover { border-color: var(--ink); color: var(--ink); }
-  .filter.active {
-    background: var(--ink);
-    color: var(--bg);
-    border-color: var(--ink);
-  }
-  .filter.active span { color: rgba(255,255,255,0.5); }
 </style>
 
 <!-- BIG GRID -->
 <section class="section">
   <div class="container">
     <div class="big-grid reveal-stagger">
-      <a href="#" class="bg-item" data-cat="mining">
-        <div class="bg-img"><div class="ph" data-tone="1"><div class="ph-label">SLOT 20 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-20.jpg" alt="FEM Tools membrane form-finding analysis" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Conveyor truss <span class="it">retrofit</span></h3>
-          <span>Mining · WA · 2024</span>
+          <h3>Membrane <span class="it">form-finding</span> analysis</h3>
         </div>
       </a>
-      <a href="#" class="bg-item" data-cat="construction">
-        <div class="bg-img"><div class="ph" data-tone="3"><div class="ph-label">SLOT 21 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-21.jpg" alt="FEA bracket Von Mises validation" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Structural steel <span class="it">framing</span></h3>
-          <span>Construction · WA · 2024</span>
+          <h3>Bracket <span class="it">FEA</span> validation</h3>
         </div>
       </a>
-      <a href="#" class="bg-item" data-cat="events">
-        <div class="bg-img"><div class="ph" data-tone="2"><div class="ph-label">SLOT 22 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-22.jpg" alt="Steel frame technical drawing" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Event stage <span class="it">structure</span></h3>
-          <span>Events · VIC · 2024</span>
+          <h3>Steel <span class="it">frame</span> design</h3>
         </div>
       </a>
-      <a href="#" class="bg-item" data-cat="arch">
-        <div class="bg-img"><div class="ph" data-tone="4"><div class="ph-label">SLOT 23 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-23.jpg" alt="Custom hydraulic equipment CAD" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Architectural <span class="it">canopy</span></h3>
-          <span>Architectural · NSW · 2025</span>
+          <h3>Custom <span class="it">machinery</span> design</h3>
         </div>
       </a>
-      <a href="#" class="bg-item" data-cat="mining">
-        <div class="bg-img"><div class="ph" data-tone="5"><div class="ph-label">SLOT 24 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-24.jpg" alt="Trailer chassis CAD design" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Drivetrain <span class="it">redesign</span></h3>
-          <span>Mining · WA · 2025</span>
+          <h3>Trailer <span class="it">chassis</span> engineering</h3>
         </div>
       </a>
-      <a href="#" class="bg-item" data-cat="construction">
-        <div class="bg-img"><div class="ph" data-tone="6"><div class="ph-label">SLOT 25 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-25.jpg" alt="Steel frame modular house structure" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Mezzanine <span class="it">platform</span></h3>
-          <span>Construction · WA · 2025</span>
+          <h3>Modular <span class="it">house</span> framing</h3>
         </div>
       </a>
-      <a href="#" class="bg-item" data-cat="arch">
-        <div class="bg-img"><div class="ph" data-tone="3"><div class="ph-label">SLOT 26 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-26.jpg" alt="Radial tension roof structure" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Mixed-use <span class="it">tower</span></h3>
-          <span>Architectural · QLD · 2025</span>
+          <h3>Radial <span class="it">roof</span> structure</h3>
         </div>
       </a>
-      <a href="#" class="bg-item" data-cat="events">
-        <div class="bg-img"><div class="ph" data-tone="2"><div class="ph-label">SLOT 27 · Project</div></div></div>
+      <a href="#" class="bg-item">
+        <div class="bg-img"><img src="images/project-27.jpg" alt="Industrial shed steel structure" style="width:100%; height:100%; object-fit:cover;" /></div>
         <div class="bg-meta">
-          <h3>Festival <span class="it">rigging</span></h3>
-          <span>Events · QLD · 2025</span>
+          <h3>Industrial <span class="it">shed</span> design</h3>
         </div>
       </a>
     </div>
@@ -257,28 +206,6 @@
     </div>
   </div>
 </section>
-
-<script>
-  // simple filter (visual only — keeps all visible, just demonstrates intent for now)
-  document.querySelectorAll('.filter').forEach(btn => {
-    btn.addEventListener('click', () => {
-      document.querySelectorAll('.filter').forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const cat = btn.dataset.filter;
-      document.querySelectorAll('.bg-item').forEach(item => {
-        if (cat === 'all' || item.dataset.cat === cat) {
-          item.style.display = '';
-          item.style.opacity = '0';
-          setTimeout(() => { item.style.transition = 'opacity 0.5s ease'; item.style.opacity = '1'; }, 50);
-        } else {
-          item.style.transition = 'opacity 0.3s ease';
-          item.style.opacity = '0';
-          setTimeout(() => { item.style.display = 'none'; }, 300);
-        }
-      });
-    });
-  });
-</script>
 
 <footer class="footer">
   <div class="footer-grid">
