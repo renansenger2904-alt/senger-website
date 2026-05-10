@@ -19,6 +19,24 @@
 <link rel="stylesheet" href="style.css" />
 <link rel="stylesheet" href="styles.css">
 
+<!-- ============================================
+     CRITICAL: Reveal animation fallback
+     This ensures content is ALWAYS visible,
+     even if reveal JS fails or doesn't trigger.
+     The animations still work when JS runs,
+     but content never stays hidden.
+     ============================================ -->
+<style>
+  /* Force visibility on this page — fallback in case reveal JS fails */
+  .projects-page-fix .reveal,
+  .projects-page-fix .reveal-stagger,
+  .projects-page-fix .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+</style>
+
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18153072870"></script>
 <script>
@@ -28,7 +46,7 @@
   gtag('config', 'AW-18153072870');
 </script>
 </head>
-<body>
+<body class="projects-page-fix">
 <div class="topbar">
   <a href="mailto:info@senger.com.au">info@senger.com.au</a>
   <span class="sep">|</span>
@@ -98,7 +116,7 @@
 <!-- HERO STATS BAND -->
 <section class="stats-band">
   <div class="container">
-    <div class="stats-grid reveal-stagger">
+    <div class="stats-grid">
       <div class="stat">
         <div class="stat-num">16</div>
         <div class="stat-lbl">Capability studies on display</div>
@@ -121,7 +139,7 @@
 
 <style>
   .stats-band {
-    background: var(--ink, #0f1419);
+    background: #0f1419;
     color: #fff;
     padding: clamp(48px, 6vw, 80px) 0;
     border-top: 1px solid var(--line);
@@ -172,7 +190,7 @@
 <!-- APPROACH STATEMENT -->
 <section class="section-tight">
   <div class="container">
-    <div class="approach-grid reveal">
+    <div class="approach-grid">
       <div class="approach-label">Approach</div>
       <div class="approach-text">
         <p>
@@ -246,7 +264,7 @@
 
 <style>
   .marquee-band {
-    background: var(--bg-2, #f4f4f0);
+    background: #f4f4f0;
     border-top: 1px solid var(--line);
     border-bottom: 1px solid var(--line);
     padding: 24px 0;
@@ -262,8 +280,8 @@
     z-index: 2;
     pointer-events: none;
   }
-  .marquee-band::before { left: 0; background: linear-gradient(90deg, var(--bg-2, #f4f4f0), transparent); }
-  .marquee-band::after { right: 0; background: linear-gradient(-90deg, var(--bg-2, #f4f4f0), transparent); }
+  .marquee-band::before { left: 0; background: linear-gradient(90deg, #f4f4f0, transparent); }
+  .marquee-band::after { right: 0; background: linear-gradient(-90deg, #f4f4f0, transparent); }
   .marquee-track {
     display: flex;
     width: max-content;
@@ -304,12 +322,12 @@
 <section class="section">
   <div class="container">
 
-    <div class="grid-heading reveal">
+    <div class="grid-heading">
       <div class="grid-heading-eyebrow">Selected sample work · 16 studies</div>
       <h2 class="grid-heading-title">Sixteen studies in <span class="it">applied</span> mechanical engineering.</h2>
     </div>
 
-    <div class="big-grid reveal-stagger">
+    <div class="big-grid">
 
       <!-- 01 — Membrane form-finding -->
       <article class="bg-item">
@@ -425,7 +443,7 @@
         </div>
       </article>
 
-      <!-- 07 — FEA Von Mises (LARGE - new image) -->
+      <!-- 07 — FEA Von Mises (LARGE) -->
       <article class="bg-item bg-item--wide">
         <div class="bg-img">
           <span class="bg-overlay-tag">07 · ANALYSIS</span>
@@ -446,7 +464,7 @@
         </div>
       </article>
 
-      <!-- 08 — Radial roof (new image #4 - tensile glamping) -->
+      <!-- 08 — Tensile canopy -->
       <article class="bg-item">
         <div class="bg-img">
           <span class="bg-overlay-tag">08 · TENSILE</span>
@@ -484,7 +502,7 @@
         </div>
       </article>
 
-      <!-- 10 — Portal frame erection (new image #1) -->
+      <!-- 10 — Portal frame erection -->
       <article class="bg-item">
         <div class="bg-img">
           <span class="bg-overlay-tag">10 · STRUCTURE</span>
@@ -503,7 +521,7 @@
         </div>
       </article>
 
-      <!-- 11 — Container building (new image #2) -->
+      <!-- 11 — Container building -->
       <article class="bg-item">
         <div class="bg-img">
           <span class="bg-overlay-tag">11 · MODULAR</span>
@@ -522,7 +540,7 @@
         </div>
       </article>
 
-      <!-- 12 — Bolted connections detail (new image #3) - LARGE -->
+      <!-- 12 — Bolted connections detail (LARGE) -->
       <article class="bg-item bg-item--wide">
         <div class="bg-img">
           <span class="bg-overlay-tag">12 · DETAIL</span>
@@ -543,7 +561,7 @@
         </div>
       </article>
 
-      <!-- 13 — Welding (new image #6) -->
+      <!-- 13 — Welding -->
       <article class="bg-item">
         <div class="bg-img">
           <span class="bg-overlay-tag">13 · WELDING</span>
@@ -562,7 +580,7 @@
         </div>
       </article>
 
-      <!-- 14 — CAD documentation (new image #5) -->
+      <!-- 14 — CAD documentation -->
       <article class="bg-item">
         <div class="bg-img">
           <span class="bg-overlay-tag">14 · DOCS</span>
@@ -581,7 +599,7 @@
         </div>
       </article>
 
-      <!-- 15 — Large structure (new image #7) - LARGE -->
+      <!-- 15 — Large structure (LARGE) -->
       <article class="bg-item bg-item--wide">
         <div class="bg-img">
           <span class="bg-overlay-tag">15 · MINING</span>
@@ -602,7 +620,7 @@
         </div>
       </article>
 
-      <!-- 16 — Steel frame original (last one) -->
+      <!-- 16 — Radial roof -->
       <article class="bg-item">
         <div class="bg-img">
           <span class="bg-overlay-tag">16 · ROOF</span>
@@ -623,7 +641,7 @@
 
     </div>
 
-    <p class="grid-disclaimer reveal">
+    <p class="grid-disclaimer">
       <em>Images are representative of in-house capability rather than client-specific deliverables. Project specifics, references and additional documentation are available on request, subject to client confidentiality.</em>
     </p>
 
@@ -680,7 +698,6 @@
     filter: brightness(0.92);
   }
 
-  /* Overlay tag inside image */
   .bg-overlay-tag {
     position: absolute;
     top: 16px;
@@ -697,8 +714,7 @@
     border-radius: 2px;
     font-weight: 500;
     transform: translateY(0);
-    transition: transform 0.5s var(--ease, cubic-bezier(0.2,0.8,0.2,1)),
-                background 0.5s ease;
+    transition: transform 0.5s cubic-bezier(0.2,0.8,0.2,1), background 0.5s ease;
   }
   .bg-item:hover .bg-overlay-tag {
     background: var(--accent);
@@ -719,7 +735,7 @@
     height: 1px;
     width: 32px;
     background: var(--accent);
-    transition: width 0.6s var(--ease, cubic-bezier(0.2,0.8,0.2,1));
+    transition: width 0.6s cubic-bezier(0.2,0.8,0.2,1);
   }
   .bg-item:hover .bg-meta::before { width: 100%; }
 
@@ -803,10 +819,10 @@
 
 
 <!-- AUSTRALIAN STANDARDS GRID -->
-<section class="section-tight" style="background: var(--bg-2, #f4f4f0); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+<section class="section-tight" style="background: #f4f4f0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
   <div class="container">
 
-    <div class="std-head reveal">
+    <div class="std-head">
       <div class="std-eyebrow">Australian Standards · Reference frame</div>
       <h2 class="std-title">Designed and documented to <span class="it">code</span>.</h2>
       <p class="std-lede">
@@ -814,7 +830,7 @@
       </p>
     </div>
 
-    <div class="std-grid reveal-stagger">
+    <div class="std-grid">
 
       <div class="std-card">
         <div class="std-code">AS 4100</div>
@@ -866,7 +882,7 @@
 
     </div>
 
-    <p class="std-foot reveal">
+    <p class="std-foot">
       <em>Additional standards (AS 1210 pressure vessels, AS 2885 pipelines, AS 1170.4 earthquake actions, AS/NZS 1252 high-strength bolts, project-specific client specifications) consulted as required.</em>
     </p>
 
@@ -958,12 +974,12 @@
 <section class="section">
   <div class="container">
 
-    <div class="proc-head reveal">
+    <div class="proc-head">
       <div class="proc-eyebrow">Engineering process · Five stages</div>
       <h2 class="proc-title">From <span class="it">brief</span> to fabrication.</h2>
     </div>
 
-    <ol class="proc-list reveal-stagger">
+    <ol class="proc-list">
 
       <li class="proc-step">
         <div class="proc-num">01</div>
@@ -1081,10 +1097,10 @@
 
 
 <!-- SOFTWARE STACK -->
-<section class="section-tight" style="background: var(--ink, #0f1419); color: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+<section class="section-tight" style="background: #0f1419; color: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
   <div class="container">
 
-    <div class="stack-grid reveal">
+    <div class="stack-grid">
       <div class="stack-head">
         <div class="stack-eyebrow">Software stack</div>
         <h2 class="stack-title">The <span class="it">tools</span> behind every drawing.</h2>
@@ -1149,7 +1165,6 @@
     border-top: 1px solid rgba(255,255,255,0.18);
     padding-right: 24px;
   }
-  .stack-item:nth-child(-n+2) { border-top: 1px solid rgba(255,255,255,0.18); }
   .stack-name {
     font-family: var(--serif);
     font-size: clamp(20px, 2.2vw, 26px);
@@ -1175,12 +1190,12 @@
 <section class="section-tight">
   <div class="container">
 
-    <div class="del-head reveal">
+    <div class="del-head">
       <div class="del-eyebrow">Deliverables</div>
       <h2 class="del-title">What leaves the studio.</h2>
     </div>
 
-    <div class="del-grid reveal-stagger">
+    <div class="del-grid">
 
       <div class="del-item">
         <div class="del-icon">
@@ -1329,9 +1344,9 @@
 
 
 <!-- INDUSTRIES -->
-<section class="section-tight" style="background: var(--bg-2, #f4f4f0); border-top: 1px solid var(--line);">
+<section class="section-tight" style="background: #f4f4f0; border-top: 1px solid var(--line);">
   <div class="container">
-    <div class="ind-grid reveal">
+    <div class="ind-grid">
       <div>
         <div class="ind-eyebrow">Industries served</div>
         <h2 class="ind-title">Built for industries that <span class="it">don't forgive</span> errors.</h2>
@@ -1410,13 +1425,13 @@
 <!-- CTA -->
 <section class="section-tight" style="border-top: 1px solid var(--line); text-align:center;">
   <div class="container">
-    <h2 class="reveal" style="font-family: var(--serif); font-size: clamp(36px, 5.5vw, 64px); line-height: 1; letter-spacing: -0.03em; font-weight: 400; max-width: 900px; margin: 0 auto 24px;">
+    <h2 style="font-family: var(--serif); font-size: clamp(36px, 5.5vw, 64px); line-height: 1; letter-spacing: -0.03em; font-weight: 400; max-width: 900px; margin: 0 auto 24px;">
       Got a project? <span style="font-style:italic; color:var(--accent);">Let's talk.</span>
     </h2>
-    <p class="reveal" style="max-width: 580px; margin: 0 auto 32px; color: var(--muted); font-size: 16px; line-height: 1.6;">
+    <p style="max-width: 580px; margin: 0 auto 32px; color: var(--muted); font-size: 16px; line-height: 1.6;">
       Brief, sketch on a napkin, or a full specification — send what you have. Initial scoping calls are free.
     </p>
-    <div class="reveal">
+    <div>
       <a href="contact.html" class="btn btn-primary">
         Request a quote
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
@@ -1471,4 +1486,3 @@
 <script src="script.js"></script>
 </body>
 </html>
-
