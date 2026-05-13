@@ -574,3 +574,56 @@ button { font: inherit; border: none; background: none; color: inherit; cursor: 
   animation: fadeUp 1s var(--ease) 0.6s forwards;
 }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ============================================================
+   Floating quick-contact (WhatsApp + Call) — every page
+   ============================================================ */
+.float-contact {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+}
+.fc-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px 12px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  color: #fff;
+  box-shadow: 0 10px 28px -8px rgba(15, 20, 25, 0.35), 0 4px 10px -4px rgba(15, 20, 25, 0.2);
+  transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.2, 0.8, 0.2, 1),
+              filter 0.25s ease;
+  will-change: transform;
+}
+.fc-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 14px 32px -8px rgba(15, 20, 25, 0.4), 0 6px 14px -4px rgba(15, 20, 25, 0.25);
+}
+.fc-btn svg { flex-shrink: 0; display: block; }
+.fc-wa { background: #25D366; }
+.fc-call { background: #1F3A5F; }
+.fc-label {
+  white-space: nowrap;
+  max-width: 240px;
+  overflow: hidden;
+}
+@media (max-width: 640px) {
+  .float-contact { right: 14px; bottom: 14px; gap: 8px; }
+  .fc-btn { padding: 12px; border-radius: 50%; width: 50px; height: 50px; justify-content: center; }
+  .fc-label { display: none; }
+}
+@media print {
+  .float-contact { display: none; }
+}
