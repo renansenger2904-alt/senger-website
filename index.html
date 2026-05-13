@@ -293,13 +293,19 @@
       </p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:36px; opacity:0; animation: fadeUp 1s var(--ease) 0.8s forwards;">
         <a href="contact.html" class="btn btn-primary">
-          Discuss your project
+          Send a brief · get a proposal
           <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
             <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
           </svg>
         </a>
         <a href="projects.html" class="btn btn-ghost">View capabilities</a>
       </div>
+
+      <ul class="hero-trust" style="opacity:0; animation: fadeUp 1s var(--ease) 1s forwards;">
+        <li><span class="ht-tick">✓</span> Free 30-min scoping call</li>
+        <li><span class="ht-tick">✓</span> Written proposal in 48 hours</li>
+        <li><span class="ht-tick">✓</span> NDA on request</li>
+      </ul>
     </div>
 
     <div class="hero-image-frame" style="position:relative; aspect-ratio: 4/5; overflow:hidden; border-radius: 4px; opacity:0; animation: imageReveal 1.4s var(--ease) 0.4s forwards;">
@@ -311,6 +317,26 @@
   @keyframes imageReveal {
     from { opacity: 0; transform: scale(1.04) translateY(30px); }
     to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .hero-trust {
+    list-style: none;
+    padding: 0;
+    margin: 28px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 22px;
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+  .hero-trust li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .ht-tick {
+    color: var(--accent);
+    font-weight: 600;
   }
 </style>
 
@@ -594,17 +620,25 @@
         <img src="images/renders-teaser.jpg" alt="Modern commercial building exterior render — Senger Engineering" style="width:100%; height:100%; object-fit:cover;" />
       </div>
       <div class="reveal">
-        <div class="eyebrow" style="margin-bottom:20px;"><span class="num">04</span>3D Visualisation</div>
+        <div class="eyebrow" style="margin-bottom:20px;"><span class="num">04</span>3D Visualisation · Available now</div>
         <h2 class="section-title" style="margin-bottom:20px;">See it before <span class="it">you build it.</span></h2>
-        <p class="section-sub" style="margin-bottom:36px;">
-          Photoreal 3D renders produced from native engineering models — for client approvals, design validation, marketing and proposal support. A drawing tells you what; a render shows you why.
+        <p class="section-sub" style="margin-bottom:24px;">
+          Photoreal 3D renders produced from native engineering models — for client approvals, design validation, marketing, tender submissions and proposal support. A drawing tells you what; a render shows you why.
         </p>
-        <a href="renders.html" class="btn btn-primary">
-          View our renders
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
-          </svg>
-        </a>
+        <ul class="render-bullets">
+          <li><span class="rb-dot">·</span> Fixed-price packages from a single hero shot to full marketing sets</li>
+          <li><span class="rb-dot">·</span> Typical turnaround 5–10 business days</li>
+          <li><span class="rb-dot">·</span> Send a model, sketch or photo — we&rsquo;ll quote within 24 hours</li>
+        </ul>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="renders.html" class="btn btn-primary">
+            View renders &amp; pricing
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
+            </svg>
+          </a>
+          <a href="contact.html" class="btn btn-ghost">Request a render quote</a>
+        </div>
       </div>
     </div>
   </div>
@@ -630,6 +664,26 @@
   .feature-image:hover .ph { transform: scale(1.03); }
   @media (max-width: 880px) {
     .feature-block { grid-template-columns: 1fr; }
+  }
+  .render-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .render-bullets li {
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-2, var(--ink));
+    display: flex;
+    gap: 10px;
+  }
+  .rb-dot {
+    color: var(--accent);
+    font-weight: 700;
+    flex-shrink: 0;
   }
 </style>
 
@@ -764,12 +818,12 @@
     <h2 class="reveal" style="font-family: var(--serif); font-size: clamp(40px, 6vw, 80px); line-height: 1; letter-spacing: -0.03em; font-weight: 400; max-width: 1000px; margin: 0 auto 24px;">
       Bring us your <span style="font-style:italic; color:var(--accent);">next project.</span>
     </h2>
-    <p class="reveal" style="font-size: 17px; color: var(--muted); max-width: 580px; margin: 0 auto 40px; line-height: 1.6;">
-      Brief, sketch on a napkin, or a full specification — send what you have. Initial scoping calls are free, and a written proposal is typically returned within forty-eight hours.
+    <p class="reveal" style="font-size: 17px; color: var(--muted); max-width: 620px; margin: 0 auto 40px; line-height: 1.6;">
+      Brief, sketch on a napkin, full spec, or a folder of drawings — send what you have. Free scoping call, written fixed-scope proposal back within 48 hours, NDA on request.
     </p>
     <div class="reveal" style="display:inline-flex; gap:14px; flex-wrap:wrap; justify-content:center;">
       <a href="contact.html" class="btn btn-primary">
-        Discuss your project
+        Send a brief now
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
           <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
