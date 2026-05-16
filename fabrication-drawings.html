@@ -34,17 +34,27 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "serviceType": "Fabrication Drawings & Shop Drawings",
-  "provider": {
-    "@type": "ProfessionalService",
-    "name": "Senger Engineering",
-    "address": { "@type": "PostalAddress", "addressLocality": "Perth", "addressRegion": "WA", "addressCountry": "AU" },
-    "telephone": "+61413886800",
-    "email": "info@senger.com.au",
-    "url": "https://senger.com.au"
-  },
-  "areaServed": { "@type": "State", "name": "Western Australia" },
-  "description": "Manufacturing-ready fabrication and shop drawings produced from native 3D models, issued to AS 1100."
+  "name": "Fabrication and shop drawings",
+  "serviceType": "Fabrication and shop drawings",
+  "url": "https://senger.com.au/fabrication-drawings.html",
+  "provider": { "@type": "ProfessionalService", "name": "Senger Engineering", "url": "https://senger.com.au/" },
+  "areaServed": [
+    { "@type": "AdministrativeArea", "name": "Western Australia" },
+    { "@type": "Country", "name": "Australia" }
+  ],
+  "description": "Manufacturing-ready fabrication and shop drawings to AS 1100, with weld schedules, bolt callouts, BOMs and finishing notes ready for direct release to the fabricator.",
+  "audience": { "@type": "BusinessAudience", "audienceType": "Fabricators, industrial and mining clients" },
+  "termsOfService": "Fixed-scope written proposal within 48 hours of scoping call. NDA on request."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://senger.com.au/" },
+    { "@type": "ListItem", "position": 2, "name": "Fabrication drawings", "item": "https://senger.com.au/fabrication-drawings.html" }
+  ]
 }
 </script>
 
@@ -57,14 +67,6 @@
 </script>
 </head>
 <body class="service-page-fix">
-
-<div class="topbar">
-  <a href="mailto:info@senger.com.au">info@senger.com.au</a>
-  <span class="sep">|</span>
-  <a href="tel:+61413886800">+61 0413 886 800</a>
-  <span class="sep">|</span>
-  <span>Perth, WA, Australia</span>
-</div>
 
 <nav class="nav" id="nav">
   <a href="../index.html" class="logo" aria-label="Senger Engineering home">
