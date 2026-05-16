@@ -1,4 +1,76 @@
+# Senger Engineering — robots.txt
+# Mechanical engineering consultancy, Perth, Western Australia
+# https://senger.com.au
+
+# Default: allow all well-behaved crawlers full access
 User-agent: *
+Allow: /
+
+# --- AI / LLM crawlers (explicit allow) ---
+# OpenAI (ChatGPT, search index, training)
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+# Google AI / Gemini / Vertex (controlled via Google-Extended)
+User-agent: Google-Extended
+Allow: /
+
+# Apple Intelligence
+User-agent: Applebot-Extended
+Allow: /
+
+# Common Crawl (training corpus used by many LLMs)
+User-agent: CCBot
+Allow: /
+
+# Meta / Facebook AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+# Bytedance / DouBao
+User-agent: Bytespider
+Allow: /
+
+# Mistral
+User-agent: MistralAI-User
+Allow: /
+
+# Cohere
+User-agent: cohere-ai
+Allow: /
+
+# Diffbot (used by Bing/AI products)
+User-agent: Diffbot
+Allow: /
+
+# DuckDuckGo AI
+User-agent: DuckAssistBot
 Allow: /
 
 Sitemap: https://senger.com.au/sitemap.xml
