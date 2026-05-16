@@ -23,21 +23,70 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "ProfessionalService",
-  "name": "Senger Engineering",
-  "image": "https://senger.com.au/images/logo-stacked-light.png",
-  "@id": "https://senger.com.au/",
-  "url": "https://senger.com.au/",
-  "telephone": "+61413886800",
-  "email": "info@senger.com.au",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Perth",
-    "addressRegion": "WA",
-    "addressCountry": "AU"
-  },
-  "areaServed": { "@type": "State", "name": "Western Australia" },
-  "description": "Mechanical engineering consultancy delivering first-principles design, FEA verification and manufacture-ready documentation."
+  "@graph": [
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://senger.com.au/#organization",
+      "name": "Senger Engineering",
+      "url": "https://senger.com.au/",
+      "logo": "https://senger.com.au/images/logo-horizontal-transparent.png",
+      "image": "https://senger.com.au/images/logo-horizontal-transparent.png",
+      "description": "Mechanical engineering consultancy based in Perth, Western Australia. First-principles mechanical design, FEA verification, fabrication and shop drawings, product development and photoreal 3D visualisation for industrial, mining and architectural clients.",
+      "telephone": "+61413886800",
+      "email": "info@senger.com.au",
+      "priceRange": "$$-$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Perth",
+        "addressRegion": "WA",
+        "addressCountry": "AU"
+      },
+      "areaServed": [
+        { "@type": "AdministrativeArea", "name": "Western Australia" },
+        { "@type": "Country", "name": "Australia" }
+      ],
+      "knowsAbout": [
+        "Mechanical engineering",
+        "Finite Element Analysis",
+        "Fabrication drawings",
+        "Shop drawings",
+        "Product development",
+        "Design for Manufacture",
+        "SOLIDWORKS",
+        "Structural steel design",
+        "Mining equipment engineering",
+        "Modular and transportable systems",
+        "AS 4100",
+        "AS 3990",
+        "AS/NZS 1170",
+        "AS 1100"
+      ],
+      "identifier": {
+        "@type": "PropertyValue",
+        "propertyID": "ABN",
+        "value": "12 326 601 680"
+      },
+      "slogan": "Mechanical engineering, technical documentation and shop drawings for the people who build.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Engineering services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mechanical engineering", "url": "https://senger.com.au/mechanical-engineering.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fabrication and shop drawings", "url": "https://senger.com.au/fabrication-drawings.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product development", "url": "https://senger.com.au/product-development.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D renders and visualisation", "url": "https://senger.com.au/renders.html" } }
+        ]
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://senger.com.au/#website",
+      "url": "https://senger.com.au/",
+      "name": "Senger Engineering",
+      "publisher": { "@id": "https://senger.com.au/#organization" },
+      "inLanguage": "en-AU"
+    }
+  ]
 }
 </script>
 
@@ -181,14 +230,6 @@
 </style>
 </head>
 <body>
-<div class="topbar">
-  <a href="mailto:info@senger.com.au">info@senger.com.au</a>
-  <span class="sep">|</span>
-  <a href="tel:+61413886800">+61 0413 886 800</a>
-  <span class="sep">|</span>
-  <span>Perth, WA, Australia</span>
-</div>
-
 <!-- =============== NAV WITH DROPDOWN =============== -->
 <nav class="nav" id="nav">
   <a href="index.html" class="logo" aria-label="Senger Engineering home">
