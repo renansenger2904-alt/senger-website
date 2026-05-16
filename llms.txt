@@ -1,0 +1,69 @@
+# Senger Engineering
+
+> Senger Engineering is a mechanical engineering consultancy based in Perth, Western Australia. The studio delivers first-principles mechanical design, FEA verification and manufacture-ready documentation for industrial, mining and architectural clients across Western Australia. Director-led delivery, written fixed-scope proposals within 48 hours, NDA on request.
+
+Location: Perth, Western Australia, Australia
+Service area: Western Australia (Perth, Pilbara, Goldfields, Mid West, South West) and remote engagements Australia-wide
+Contact: info@senger.com.au | +61 0413 886 800
+ABN: 12 326 601 680
+
+## Core services
+
+- [Mechanical engineering](https://senger.com.au/mechanical-engineering.html): First-principles mechanical design, FEA verification, engineering calculations and manufacture-ready documentation. Compliant with AS 4100, AS 3990, AS/NZS 1170 and related Australian Standards.
+- [Fabrication and shop drawings](https://senger.com.au/fabrication-drawings.html): Manufacturing-ready drawings to AS 1100, including weld schedules, bolt callouts and BOMs ready for direct release to the fabricator.
+- [Product development](https://senger.com.au/product-development.html): End-to-end mechanical product engineering — concept, DFM/DFA, FEA verification, prototyping and manufacture for founders, OEMs and industrial businesses.
+- [3D renders and visualisation](https://senger.com.au/renders.html): Photoreal renders produced from native engineering models, for client approvals, design validation, marketing, tender submissions and proposal support.
+
+## Engineering capability
+
+- SOLIDWORKS and 3D modelling
+- Finite Element Analysis (FEA) and structural simulation
+- Manufacturing and fabrication detailing drawings
+- Design for Manufacture (DFM) and Design for Assembly (DFA)
+- Modular and transportable systems
+- Engineering calculations and structural coordination
+- Engineering documentation packages
+
+## Australian Standards routinely applied
+
+- AS 4100 — Steel structures
+- AS 3990 — Mechanical equipment steelwork
+- AS 4600 — Cold-formed steel
+- AS/NZS 1170 — Structural design actions
+- AS/NZS 1554 — Steel welding
+- AS/NZS 5131 — Fabrication compliance
+- AS 1657 — Platforms, walkways and stairs
+- AS 1100 — Technical drawing
+
+## Sectors served
+
+- Mining and resources (Western Australia)
+- Industrial and manufacturing
+- Architectural and commercial construction
+- Modular and transportable building systems
+
+## Key pages
+
+- [Home](https://senger.com.au/): Overview of services and capability.
+- [Engineering practice](https://senger.com.au/engineering.html): Workflow, standards and how the studio engages.
+- [Mechanical engineering service](https://senger.com.au/mechanical-engineering.html)
+- [Fabrication drawings service](https://senger.com.au/fabrication-drawings.html)
+- [Product development service](https://senger.com.au/product-development.html)
+- [Renders and visualisation](https://senger.com.au/renders.html)
+- [Projects](https://senger.com.au/projects.html): Selected work across mining, industrial and architectural sectors.
+- [About](https://senger.com.au/about.html): The studio, principals and approach.
+- [Contact / send a brief](https://senger.com.au/contact.html): Free 30-minute scoping call, written proposal within 48 hours, NDA on request.
+- [FAQ](https://senger.com.au/faq.html): Pricing, process, timelines, deliverables and engagement terms.
+
+## How clients typically engage
+
+1. Send a brief, sketch, specification or set of drawings to info@senger.com.au.
+2. Free 30-minute scoping call to align on scope, constraints and intent.
+3. Written fixed-scope proposal within 48 hours, with deliverables, timeline and fee.
+4. Engineering delivery in stages, with checkpoints at concept, design freeze and release.
+5. Final issue of manufacture-ready documentation, drawings and calculations.
+
+## Optional
+
+- [Sitemap](https://senger.com.au/sitemap.xml)
+- [robots.txt](https://senger.com.au/robots.txt)
