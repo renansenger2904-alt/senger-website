@@ -158,6 +158,7 @@ button { font: inherit; border: none; background: none; color: inherit; cursor: 
 
 /* mobile menu */
 .mobile-menu {
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 90;
@@ -165,10 +166,12 @@ button { font: inherit; border: none; background: none; color: inherit; cursor: 
   padding: 100px var(--gutter) 32px;
   transform: translateY(-100%);
   transition: transform 0.55s var(--ease);
-  display: flex;
   flex-direction: column;
   justify-content: space-between;
   pointer-events: none;
+}
+@media (max-width: 980px) {
+  .mobile-menu { display: flex; }
 }
 .mobile-menu.open { transform: translateY(0); pointer-events: auto; }
 .mobile-menu nav { display: flex; flex-direction: column; }
