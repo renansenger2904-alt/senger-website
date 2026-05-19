@@ -353,33 +353,26 @@
     <div class="form-wrap reveal">
       <!--
         ============================================================
-        FORM ENDPOINT — FormSubmit (free, no signup required)
+        FORM ENDPOINT — Web3Forms
         ------------------------------------------------------------
-        On the FIRST submission, FormSubmit emails info@senger.com.au
-        with a one-click "Activate" link. Click that link once and
-        the form is live. Future submissions land directly in inbox
-        with attachments.
-
-        For a permanent endpoint (recommended after activation),
-        FormSubmit will give you a hashed URL — swap the action
-        below to that hash to hide your email from bots.
-        Example: action="https://formsubmit.co/abc123def456"
+        Access key is a public client-side ID. Submissions are
+        delivered to the email registered on web3forms.com
+        (info@senger.com.au). Free tier: 250 submissions/month.
         ============================================================
       -->
       <form id="proposalForm"
-            action="https://formsubmit.co/info@senger.com.au"
+            action="https://api.web3forms.com/submit"
             method="POST"
             enctype="multipart/form-data"
             novalidate>
 
-        <!-- FormSubmit configuration (hidden fields) -->
-        <input type="hidden" name="_subject" value="New project brief — senger.com.au" />
-        <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="false" />
-        <input type="hidden" name="_next" value="https://senger.com.au/thank-you?sent=1" />
-        <input type="hidden" name="_autoresponse" value="Thanks for your brief — we've received it and will respond within one business day. — Senger Engineering" />
-        <!-- Honeypot anti-spam (sufficient on its own — no captcha needed) -->
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
+        <!-- Web3Forms configuration (hidden fields) -->
+        <input type="hidden" name="access_key" value="1500e502-6db2-4505-9fb9-62f53eb9fccb" />
+        <input type="hidden" name="subject" value="New project brief — senger.com.au" />
+        <input type="hidden" name="from_name" value="Senger Engineering website" />
+        <input type="hidden" name="redirect" value="https://senger.com.au/thank-you?sent=1" />
+        <!-- Honeypot anti-spam (Web3Forms blocks submission if 'botcheck' is checked) -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off" />
 
         <div class="form-grid">
           <label class="field">
@@ -1046,9 +1039,9 @@
 
       clearStatus();
 
-      // Honeypot — silently drop bots
-      var honey = form.elements['_honey'];
-      if (honey && honey.value) return;
+      // Honeypot — Web3Forms blocks server-side too, but cheap to short-circuit here
+      var honey = form.elements['botcheck'];
+      if (honey && honey.checked) return;
 
       // Manual required-field check (form has novalidate)
       var requireds = form.querySelectorAll('[required]');
@@ -1067,11 +1060,11 @@
       setBusy(true);
 
       var fd = new FormData(form);
-      // FormSubmit AJAX endpoint — returns JSON, lets us detect real success/failure
-      var endpoint = form.action.replace(/formsubmit\.co\/(?!ajax\/)/, 'formsubmit.co/ajax/');
+      // Web3Forms accepts FormData POST; with Accept: application/json it
+      // returns { success: true/false, message: "..." } instead of redirecting.
+      var endpoint = form.action;
 
-      // 20s safety timeout — FormSubmit has been returning 522 with a
-      // ~20s hang; we want to give up sooner and show the user a fallback.
+      // 18s safety timeout — if the endpoint stalls, fall back to mailto
       var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
       var timeoutId = setTimeout(function () { if (ctrl) ctrl.abort(); }, 18000);
 
@@ -1087,27 +1080,16 @@
                          .catch(function ()   { return { ok: res.ok, status: res.status, body: {} }; });
       })
       .then(function (r) {
-        // FormSubmit returns { success: "true", message: "..." } on success.
-        // It returns success: false with an activation message if the email
-        // address has not yet been confirmed.
+        // Web3Forms returns { success: true, message: "Email sent successfully", data: {...} }
+        // on success, or { success: false, message: "..." } on validation/quota failure.
         var bodyOk = r.body && (r.body.success === true || r.body.success === 'true');
         if (r.ok && bodyOk) {
           fireConversion();
           window.location.href = '/thank-you?sent=1';
           return;
         }
-        // Activation-needed case — FormSubmit returns success:false + message
         var msg = (r.body && r.body.message) ? String(r.body.message) : '';
-        if (/activat/i.test(msg) || /confirm/i.test(msg)) {
-          showError(
-            'The form endpoint needs one-time activation. We have been notified — please ' +
-            '<a href="' + mailtoFallback() + '" style="color:#7a1f17;text-decoration:underline;font-weight:600;">email your brief directly</a> ' +
-            'so we can respond today.'
-          );
-        } else {
-          throw new Error('HTTP ' + r.status + (msg ? ' — ' + msg : ''));
-        }
-        setBusy(false);
+        throw new Error('HTTP ' + r.status + (msg ? ' — ' + msg : ''));
       })
       .catch(function (err) {
         clearTimeout(timeoutId);
