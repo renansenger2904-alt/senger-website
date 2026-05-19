@@ -9,9 +9,9 @@
 <meta name="description" content="Send your brief, drawings or sketches to Senger Engineering. Free 30-minute scoping call. Written proposal returned within 48 hours. Perth, Western Australia." />
 <meta property="og:title" content="Contact | Senger Engineering" />
 <meta property="og:description" content="Send your brief, drawings or sketches to Senger Engineering. Free 30-minute scoping call. Written proposal returned within 48 hours. Perth, Western Australia." />
-<meta property="og:url" content="https://senger.com.au/contact.html" />
+<meta property="og:url" content="https://senger.com.au/contact" />
 <meta property="og:type" content="website" />
-<link rel="canonical" href="https://senger.com.au/contact.html" />
+<link rel="canonical" href="https://senger.com.au/contact" />
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
 <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png" />
 <link rel="apple-touch-icon" href="images/favicon-192.png" />
@@ -375,10 +375,10 @@
         <!-- FormSubmit configuration (hidden fields) -->
         <input type="hidden" name="_subject" value="New project brief — senger.com.au" />
         <input type="hidden" name="_template" value="table" />
-        <input type="hidden" name="_captcha" value="true" />
-        <input type="hidden" name="_next" value="https://senger.com.au/contact.html?sent=1" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_next" value="https://senger.com.au/thank-you?sent=1" />
         <input type="hidden" name="_autoresponse" value="Thanks for your brief — we've received it and will respond within one business day. — Senger Engineering" />
-        <!-- Honeypot anti-spam -->
+        <!-- Honeypot anti-spam (sufficient on its own — no captcha needed) -->
         <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
 
         <div class="form-grid">
@@ -896,17 +896,39 @@
 <script src="script.js"></script>
 <script>
   // ============================================================
-  // PROPOSAL FORM — file list preview + drag/drop + success state
+  // PROPOSAL FORM
+  //   - file list preview + drag/drop
+  //   - fetch()-based submit with graceful failure
+  //   - mailto: fallback so leads aren't lost if endpoint is down
+  //   - Google Ads conversion fires ONLY on confirmed success
   // ============================================================
   (function () {
-    const form = document.getElementById('proposalForm');
+    var form = document.getElementById('proposalForm');
     if (!form) return;
 
-    const fileInput = document.getElementById('fileInput');
-    const fileList = document.getElementById('fileList');
-    const fileDrop = document.getElementById('fileDrop');
-    const success = document.getElementById('formSuccess');
+    var fileInput  = document.getElementById('fileInput');
+    var fileList   = document.getElementById('fileList');
+    var fileDrop   = document.getElementById('fileDrop');
+    var success    = document.getElementById('formSuccess');
+    var submitBtn  = form.querySelector('button[type="submit"]');
+    var submitLbl  = submitBtn ? submitBtn.querySelector('span') : null;
+    var defaultLbl = submitLbl ? submitLbl.textContent : 'Send project brief';
 
+    // --- Google Ads conversion ID (one place to update) -----------
+    // NOTE: if you have a specific conversion *label* in Ads, change
+    // 'AW-18153072870' to 'AW-18153072870/<label>'. Pageview-only
+    // conversion actions should be replaced with a "Form submission"
+    // conversion that listens for this event.
+    var ADS_CONVERSION_SEND_TO = 'AW-18153072870';
+
+    function fireConversion() {
+      try { if (typeof gtag === 'function') gtag('event', 'conversion', { 'send_to': ADS_CONVERSION_SEND_TO }); } catch (e) {}
+      try { if (typeof gtag === 'function') gtag('event', 'generate_lead'); } catch (e) {}
+    }
+
+    // ============================================================
+    // File preview & drag-drop
+    // ============================================================
     function humanSize(bytes) {
       if (bytes < 1024) return bytes + ' B';
       if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
@@ -914,20 +936,21 @@
     }
 
     function renderFiles() {
+      if (!fileList || !fileInput) return;
       fileList.innerHTML = '';
-      const files = fileInput.files;
+      var files = fileInput.files;
       if (!files || files.length === 0) return;
-      let total = 0;
-      for (let i = 0; i < files.length; i++) {
-        const f = files[i];
+      var total = 0;
+      for (var i = 0; i < files.length; i++) {
+        var f = files[i];
         total += f.size;
-        const row = document.createElement('div');
+        var row = document.createElement('div');
         row.className = 'fl-item';
         row.innerHTML = '<span class="fl-name">' + f.name.replace(/[<>&]/g, '') + '</span><span class="fl-size">' + humanSize(f.size) + '</span>';
         fileList.appendChild(row);
       }
       if (total > 25 * 1024 * 1024) {
-        const warn = document.createElement('div');
+        var warn = document.createElement('div');
         warn.className = 'fl-item';
         warn.style.borderColor = '#c0392b';
         warn.style.color = '#c0392b';
@@ -936,29 +959,179 @@
       }
     }
 
-    fileInput.addEventListener('change', renderFiles);
+    if (fileInput) fileInput.addEventListener('change', renderFiles);
 
-    ['dragenter', 'dragover'].forEach(ev => {
-      fileDrop.addEventListener(ev, e => { e.preventDefault(); fileDrop.classList.add('dragover'); });
-    });
-    ['dragleave', 'drop'].forEach(ev => {
-      fileDrop.addEventListener(ev, e => { e.preventDefault(); fileDrop.classList.remove('dragover'); });
-    });
-    fileDrop.addEventListener('drop', e => {
-      const dt = e.dataTransfer;
-      if (dt && dt.files && dt.files.length) {
-        fileInput.files = dt.files;
-        renderFiles();
+    if (fileDrop) {
+      ['dragenter', 'dragover'].forEach(function (ev) {
+        fileDrop.addEventListener(ev, function (e) { e.preventDefault(); fileDrop.classList.add('dragover'); });
+      });
+      ['dragleave', 'drop'].forEach(function (ev) {
+        fileDrop.addEventListener(ev, function (e) { e.preventDefault(); fileDrop.classList.remove('dragover'); });
+      });
+      fileDrop.addEventListener('drop', function (e) {
+        var dt = e.dataTransfer;
+        if (dt && dt.files && dt.files.length && fileInput) {
+          fileInput.files = dt.files;
+          renderFiles();
+        }
+      });
+    }
+
+    // ============================================================
+    // Inline status / error rendering
+    // ============================================================
+    function getStatusBox() {
+      var box = document.getElementById('formStatus');
+      if (!box) {
+        box = document.createElement('div');
+        box.id = 'formStatus';
+        box.setAttribute('role', 'status');
+        box.setAttribute('aria-live', 'polite');
+        box.style.cssText = 'margin-top:16px;padding:14px 16px;border-radius:4px;font-size:14px;line-height:1.55;';
+        form.appendChild(box);
       }
+      return box;
+    }
+
+    function showError(messageHtml) {
+      var box = getStatusBox();
+      box.style.background = '#fdecea';
+      box.style.border = '1px solid #f5b5b0';
+      box.style.color = '#7a1f17';
+      box.innerHTML = messageHtml;
+    }
+
+    function clearStatus() {
+      var box = document.getElementById('formStatus');
+      if (box) box.remove();
+    }
+
+    function mailtoFallback() {
+      // Build a mailto: that pre-fills everything the user typed,
+      // so a dead endpoint never costs us the lead.
+      var get = function (n) { var el = form.elements[n]; return el ? (el.value || '') : ''; };
+      var lines = [
+        'Name: '     + get('Name'),
+        'Company: '  + get('Company'),
+        'Email: '    + get('Email'),
+        'Phone: '    + get('Phone'),
+        'Service: '  + get('Service'),
+        'Timeline: ' + get('Timeline'),
+        'Budget: '   + get('Budget'),
+        'Source: '   + get('Source'),
+        'NDA: '      + (form.elements['NDA'] && form.elements['NDA'].checked ? 'Yes' : 'No'),
+        '',
+        '--- Proposal ---',
+        get('Proposal')
+      ];
+      var subject = 'Project brief — ' + (get('Name') || 'website enquiry');
+      return 'mailto:info@senger.com.au'
+           + '?subject=' + encodeURIComponent(subject)
+           + '&body='    + encodeURIComponent(lines.join('\n'));
+    }
+
+    function setBusy(busy) {
+      if (!submitBtn) return;
+      submitBtn.disabled = busy;
+      if (submitLbl) submitLbl.textContent = busy ? 'Sending…' : defaultLbl;
+      form.dataset.submitting = busy ? '1' : '';
+    }
+
+    // ============================================================
+    // Submit handler
+    // ============================================================
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.dataset.submitting === '1') return;
+
+      clearStatus();
+
+      // Honeypot — silently drop bots
+      var honey = form.elements['_honey'];
+      if (honey && honey.value) return;
+
+      // Manual required-field check (form has novalidate)
+      var requireds = form.querySelectorAll('[required]');
+      for (var i = 0; i < requireds.length; i++) {
+        var fld = requireds[i];
+        var val = (fld.value || '').trim();
+        if (!val) {
+          fld.focus();
+          var lbl = fld.closest('label');
+          var labelText = lbl ? (lbl.querySelector('.field-label') ? lbl.querySelector('.field-label').textContent.replace('*', '').trim() : fld.name) : fld.name;
+          showError('Please fill in <strong>' + labelText + '</strong> before sending.');
+          return;
+        }
+      }
+
+      setBusy(true);
+
+      var fd = new FormData(form);
+      // FormSubmit AJAX endpoint — returns JSON, lets us detect real success/failure
+      var endpoint = form.action.replace(/formsubmit\.co\/(?!ajax\/)/, 'formsubmit.co/ajax/');
+
+      // 20s safety timeout — FormSubmit has been returning 522 with a
+      // ~20s hang; we want to give up sooner and show the user a fallback.
+      var ctrl = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+      var timeoutId = setTimeout(function () { if (ctrl) ctrl.abort(); }, 18000);
+
+      fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: fd,
+        signal: ctrl ? ctrl.signal : undefined
+      })
+      .then(function (res) {
+        clearTimeout(timeoutId);
+        return res.json().then(function (j) { return { ok: res.ok, status: res.status, body: j }; })
+                         .catch(function ()   { return { ok: res.ok, status: res.status, body: {} }; });
+      })
+      .then(function (r) {
+        // FormSubmit returns { success: "true", message: "..." } on success.
+        // It returns success: false with an activation message if the email
+        // address has not yet been confirmed.
+        var bodyOk = r.body && (r.body.success === true || r.body.success === 'true');
+        if (r.ok && bodyOk) {
+          fireConversion();
+          window.location.href = '/thank-you?sent=1';
+          return;
+        }
+        // Activation-needed case — FormSubmit returns success:false + message
+        var msg = (r.body && r.body.message) ? String(r.body.message) : '';
+        if (/activat/i.test(msg) || /confirm/i.test(msg)) {
+          showError(
+            'The form endpoint needs one-time activation. We have been notified — please ' +
+            '<a href="' + mailtoFallback() + '" style="color:#7a1f17;text-decoration:underline;font-weight:600;">email your brief directly</a> ' +
+            'so we can respond today.'
+          );
+        } else {
+          throw new Error('HTTP ' + r.status + (msg ? ' — ' + msg : ''));
+        }
+        setBusy(false);
+      })
+      .catch(function (err) {
+        clearTimeout(timeoutId);
+        // Network / 5xx / abort — degrade gracefully so the lead isn't lost
+        showError(
+          'We couldn’t reach our form server just now. ' +
+          '<a href="' + mailtoFallback() + '" style="color:#7a1f17;text-decoration:underline;font-weight:600;">' +
+          'Click here to email your brief directly</a> — your details are pre-filled. ' +
+          'Or call <a href="tel:+61413886800" style="color:#7a1f17;text-decoration:underline;font-weight:600;">+61 0413 886 800</a>.'
+        );
+        setBusy(false);
+      });
     });
 
-    // Show success panel if redirected back with ?sent=1
+    // ============================================================
+    // ?sent=1 handling — kept as a safety net.
+    // The new flow redirects to /thank-you, but if a legacy submission
+    // (or someone bookmarking the link) hits /contact?sent=1, still
+    // show the success panel and fire the conversion exactly once.
+    // ============================================================
     if (window.location.search.indexOf('sent=1') !== -1 && success) {
       form.style.display = 'none';
       success.hidden = false;
-      try { gtag('event', 'conversion', { 'send_to': 'AW-18153072870' }); } catch (e) {}
-      try { gtag('event', 'generate_lead'); } catch (e) {}
-      // Clean the URL so a refresh doesn't keep the state
+      fireConversion();
       history.replaceState({}, '', window.location.pathname);
     }
   })();
