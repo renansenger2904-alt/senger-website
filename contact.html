@@ -367,7 +367,7 @@
             novalidate>
 
         <!-- Web3Forms configuration (hidden fields) -->
-        <input type="hidden" name="access_key" value="1500e502-6db2-4505-9fb9-62f53eb9fccb" />
+        <input type="hidden" name="access_key" value="ed96b60a-1c47-4cd2-b4b9-b69295c98af2" />
         <input type="hidden" name="subject" value="New project brief — senger.com.au" />
         <input type="hidden" name="from_name" value="Senger Engineering website" />
         <input type="hidden" name="redirect" value="https://senger.com.au/thank-you?sent=1" />
@@ -381,74 +381,68 @@
           </label>
 
           <label class="field">
-            <span class="field-label">Company</span>
-            <input type="text" name="Company" autocomplete="organization" />
+            <span class="field-label">Company name <span class="req">*</span></span>
+            <input type="text" name="Company" required autocomplete="organization" />
           </label>
 
           <label class="field">
-            <span class="field-label">Email <span class="req">*</span></span>
+            <span class="field-label">Work email <span class="req">*</span></span>
+            <span class="field-help">Please use your company email — personal addresses (gmail, hotmail, yahoo etc.) cannot be accepted for project enquiries.</span>
             <input type="email" name="Email" required autocomplete="email" />
           </label>
 
           <label class="field">
-            <span class="field-label">Phone</span>
-            <input type="tel" name="Phone" autocomplete="tel" />
+            <span class="field-label">Phone <span class="req">*</span></span>
+            <input type="tel" name="Phone" required autocomplete="tel" />
           </label>
 
           <label class="field">
-            <span class="field-label">Service needed <span class="req">*</span></span>
-            <select name="Service" required>
+            <span class="field-label">Project type <span class="req">*</span></span>
+            <select name="ProjectType" required>
               <option value="">— Select —</option>
               <option>Mechanical engineering</option>
-              <option>Fabrication &amp; shop drawings</option>
-              <option>Product development</option>
-              <option>FEA &amp; engineering calculations</option>
-              <option>3D renders &amp; visualisation</option>
-              <option>Not sure — please advise</option>
-            </select>
-          </label>
-
-          <label class="field">
-            <span class="field-label">Timeline</span>
-            <select name="Timeline">
-              <option value="">— Select —</option>
-              <option>Urgent (within 2 weeks)</option>
-              <option>Soon (2–6 weeks)</option>
-              <option>Planning (6–12 weeks)</option>
-              <option>Exploratory (no fixed date)</option>
-            </select>
-          </label>
-
-          <label class="field">
-            <span class="field-label">Indicative budget</span>
-            <select name="Budget">
-              <option value="">— Select (optional) —</option>
-              <option>Under $5k</option>
-              <option>$5k – $15k</option>
-              <option>$15k – $50k</option>
-              <option>$50k+</option>
-              <option>Need a recommendation</option>
-            </select>
-          </label>
-
-          <label class="field">
-            <span class="field-label">How did you find us?</span>
-            <select name="Source">
-              <option value="">— Select (optional) —</option>
-              <option>Google search</option>
-              <option>LinkedIn</option>
-              <option>Referral</option>
-              <option>Returning client</option>
+              <option>Structural design</option>
+              <option>Steel detailing / shop drawings</option>
+              <option>Mining / fixed plant</option>
               <option>Other</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Project location <span class="req">*</span></span>
+            <span class="field-help">Town or region the project is in (e.g. Karratha, Perth metro, Kalgoorlie).</span>
+            <input type="text" name="ProjectLocation" required autocomplete="address-level2" />
+          </label>
+
+          <label class="field">
+            <span class="field-label">Project budget range <span class="req">*</span></span>
+            <select name="Budget" required>
+              <option value="">— Select —</option>
+              <option>Under $5,000</option>
+              <option>$5,000 – $25,000</option>
+              <option>$25,000 – $100,000</option>
+              <option>$100,000+</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field-label">Timeline <span class="req">*</span></span>
+            <select name="Timeline" required>
+              <option value="">— Select —</option>
+              <option>Urgent (this month)</option>
+              <option>1–3 months</option>
+              <option>3–6 months</option>
+              <option>Planning / future</option>
             </select>
           </label>
         </div>
 
         <label class="field field-full">
-          <span class="field-label">Write your proposal / project brief <span class="req">*</span></span>
-          <span class="field-help">Describe what you need engineered, drawn or rendered. Loads, dimensions, materials, deliverables, deadlines — whatever you have. Don&rsquo;t worry about format; one paragraph is fine.</span>
-          <textarea name="Proposal" rows="10" required
-            placeholder="Example: We need fabrication drawings for a 6×3m steel mezzanine over an existing workshop floor. Self-supporting on four columns, design loads to AS/NZS 1170, drawings to AS 1100 for the fabricator. Concept sketch attached. Need by mid-July."></textarea>
+          <span class="field-label">Brief project description <span class="req">*</span></span>
+          <span class="field-help">Describe the scope, deliverables and any constraints — loads, dimensions, materials, standards, deadlines. One paragraph is fine, but include enough for us to scope the work (minimum 30 characters).</span>
+          <textarea name="Proposal" rows="8" required minlength="30"
+            placeholder="Example: Fabrication drawings for a 6×3m steel mezzanine over an existing workshop floor. Self-supporting on four columns, design loads to AS/NZS 1170, drawings to AS 1100 for the fabricator. Concept sketch attached. Need by mid-July."></textarea>
         </label>
 
         <label class="field field-full">
@@ -478,13 +472,13 @@
 
         <div class="form-actions">
           <button type="submit" class="btn btn-primary btn-submit">
-            <span>Send project brief</span>
+            <span>Send my project details</span>
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
               <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
             </svg>
           </button>
           <p class="form-foot">
-            We typically reply within <strong>one business day</strong>. By submitting you agree we may contact you about your enquiry. Your files are not shared with third parties.
+            We respond within <strong>1 business day</strong>. By submitting you agree we may contact you about your enquiry. Your files are not shared with third parties.
           </p>
         </div>
       </form>
@@ -907,16 +901,31 @@
     var submitLbl  = submitBtn ? submitBtn.querySelector('span') : null;
     var defaultLbl = submitLbl ? submitLbl.textContent : 'Send project brief';
 
-    // --- Google Ads conversion ID (one place to update) -----------
-    // NOTE: if you have a specific conversion *label* in Ads, change
-    // 'AW-18153072870' to 'AW-18153072870/<label>'. Pageview-only
-    // conversion actions should be replaced with a "Form submission"
-    // conversion that listens for this event.
-    var ADS_CONVERSION_SEND_TO = 'AW-18153072870';
+    // --- Google Ads conversion (one place to update) --------------
+    // ACTION REQUIRED in Google Ads:
+    //   1. Create a new conversion action: "Quote Request"
+    //   2. Source: Website, goal: Submit lead form, count: One
+    //   3. Default value: 250 AUD, currency: AUD
+    //   4. After creating, Ads gives you a conversion *label* like 'AbC-DeFgH123'
+    //   5. Replace the line below with: 'AW-18153072870/AbC-DeFgH123'
+    //   6. ARCHIVE the old page-view-on-/contact conversion action.
+    var ADS_CONVERSION_SEND_TO = 'AW-18153072870';   // TODO swap to AW-18153072870/<LABEL>
+    var LEAD_VALUE_AUD = 250;
 
     function fireConversion() {
-      try { if (typeof gtag === 'function') gtag('event', 'conversion', { 'send_to': ADS_CONVERSION_SEND_TO }); } catch (e) {}
-      try { if (typeof gtag === 'function') gtag('event', 'generate_lead'); } catch (e) {}
+      try {
+        if (typeof gtag === 'function') gtag('event', 'conversion', {
+          'send_to': ADS_CONVERSION_SEND_TO,
+          'value': LEAD_VALUE_AUD,
+          'currency': 'AUD'
+        });
+      } catch (e) {}
+      try {
+        if (typeof gtag === 'function') gtag('event', 'generate_lead', {
+          'value': LEAD_VALUE_AUD,
+          'currency': 'AUD'
+        });
+      } catch (e) {}
     }
 
     // ============================================================
@@ -1004,20 +1013,20 @@
       // so a dead endpoint never costs us the lead.
       var get = function (n) { var el = form.elements[n]; return el ? (el.value || '') : ''; };
       var lines = [
-        'Name: '     + get('Name'),
-        'Company: '  + get('Company'),
-        'Email: '    + get('Email'),
-        'Phone: '    + get('Phone'),
-        'Service: '  + get('Service'),
-        'Timeline: ' + get('Timeline'),
-        'Budget: '   + get('Budget'),
-        'Source: '   + get('Source'),
-        'NDA: '      + (form.elements['NDA'] && form.elements['NDA'].checked ? 'Yes' : 'No'),
+        'Name: '             + get('Name'),
+        'Company: '          + get('Company'),
+        'Work email: '       + get('Email'),
+        'Phone: '            + get('Phone'),
+        'Project type: '     + get('ProjectType'),
+        'Project location: ' + get('ProjectLocation'),
+        'Budget: '           + get('Budget'),
+        'Timeline: '         + get('Timeline'),
+        'NDA requested: '    + (form.elements['NDA'] && form.elements['NDA'].checked ? 'Yes' : 'No'),
         '',
-        '--- Proposal ---',
+        '--- Project description ---',
         get('Proposal')
       ];
-      var subject = 'Project brief — ' + (get('Name') || 'website enquiry');
+      var subject = 'Project enquiry — ' + (get('Company') || get('Name') || 'website lead');
       return 'mailto:info@senger.com.au'
            + '?subject=' + encodeURIComponent(subject)
            + '&body='    + encodeURIComponent(lines.join('\n'));
@@ -1055,6 +1064,36 @@
           showError('Please fill in <strong>' + labelText + '</strong> before sending.');
           return;
         }
+      }
+
+      // B2B filter — reject free / personal email providers.
+      // NOTE: AU ISP addresses (bigpond, optusnet, iinet, tpg, internode)
+      // are intentionally NOT blocked — many legitimate WA sole traders
+      // and small fabrication shops use them. If lead quality is still
+      // poor after deploying this filter, add them to the list below.
+      var FREE_EMAIL_DOMAINS = [
+        'gmail.com', 'googlemail.com',
+        'hotmail.com', 'hotmail.co.uk', 'hotmail.com.au',
+        'outlook.com', 'outlook.com.au', 'live.com', 'live.com.au', 'msn.com',
+        'yahoo.com', 'yahoo.com.au', 'yahoo.co.uk', 'ymail.com', 'rocketmail.com',
+        'icloud.com', 'me.com', 'mac.com',
+        'aol.com', 'aim.com',
+        'proton.me', 'protonmail.com', 'pm.me',
+        'gmx.com', 'gmx.net', 'gmx.de',
+        'yandex.com', 'yandex.ru',
+        'mail.com', 'fastmail.com', 'fastmail.fm',
+        'tutanota.com', 'tutanota.de', 'tuta.io',
+        'zoho.com', 'inbox.com', 'hey.com'
+      ];
+      var emailFld = form.elements['Email'];
+      var emailVal = (emailFld.value || '').toLowerCase().trim();
+      var emailDomain = (emailVal.split('@')[1] || '').trim();
+      if (!emailDomain || FREE_EMAIL_DOMAINS.indexOf(emailDomain) !== -1) {
+        emailFld.focus();
+        showError(
+          'Please use your <strong>company email</strong>. We only respond to enquiries from work email addresses — personal addresses (gmail, hotmail, yahoo, bigpond etc.) cannot be processed. If you don’t have a company email, call <a href="tel:+61413886800" style="color:#7a1f17;text-decoration:underline;font-weight:600;">+61 0413 886 800</a> instead.'
+        );
+        return;
       }
 
       setBusy(true);
@@ -1103,6 +1142,41 @@
         setBusy(false);
       });
     });
+
+    // ============================================================
+    // URL-param pre-fill — landing pages deep-link with ?project=<type>
+    // so the ProjectType dropdown is already selected when the user
+    // arrives, saving them one click. Also supports ?location= and
+    // ?budget= and ?timeline= in case we want to test smarter ad copy.
+    // ============================================================
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var map = {
+        'project':  'ProjectType',
+        'location': 'ProjectLocation',
+        'budget':   'Budget',
+        'timeline': 'Timeline'
+      };
+      Object.keys(map).forEach(function (urlKey) {
+        var val = params.get(urlKey);
+        if (!val) return;
+        var fld = form.elements[map[urlKey]];
+        if (!fld) return;
+        if (fld.tagName === 'SELECT') {
+          // Match value case-insensitively against option text
+          var target = val.trim().toLowerCase();
+          for (var i = 0; i < fld.options.length; i++) {
+            if (fld.options[i].text.trim().toLowerCase() === target ||
+                fld.options[i].value.trim().toLowerCase() === target) {
+              fld.selectedIndex = i;
+              break;
+            }
+          }
+        } else {
+          fld.value = val;
+        }
+      });
+    })();
 
     // ============================================================
     // ?sent=1 handling — kept as a safety net.
