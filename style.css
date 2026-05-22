@@ -1,3 +1,19 @@
+
+
+/* ============================================================
+   Service landing page buttons (Perth landing pages)
+   ============================================================ */
+.btn-secondary {
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--line-2);
+}
+.btn-secondary:hover {
+  background: var(--ink);
+  color: var(--bg);
+  border-color: var(--ink);
+  transform: translateY(-2px);
+}
 /* ========================================================
    SENGER ENGINEERING — Shared Stylesheet
    Clean, photographic, restrained.
