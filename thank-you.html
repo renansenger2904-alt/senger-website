@@ -27,12 +27,11 @@
 
 <!-- ============================================================
      LEAD CONVERSION — fires on every load of /thank-you
-     Update 'AW-18153072870/<LABEL>' once you create the
-     dedicated "Submit lead form" conversion in Google Ads
-     and copy the resulting send_to ID.
+     "Quote Request" conversion (Submit lead form, count: One).
+     Ads dedupes the duplicate fire from contact.html on submit.
      ============================================================ -->
 <script>
-  try { gtag('event', 'conversion', { 'send_to': 'AW-18153072870' }); } catch (e) {}
+  try { gtag('event', 'conversion', { 'send_to': 'AW-18153072870/BR-GCPH54L4cEObRh9BD' }); } catch (e) {}
   try { gtag('event', 'generate_lead', { 'value': 1.0, 'currency': 'AUD' }); } catch (e) {}
 </script>
 
