@@ -672,6 +672,7 @@
           <h3>Brief &amp; scope</h3>
           <p>Engagement begins with a clear, written scope: deliverables, governing standards, client specifications, interfaces with other trades, and acceptance criteria. No work begins before the brief is agreed.</p>
         </div>
+        <div class="proc-img"><img src="images/real-engineer.jpg" alt="Reviewing the brief and engineering drawings" loading="lazy" /></div>
       </li>
 
       <li class="proc-step">
@@ -680,6 +681,7 @@
           <h3>Concept &amp; first principles</h3>
           <p>Loads are calculated, load paths traced and critical components sized by hand or spreadsheet before any 3D geometry is committed. The concept is validated against the brief and discussed with the client.</p>
         </div>
+        <div class="proc-img"><img src="images/real-cad.jpg" alt="Working up the concept in CAD" loading="lazy" /></div>
       </li>
 
       <li class="proc-step">
@@ -688,6 +690,7 @@
           <h3>Detailed design &amp; analysis</h3>
           <p>3D modelling and detailing in SOLIDWORKS. Where required, FEA is performed in SOLIDWORKS Simulation for stress, deflection and fatigue verification, with mesh studies and convergence documented in a formal report.</p>
         </div>
+        <div class="proc-img"><img src="images/project-21.jpg" alt="FEA stress analysis result" loading="lazy" /></div>
       </li>
 
       <li class="proc-step">
@@ -696,6 +699,7 @@
           <h3>Documentation</h3>
           <p>General arrangement, fabrication and shop drawings produced to construction-ready quality in AutoCAD and SOLIDWORKS Drawings. Bills of materials, weld schedules, bolt callouts and surface treatment notes included as required for issue to fabricator.</p>
         </div>
+        <div class="proc-img"><img src="images/real-machinery.jpg" alt="Engineered equipment ready for the workshop" loading="lazy" /></div>
       </li>
 
       <li class="proc-step">
@@ -704,6 +708,7 @@
           <h3>Manufacture support</h3>
           <p>Drawing queries, fabrication RFIs and minor design adjustments resolved in collaboration with the fabricator and client. Revisions issued and documented through to as-built where required.</p>
         </div>
+        <div class="proc-img"><img src="images/real-welding.jpg" alt="Steel fabrication in the workshop" loading="lazy" /></div>
       </li>
 
     </ol>
@@ -742,13 +747,26 @@
   }
   .proc-step {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: clamp(24px, 4vw, 56px);
+    grid-template-columns: 80px 1fr clamp(220px, 26vw, 340px);
+    gap: clamp(24px, 4vw, 48px);
     padding: clamp(28px, 4vw, 40px) 0;
     border-top: 1px solid var(--line);
-    align-items: start;
+    align-items: center;
   }
   .proc-step:last-child { border-bottom: 1px solid var(--line); }
+  .proc-img {
+    aspect-ratio: 4/3;
+    border-radius: 4px;
+    overflow: hidden;
+    background: var(--bg-3, #e8e8e3);
+  }
+  .proc-img img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 1.2s var(--ease);
+  }
+  .proc-step:hover .proc-img img { transform: scale(1.05); }
   .proc-num {
     font-family: var(--serif);
     font-size: clamp(40px, 5vw, 64px);
@@ -775,8 +793,9 @@
   }
 
   @media (max-width: 720px) {
-    .proc-step { grid-template-columns: 1fr; gap: 8px; padding: 24px 0; }
+    .proc-step { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
     .proc-num { font-size: 32px; }
+    .proc-img { aspect-ratio: 16/9; }
   }
 </style>
 
