@@ -1,5 +1,5 @@
 // ========================================================
-// SENGER ENGINEERING — Shared Interactions
+// SENGER ENGINEERING, Shared Interactions
 // ========================================================
 
 (function () {
@@ -75,16 +75,16 @@
 
   // NOTE: the proposal/contact form's submit handler lives inline on
   // contact.html (fetch + FormSubmit AJAX + mailto fallback). Do NOT
-  // add a generic submit interceptor here — a previous version bound
+  // add a generic submit interceptor here, a previous version bound
   // to #contactForm and silently preventDefault'd, which would break
   // the live form (#proposalForm) the moment someone "fixed" the id.
 
   // ========================================================
-  // Floating WhatsApp / quick-contact button — every page
+  // Floating WhatsApp / quick-contact button, every page
   // ========================================================
   if (!document.getElementById('floatContact')) {
     const waNumber = '61413886800';
-    const waText = encodeURIComponent("Hi Senger Engineering — I'd like to discuss a project.");
+    const waText = encodeURIComponent("Hi Senger Engineering, I'd like to discuss a project.");
     const wrap = document.createElement('div');
     wrap.id = 'floatContact';
     wrap.className = 'float-contact';
