@@ -473,50 +473,57 @@
     <div class="section-head reveal">
       <div class="eyebrow"><span class="num">·</span>Track record</div>
       <div>
-        <h2 class="section-title">Projects for operations that <span class="it">can't stop.</span></h2>
-        <p class="section-sub">Across five years in Brazil, I worked on engineering for some of the country's largest industrial sites, mostly external infrastructure and pipe racks, with drawings issued for execution. Operations I delivered project work for include:</p>
+        <h2 class="section-title">Where the experience <span class="it">comes from.</span></h2>
+        <p class="section-sub">Five years on large industrial sites in Brazil, mostly external infrastructure and pipe racks issued for execution, and now modular and glamping work in Western Australia. Operations and companies I've worked on projects for and with:</p>
       </div>
     </div>
-    <div class="tr-grid reveal">
-      <div class="tr-item"><div class="tr-name">Heineken</div><div class="tr-role">External infrastructure, issued for execution</div></div>
-      <div class="tr-item"><div class="tr-name">Electrolux</div><div class="tr-role">Plant infrastructure and pipe racks</div></div>
-      <div class="tr-item"><div class="tr-name">JBS</div><div class="tr-role">Boiler engineering study</div></div>
-      <div class="tr-item"><div class="tr-name">Fr&iacute;sia</div><div class="tr-role">Infrastructure and pipe racks</div></div>
-      <div class="tr-item"><div class="tr-name">Castrolanda</div><div class="tr-role">Infrastructure and pipe racks</div></div>
-      <div class="tr-item"><div class="tr-name">Baston</div><div class="tr-role">Aerosol plant infrastructure</div></div>
+    <div class="logo-grid reveal">
+      <div class="logo-cell"><img src="images/logo-heineken.png" alt="Heineken" loading="lazy" /><div class="logo-cap">External infrastructure, issued for execution</div></div>
+      <div class="logo-cell"><img src="images/logo-electrolux.png" alt="Electrolux" loading="lazy" /><div class="logo-cap">Plant infrastructure and pipe racks</div></div>
+      <div class="logo-cell"><img src="images/logo-jbs.png" alt="JBS" loading="lazy" /><div class="logo-cap">Boiler engineering study</div></div>
+      <div class="logo-cell"><img src="images/logo-frisia.png" alt="Fr&iacute;sia" loading="lazy" /><div class="logo-cap">Infrastructure and pipe racks</div></div>
+      <div class="logo-cell"><img src="images/logo-castrolanda.png" alt="Castrolanda" loading="lazy" /><div class="logo-cap">Infrastructure and pipe racks</div></div>
+      <div class="logo-cell"><img src="images/logo-baston.png" alt="Baston" loading="lazy" /><div class="logo-cap">Aerosol plant infrastructure</div></div>
+      <div class="logo-cell"><img src="images/logo-wabi.png" alt="Wabi Systems" loading="lazy" /><div class="logo-cap">Modular homes · current</div></div>
+      <div class="logo-cell"><img src="images/logo-eco.png" alt="Eco Structures" loading="lazy" /><div class="logo-cap">Glamping structures · current</div></div>
     </div>
-    <p class="tr-note reveal">Engineering delivered through established firms during that time. Names shown reflect operations I worked on, not current clients of Senger Engineering.</p>
+    <p class="tr-note reveal">Logos reflect operations I've worked on projects for and companies I've worked with. They are shown as professional experience, not as endorsements by, or current clients of, Senger Engineering.</p>
   </div>
 </section>
 <style>
-  .tr-grid {
+  .logo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);
   }
-  .tr-item {
+  .logo-cell {
     background: #fff;
-    padding: clamp(20px, 2.4vw, 28px) clamp(20px, 2.2vw, 26px);
-    transition: background 0.3s ease;
+    padding: clamp(22px, 2.6vw, 30px) 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    gap: 16px;
   }
-  .tr-item:hover { background: #fafaf7; }
-  .tr-name {
-    font-family: var(--serif);
-    font-size: clamp(22px, 2.6vw, 30px);
-    color: var(--ink);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+  .logo-cell img {
+    height: 38px;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 3px;
+    transition: transform 0.35s ease;
   }
-  .tr-role {
-    margin-top: 8px;
-    font-size: 12.5px;
+  .logo-cell:hover img { transform: scale(1.05); }
+  .logo-cap {
+    font-size: 11.5px;
     color: var(--muted);
     line-height: 1.45;
   }
-  @media (max-width: 760px) { .tr-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 460px) { .tr-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 880px) { .logo-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 620px) { .logo-grid { grid-template-columns: repeat(2, 1fr); } }
   .tr-note {
     margin-top: 20px;
     font-size: 12.5px;
