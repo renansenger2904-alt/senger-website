@@ -400,6 +400,70 @@
   </div>
 </div>
 
+<!-- EXPERIENCE LOGO BAR -->
+<section class="exp-bar">
+  <div class="container">
+    <div class="exp-bar-label">Experience across major industrial operations</div>
+    <div class="exp-bar-logos">
+      <img src="images/logo-heineken.png" alt="Heineken" loading="lazy" />
+      <img src="images/logo-electrolux.png" alt="Electrolux" loading="lazy" />
+      <img src="images/logo-jbs.png" alt="JBS" loading="lazy" />
+      <img src="images/logo-frisia.png" alt="Fr&iacute;sia" loading="lazy" />
+      <img src="images/logo-castrolanda.png" alt="Castrolanda" loading="lazy" />
+      <img src="images/logo-baston.png" alt="Baston" loading="lazy" />
+      <img src="images/logo-wabi.png" alt="Wabi Systems" loading="lazy" />
+      <img src="images/logo-eco.png" alt="Eco Structures" loading="lazy" />
+    </div>
+    <a href="about.html" class="exp-bar-link">Professional experience, not current clients. See the full background &rarr;</a>
+  </div>
+</section>
+<style>
+  .exp-bar {
+    padding: clamp(36px, 5vw, 56px) 0;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg, #fff);
+  }
+  .exp-bar-label {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 500;
+    margin-bottom: clamp(22px, 3vw, 32px);
+  }
+  .exp-bar-logos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(24px, 4vw, 56px);
+  }
+  .exp-bar-logos img {
+    height: 34px;
+    width: auto;
+    max-width: 130px;
+    object-fit: contain;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .exp-bar-logos img:hover { opacity: 1; transform: scale(1.06); }
+  .exp-bar-link {
+    display: block;
+    text-align: center;
+    margin-top: clamp(22px, 3vw, 30px);
+    font-size: 12px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .exp-bar-link:hover { color: var(--accent); }
+  @media (max-width: 600px) {
+    .exp-bar-logos { gap: 22px 28px; }
+    .exp-bar-logos img { height: 26px; }
+  }
+</style>
+
 <!-- SERVICES -->
 <section class="section">
   <div class="container">
