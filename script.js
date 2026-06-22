@@ -28,37 +28,57 @@
     }));
   }
 
-  // reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('in');
-        io.unobserve(e.target);
-      }
+  // reveal on scroll (with failsafes so content can never stay hidden)
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  const revealAll = () => revealEls.forEach(el => el.classList.add('in'));
+  const prefersReduced = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!('IntersectionObserver' in window) || prefersReduced) {
+    revealAll();
+  } else {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    revealEls.forEach(el => io.observe(el));
+    // Failsafe 1: reveal anything in/above the viewport just after load.
+    const sweep = () => revealEls.forEach(el => {
+      if (el.classList.contains('in')) return;
+      if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add('in');
     });
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => io.observe(el));
+    window.addEventListener('load', () => setTimeout(sweep, 400));
+    // Failsafe 2: never leave content permanently hidden.
+    setTimeout(revealAll, 4000);
+  }
 
-  // animated counters
-  const cIO = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (!e.isIntersecting) return;
-      const el = e.target;
-      const target = +el.dataset.target;
-      const start = performance.now();
-      const dur = 1600;
-      const ease = t => 1 - Math.pow(1 - t, 3);
-      function step(now) {
-        const t = Math.min(1, (now - start) / dur);
-        el.textContent = Math.floor(ease(t) * target);
-        if (t < 1) requestAnimationFrame(step);
-        else el.textContent = target;
-      }
-      requestAnimationFrame(step);
-      cIO.unobserve(el);
-    });
-  }, { threshold: 0.4 });
-  document.querySelectorAll('.count').forEach(el => cIO.observe(el));
+  // animated counters (guarded; if anything fails the HTML already shows the real number)
+  if ('IntersectionObserver' in window && !prefersReduced) {
+    const cIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const target = +el.dataset.target;
+        const start = performance.now();
+        const dur = 1600;
+        const ease = t => 1 - Math.pow(1 - t, 3);
+        function step(now) {
+          const t = Math.min(1, (now - start) / dur);
+          el.textContent = Math.floor(ease(t) * target);
+          if (t < 1) requestAnimationFrame(step);
+          else el.textContent = target;
+        }
+        requestAnimationFrame(step);
+        cIO.unobserve(el);
+      });
+    }, { threshold: 0.4 });
+    document.querySelectorAll('.count').forEach(el => cIO.observe(el));
+  } else {
+    document.querySelectorAll('.count').forEach(el => { el.textContent = el.dataset.target; });
+  }
 
   // smooth anchors with offset
   document.querySelectorAll('a[href^="#"]').forEach(a => {
