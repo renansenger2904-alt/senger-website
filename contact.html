@@ -239,7 +239,7 @@
   </nav>
   <div class="mobile-foot">
     <span>info@senger.com.au</span>
-    <span>+61 0413 886 800</span>
+    <span>+61 413 886 800</span>
   </div>
 </div>
 
@@ -272,7 +272,7 @@
       </div>
       <div class="cq-block">
         <div class="cq-label">Phone</div>
-        <a class="cq-val" href="tel:+61413886800">+61 0413 886 800</a>
+        <a class="cq-val" href="tel:+61413886800">+61 413 886 800</a>
       </div>
       <div class="cq-block">
         <div class="cq-label">Studio</div>
@@ -393,8 +393,9 @@
           </label>
 
           <label class="field">
-            <span class="field-label">Phone <span class="req">*</span></span>
-            <input type="tel" name="Phone" required autocomplete="tel" />
+            <span class="field-label">Phone</span>
+            <span class="field-help">Optional, but the fastest way for me to scope your job.</span>
+            <input type="tel" name="Phone" autocomplete="tel" />
           </label>
 
           <label class="field">
@@ -405,6 +406,9 @@
               <option>Structural design</option>
               <option>Steel detailing / shop drawings</option>
               <option>Mining / fixed plant</option>
+              <option>Machine safety assessment</option>
+              <option>3D render</option>
+              <option>Product development</option>
               <option>Other</option>
             </select>
           </label>
@@ -441,8 +445,8 @@
 
         <label class="field field-full">
           <span class="field-label">Brief project description <span class="req">*</span></span>
-          <span class="field-help">Describe the scope, deliverables and any constraints, loads, dimensions, materials, standards, deadlines. One paragraph is fine, but include enough for us to scope the work (minimum 30 characters).</span>
-          <textarea name="Proposal" rows="8" required minlength="30"
+          <span class="field-help">Describe the scope, deliverables and any constraints, loads, dimensions, materials, standards, deadlines. A sentence or two is plenty to start.</span>
+          <textarea name="Proposal" rows="8" required minlength="10"
             placeholder="Example: Fabrication drawings for a 6×3m steel mezzanine over an existing workshop floor. Self-supporting on four columns, design loads to AS/NZS 1170, drawings to AS 1100 for the fabricator. Concept sketch attached. Need by mid-July."></textarea>
         </label>
 
@@ -542,7 +546,7 @@
     border-radius: 4px;
     padding: 13px 14px;
     font-family: 'Inter', sans-serif;
-    font-size: 15px;
+    font-size: 16px;
     color: var(--ink);
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
     box-sizing: border-box;
@@ -692,7 +696,7 @@
         <div class="alt-num">01</div>
         <h3>Call the studio</h3>
         <p>Have a sketch on a napkin? Two-minute call is usually enough to know if we can help.</p>
-        <div class="alt-link">+61 0413 886 800 →</div>
+        <div class="alt-link">+61 413 886 800 →</div>
       </a>
       <a href="mailto:info@senger.com.au?subject=Project%20enquiry%20from%20the%20website" class="alt-card">
         <div class="alt-num">02</div>
@@ -876,7 +880,7 @@
       <h4>Studio</h4>
       <ul>
         <li><a href="mailto:info@senger.com.au">info@senger.com.au</a></li>
-        <li><a href="tel:+61413886800">+61 0413 886 800</a></li>
+        <li><a href="tel:+61413886800">+61 413 886 800</a></li>
         <li>Perth, WA, Australia</li>
         <li>ABN 12 326 601 680</li>
         <li><a href="https://www.linkedin.com/company/senger-engineering-aus/" target="_blank" rel="noopener" aria-label="Senger Engineering on LinkedIn" style="display:inline-flex; align-items:center; gap:7px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
@@ -1129,7 +1133,7 @@
           'We couldn’t reach our form server just now. ' +
           '<a href="' + mailtoFallback() + '" style="color:#7a1f17;text-decoration:underline;font-weight:600;">' +
           'Click here to email your brief directly</a>, your details are pre-filled. ' +
-          'Or call <a href="tel:+61413886800" style="color:#7a1f17;text-decoration:underline;font-weight:600;">+61 0413 886 800</a>.'
+          'Or call <a href="tel:+61413886800" style="color:#7a1f17;text-decoration:underline;font-weight:600;">+61 413 886 800</a>.'
         );
         setBusy(false);
       });
