@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 600" role="img" aria-label="Boiler energy balance: 64.3% thermal efficiency, 35.7% losses dominated by flue-gas heat from excess combustion air">
+  <rect width="480" height="600" fill="#0f1419"/>
+  <!-- eyebrow -->
+  <text x="40" y="64" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="12" letter-spacing="2.2" fill="#8aa9c9">THERMAL-EFFICIENCY ANALYSIS</text>
+  <text x="40" y="84" font-family="ui-monospace, 'JetBrains Mono', monospace" font-size="12" letter-spacing="2.2" fill="#5f7388">INDIRECT (HEAT-LOSS) METHOD</text>
+
+  <!-- headline result -->
+  <text x="40" y="186" font-family="Georgia, 'Times New Roman', serif" font-size="118" fill="#faf8f4">64.3%</text>
+  <text x="42" y="220" font-family="Georgia, serif" font-size="22" font-style="italic" fill="#8aa9c9">thermal efficiency</text>
+
+  <!-- energy balance bar -->
+  <text x="40" y="288" font-family="ui-monospace, monospace" font-size="12" letter-spacing="1.5" fill="#5f7388">ENERGY BALANCE — 100% FUEL INPUT</text>
+  <g>
+    <!-- useful 64.3% -->
+    <rect x="40" y="304" width="257" height="58" fill="#3a7d6e"/>
+    <!-- losses 35.7% -->
+    <rect x="297" y="304" width="143" height="58" fill="#c1762f"/>
+    <text x="52" y="339" font-family="Arial, sans-serif" font-size="15" font-weight="700" fill="#0f1419">Useful heat</text>
+    <text x="52" y="356" font-family="ui-monospace, monospace" font-size="12" fill="#0f1419">64.3%</text>
+    <text x="309" y="339" font-family="Arial, sans-serif" font-size="14" font-weight="700" fill="#0f1419">Losses</text>
+    <text x="309" y="356" font-family="ui-monospace, monospace" font-size="12" fill="#0f1419">35.7%</text>
+  </g>
+
+  <!-- root cause -->
+  <line x1="40" y1="408" x2="440" y2="408" stroke="#27323b" stroke-width="1"/>
+  <text x="40" y="442" font-family="ui-monospace, monospace" font-size="12" letter-spacing="1.5" fill="#5f7388">DOMINANT LOSS</text>
+  <text x="40" y="470" font-family="Georgia, serif" font-size="20" fill="#faf8f4">Flue-gas heat carried off by</text>
+  <text x="40" y="497" font-family="Georgia, serif" font-size="20" fill="#faf8f4"><tspan fill="#c1762f" font-style="italic">excess combustion air.</tspan></text>
+
+  <!-- spec chips -->
+  <g font-family="ui-monospace, monospace" font-size="12" fill="#cdd6da">
+    <rect x="40"  y="528" width="118" height="30" rx="15" fill="none" stroke="#33424a"/>
+    <text x="58"  y="548">12,000 kg/h</text>
+    <rect x="168" y="528" width="78"  height="30" rx="15" fill="none" stroke="#33424a"/>
+    <text x="186" y="548">12 bar</text>
+    <rect x="256" y="528" width="118" height="30" rx="15" fill="none" stroke="#33424a"/>
+    <text x="274" y="548">wood-fired</text>
+  </g>
+</svg>
