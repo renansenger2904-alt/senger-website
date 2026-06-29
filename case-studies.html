@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<!--
+  STAGED DRAFT — case-studies.NEW.html
+  Real case studies (from Renan's CV + UTFPR thesis), rebuilt in the live site's cs-* style.
+  Replaces the 2 generic/representative cases on the current case-studies.html.
+  BEFORE PUBLISH:
+    1. Swap the 3 placeholder images (marked TODO) for real renders/photos/drawings.
+    2. Client names show the SAFE anonymised version; real names are in HTML comments —
+       only reveal once naming permission is confirmed (Heineken, Eco Structures, Wabi).
+    3. Sanity-check every figure (64.3%, 12,000 kg/h, 12 bar) before it goes live.
+    4. To publish: rename this over case-studies.html (keep a backup first).
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+<title>Case Studies · Mechanical &amp; Structural Steel Engineering | Senger Engineering</title>
+<meta name="description" content="Real mechanical and structural engineering projects by Senger Engineering: luxury eco-resort structures, heavy-industry pipe racks, and boiler efficiency verification. First-principles design to Australian Standards, Perth WA." />
+<meta property="og:title" content="Case Studies | Senger Engineering" />
+<meta property="og:description" content="Real projects: eco-resort structures, industrial pipe racks, and boiler efficiency verification — concept to fabrication-ready." />
+<meta property="og:url" content="https://senger.com.au/case-studies.html" />
+<meta property="og:type" content="website" />
+<link rel="canonical" href="https://senger.com.au/case-studies.html" />
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png" />
+<link rel="apple-touch-icon" href="images/favicon-192.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+
+<!-- ============================================
+     CRITICAL: Reveal animation fallback
+     ============================================ -->
+<style>
+  .projects-page-fix .reveal,
+  .projects-page-fix .reveal-stagger,
+  .projects-page-fix .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+  }
+</style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18153072870"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18153072870');
+  gtag('config', 'G-6XM7PW3YZ0');
+</script>
+
+<!-- ============================================
+     DROPDOWN NAV CSS, INLINE (safe, won't touch style.css)
+     ============================================ -->
+<style>
+  .nav-dropdown { position: relative; display: inline-block; }
+  .nav-dd-trigger { display: inline-flex; align-items: center; gap: 6px; }
+  .nav-dd-arrow { transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); opacity: 0.7; }
+  .nav-dropdown:hover .nav-dd-arrow,
+  .nav-dropdown:focus-within .nav-dd-arrow { transform: rotate(-180deg); opacity: 1; }
+
+  .nav-dd-panel {
+    position: absolute;
+    top: calc(100% + 14px);
+    left: -24px;
+    min-width: 460px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-top: 3px solid #1F3A5F;
+    box-shadow: 0 24px 60px -12px rgba(15, 20, 25, 0.14), 0 8px 24px -8px rgba(15, 20, 25, 0.08);
+    border-radius: 4px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-6px);
+    transition: opacity 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                visibility 0s linear 0.32s;
+    z-index: 100;
+  }
+  .nav-dropdown:hover .nav-dd-panel,
+  .nav-dropdown:focus-within .nav-dd-panel {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                transform 0.32s cubic-bezier(0.2, 0.8, 0.2, 1),
+                visibility 0s linear 0s;
+  }
+  .nav-dd-panel::before { content: ''; position: absolute; top: -16px; left: 0; right: 0; height: 16px; }
+  .nav-dd-inner { padding: 10px; }
+  .nav-dd-item {
+    display: grid;
+    grid-template-columns: 36px 1fr;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 3px;
+    transition: background 0.25s ease;
+    text-decoration: none;
+    color: inherit;
+  }
+  .nav-dd-item:hover { background: #fafaf7; }
+  .nav-dd-item--lead {
+    background: #fafaf7;
+    border-bottom: 1px solid #e5e5e5;
+    border-radius: 3px 3px 0 0;
+    margin-bottom: 4px;
+    padding-bottom: 16px;
+  }
+  .nav-dd-item--lead:hover { background: #f4f4f0; }
+  .nav-dd-num {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-size: 22px;
+    color: #1F3A5F;
+    line-height: 1;
+    padding-top: 4px;
+  }
+  .nav-dd-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0a0a0a;
+    letter-spacing: -0.005em;
+    margin-bottom: 4px;
+    transition: color 0.25s ease;
+  }
+  .nav-dd-item:hover .nav-dd-title { color: #1F3A5F; }
+  .nav-dd-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 12.5px;
+    line-height: 1.5;
+    color: #5a5a5a;
+  }
+  .mobile-sub {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 16px 24px;
+    border-left: 2px solid #1F3A5F;
+    margin-left: 18px;
+    margin-top: -8px;
+    margin-bottom: 16px;
+  }
+  .mobile-sub a {
+    display: flex !important;
+    align-items: center;
+    padding: 12px 0 !important;
+    font-family: 'Instrument Serif', serif !important;
+    font-size: 18px !important;
+    font-style: italic !important;
+    color: inherit !important;
+    opacity: 0.65;
+    text-decoration: none !important;
+    transition: opacity 0.25s ease, color 0.25s ease !important;
+    border: none !important;
+    background: none !important;
+  }
+  .mobile-sub a span,
+  .mobile-sub a em {
+    background: none !important;
+    color: inherit !important;
+  }
+  .mobile-sub a:hover,
+  .mobile-sub a:focus,
+  .mobile-sub a:active {
+    opacity: 1;
+    color: #1F3A5F !important;
+  }
+  @media (max-width: 880px) {
+    .nav-dropdown .nav-dd-panel { display: none; }
+  }
+</style>
+</head>
+<body class="projects-page-fix">
+<!-- =============== NAV WITH DROPDOWN =============== -->
+<nav class="nav" id="nav">
+  <a href="index.html" class="logo" aria-label="Senger Engineering home">
+    <img src="images/logo-horizontal-transparent.png" alt="Senger Engineering" />
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+
+    <div class="nav-dropdown">
+      <a href="engineering.html" class="nav-dd-trigger">
+        Engineering
+        <svg class="nav-dd-arrow" width="10" height="10" viewBox="0 0 10 10" fill="none">
+          <path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="square" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <div class="nav-dd-panel">
+        <div class="nav-dd-inner">
+          <a href="engineering.html" class="nav-dd-item nav-dd-item--lead">
+            <div class="nav-dd-num">·</div>
+            <div>
+              <div class="nav-dd-title">Engineering practice</div>
+              <div class="nav-dd-desc">Overview of capability, workflow and standards.</div>
+            </div>
+          </a>
+          <a href="mechanical-engineering" class="nav-dd-item">
+            <div class="nav-dd-num">01</div>
+            <div>
+              <div class="nav-dd-title">Mechanical engineering</div>
+              <div class="nav-dd-desc">First-principles design, FEA verification, manufacture-ready packages.</div>
+            </div>
+          </a>
+          <a href="fabrication-drawings" class="nav-dd-item">
+            <div class="nav-dd-num">02</div>
+            <div>
+              <div class="nav-dd-title">Fabrication &amp; shop drawings</div>
+              <div class="nav-dd-desc">Manufacturing-ready drawings to AS 1100, for the workshop.</div>
+            </div>
+          </a>
+          <a href="product-development" class="nav-dd-item">
+            <div class="nav-dd-num">03</div>
+            <div>
+              <div class="nav-dd-title">Product development</div>
+              <div class="nav-dd-desc">End-to-end mechanical product engineering. DFM, DFA, FEA.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <a href="renders.html">Renders</a>
+    <a href="projects.html">Capabilities</a>
+    <a href="case-studies.html" class="active">Case studies</a>
+    <a href="about.html">About</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <a href="contact.html" class="nav-cta">
+    Discuss your project
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+      <path d="M3 9 L9 3 M9 3 H5 M9 3 V7" stroke="currentColor" stroke-width="1.4" stroke-linecap="square"/>
+    </svg>
+  </a>
+
+  <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+    <span></span><span></span>
+  </button>
+</nav>
+
+<!-- =============== MOBILE MENU WITH SUB-ITEMS =============== -->
+<div class="mobile-menu" id="mobileMenu">
+  <nav>
+    <a href="index.html"><em>Home</em><span>01</span></a>
+    <a href="engineering.html"><em>Engineering</em><span>02</span></a>
+    <div class="mobile-sub">
+      <a href="mechanical-engineering"><em>Mechanical engineering</em></a>
+      <a href="fabrication-drawings"><em>Fabrication drawings</em></a>
+      <a href="product-development"><em>Product development</em></a>
+    </div>
+    <a href="renders.html"><em>Renders</em><span>03</span></a>
+    <a href="projects.html"><em>Capabilities</em><span>04</span></a>
+    <a href="case-studies.html"><em>Case studies</em><span>05</span></a>
+    <a href="about.html"><em>About</em><span>06</span></a>
+    <a href="faq.html"><em>FAQ</em><span>07</span></a>
+    <a href="contact.html"><em>Contact</em><span>08</span></a>
+  </nav>
+  <div class="mobile-foot">
+    <span>info@senger.com.au</span>
+    <span>+61 0413 886 800</span>
+  </div>
+</div>
+
+
+<header class="page-hero">
+  <div class="page-hero-inner" style="grid-template-columns: 1fr;">
+    <div style="text-align: left; max-width: 1100px;">
+      <div class="page-hero-eyebrow">Case studies · Selected work</div>
+      <h1 class="page-hero-title">
+        <span class="line"><span class="line-inner">Engineering you</span></span>
+        <span class="line"><span class="line-inner"><span class="it">can point</span> to.</span></span>
+      </h1>
+      <p class="page-hero-lede" style="margin-top: 28px;">
+        Real projects, from off-grid eco-resort structures in Western Australia to heavy-industry pipe racks and boiler-efficiency verification. Director-led: the engineer who designed it is the one you talk to. First-principles design, verified against the standards, documented so the workshop can build straight from it.
+      </p>
+      <div style="margin-top: 40px; display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary">Bring us your project
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+        </a>
+        <a href="contact.html" class="btn-secondary">Request a quote</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .cs-inner { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(36px, 5vw, 80px); align-items: start; }
+  .cs-figure { border-radius: 6px; overflow: hidden; background: var(--bg-3, #e8e8e3); border: 1px solid var(--line); }
+  .cs-figure img { width: 100%; height: 100%; object-fit: cover; display: block; aspect-ratio: 4/5; }
+  .cs-eyebrow { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 18px; }
+  .cs-title { font-size: clamp(26px, 3.4vw, 40px); line-height: 1.08; letter-spacing: -0.01em; margin-bottom: 14px; }
+  .cs-sector { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent, #2f4f6f); margin-bottom: 28px; }
+  .cs-block { margin-bottom: 22px; }
+  .cs-block h3 { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 8px; }
+  .cs-block p { color: var(--ink, #14161a); line-height: 1.6; }
+  .cs-deliver { list-style: none; padding: 0; margin: 22px 0 0; border-top: 1px solid var(--line); }
+  .cs-deliver li { padding: 11px 0; border-bottom: 1px solid var(--line); display: flex; gap: 12px; align-items: baseline; font-size: 15px; }
+  .cs-deliver li::before { content: "\2713"; color: var(--accent, #2f4f6f); font-weight: 700; }
+  .cs-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 26px; }
+  .cs-tag { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 11px; letter-spacing: 0.04em; color: var(--accent, #2f4f6f); border: 1px solid var(--line); border-radius: 999px; padding: 6px 13px; background: #fff; }
+  @media (max-width: 860px){ .cs-inner { grid-template-columns: 1fr; gap: 32px; } .cs-figure img { aspect-ratio: 16/10; } }
+</style>
+
+<!-- ===== CASE 1 — Eco-resort structures (modelling/design tier) ===== -->
+<section class="section" id="cs-eco">
+  <div class="container">
+    <div class="cs-inner reveal">
+      <!-- TODO: swap real-steel-night.jpg for a glamping / eco-resort render from the Renders Portfolio 2026 -->
+      <div class="cs-figure"><img src="images/real-steel-night.jpg" alt="Luxury glamping / eco-resort structure taken from architectural concept to a build-ready structural package" loading="lazy" /></div>
+      <div>
+        <div class="cs-eyebrow">01 · Eco-tourism &amp; modular · WA &amp; international</div>
+        <h2 class="cs-title">Luxury glamping &amp; off-grid eco-resorts: concept to build-ready structure.</h2>
+        <div class="cs-sector">Sector: Eco-tourism / modular construction<!-- Eco Structures / Wabi Systems — name once permission confirmed --></div>
+        <div class="cs-block">
+          <h3>The challenge</h3>
+          <p>An architect's render of a luxury glamping resort looks striking, but someone has to make it stand up: transportable, durable and safe on remote sites with wind, sun and no easy access to trades. The gap is turning the vision into a structure a workshop can fabricate and a crew can erect in the bush.</p>
+        </div>
+        <div class="cs-block">
+          <h3>What I did</h3>
+          <p>Led the engineering that takes the concept to reality, PVC tensile-membrane roof systems, steel arch frames, modular floors and prefabricated assemblies built for transport, plus advanced modular foundations and structural anchoring for variable remote ground. Designed to AS 4100 and AS/NZS 1554 with wind-region classification, coordinating fabricators and on-site erection.</p>
+        </div>
+        <div class="cs-block">
+          <h3>The result</h3>
+          <p>Build-ready structural packages, drawings, assemblies and fabrication detail, for eco-tourism resorts delivered across Australia and overseas. Designs that survive the site walk: buildable, transportable and durable in genuinely challenging environments, without losing the architectural intent that sells the resort.</p>
+        </div>
+        <ul class="cs-deliver">
+          <li>Structural design of tensile-membrane + steel arch systems</li>
+          <li>Modular, transportable floors, foundations and anchoring</li>
+          <li>Design to AS 4100 / AS/NZS 1554 with wind-region classification</li>
+          <li>Fabrication detail and on-site erection coordination</li>
+        </ul>
+        <div class="cs-tags">
+          <span class="cs-tag">Tensile membrane + steel</span>
+          <span class="cs-tag">Modular / transportable</span>
+          <span class="cs-tag">AS 4100</span>
+          <span class="cs-tag">AS/NZS 1554</span>
+          <span class="cs-tag">SOLIDWORKS</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE 2 — Pipe racks & steel structures (fabrication/structural tier) ===== -->
+<section class="section-tight" id="cs-piperacks" style="background:#f4f4f0; border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="container">
+    <div class="cs-inner reveal">
+      <div>
+        <div class="cs-eyebrow">02 · Industrial · Heavy industry &amp; food/beverage</div>
+        <h2 class="cs-title">Pipe racks &amp; steel structures for heavy industry.</h2>
+        <div class="cs-sector">Sector: Industrial / metallurgical / food &amp; beverage</div>
+        <div class="cs-block">
+          <h3>The challenge</h3>
+          <p>Major industrial clients, including a major international brewery,<!-- Heineken — reveal only with naming permission --> needed pipe racks, piping layouts and steel structures designed, calculated and detailed for fabrication, on tight schedules and to strict compliance, without stalling plant operations.</p>
+        </div>
+        <div class="cs-block">
+          <h3>What I did</h3>
+          <p>Delivered the full package behind the build: designed and detailed pipe racks, platforms and metallic frameworks; ran the structural calculations, load-bearing capacity, wind and equipment loads, in SOLIDWORKS and CypeCAD; produced fabrication drawings, BoMs and assembly guides; and worked to ISO 9001, NR 12 and NR 13, including QA inspection of boilers, pressure vessels and structural components.</p>
+        </div>
+        <div class="cs-block">
+          <h3>The result</h3>
+          <p>Build-ready fabrication packages and validated structural designs across multiple large-scale industrial sites, drawings the workshop could build straight from, with the engineering and compliance checks already done. The large-plant discipline now applied to WA fabricators.</p>
+        </div>
+        <ul class="cs-deliver">
+          <li>Pipe racks, platforms and structural steel design</li>
+          <li>Structural calculations, load, wind and equipment cases</li>
+          <li>Fabrication drawings, BoMs and assembly guides</li>
+          <li>QA inspection to ISO 9001 / NR 12 / NR 13</li>
+        </ul>
+        <div class="cs-tags">
+          <span class="cs-tag">Pipe racks &amp; structural steel</span>
+          <span class="cs-tag">Structural calcs (load / wind)</span>
+          <span class="cs-tag">SOLIDWORKS + CypeCAD</span>
+          <span class="cs-tag">ISO 9001 · NR 12 · NR 13</span>
+        </div>
+      </div>
+      <!-- TODO: swap real-steel-factory.jpg for a pipe-rack 3D model or fabrication drawing -->
+      <div class="cs-figure"><img src="images/real-steel-factory.jpg" alt="Industrial pipe-rack and structural steel package, detailed for fabrication" loading="lazy" /></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CASE 3 — Boiler thermal-efficiency analysis (engineering verification tier) ===== -->
+<section class="section" id="cs-boiler">
+  <div class="container">
+    <div class="cs-inner reveal">
+      <!-- TODO: swap real-machinery.jpg for a boiler schematic or energy-balance chart -->
+      <div class="cs-figure"><img src="images/real-machinery.jpg" alt="Wood-fired industrial boiler analysed for thermal efficiency by the indirect heat-loss method" loading="lazy" /></div>
+      <div>
+        <div class="cs-eyebrow">03 · Energy / combustion · Engineering verification</div>
+        <h2 class="cs-title">Boiler thermal-efficiency analysis: diagnosing a 64.3% performer.</h2>
+        <div class="cs-sector">Sector: Energy / combustion · Engineering analysis</div>
+        <div class="cs-block">
+          <h3>The challenge</h3>
+          <p>A mixed wood-log-fired boiler rated 12,000 kg/h of steam at 12 bar was suspected of running inefficiently, but nobody had quantified how inefficient, or why.</p>
+        </div>
+        <div class="cs-block">
+          <h3>What I did</h3>
+          <p>Ran a full thermal-performance study using the indirect (heat-loss) method, taking field measurements of combustion flue gases and fuel consumption, then closed the energy balance with combustion and thermodynamic analysis to isolate the losses.</p>
+        </div>
+        <div class="cs-block">
+          <h3>The result</h3>
+          <p>A quantified verdict, 64.3% thermal efficiency, and the root cause: excess combustion air dropping flue-gas temperature and heat-transfer capacity, compounded by low steam output relative to fuel burned. A clear, evidence-based diagnosis pointing straight at the fix, the kind of verification work where a registered engineer's sign-off carries weight.</p>
+        </div>
+        <ul class="cs-deliver">
+          <li>Indirect-method (heat-loss) efficiency analysis</li>
+          <li>Field measurement of flue gases and fuel consumption</li>
+          <li>Combustion and thermodynamic energy balance</li>
+          <li>Root-cause diagnosis and corrective recommendation</li>
+        </ul>
+        <div class="cs-tags">
+          <span class="cs-tag">Combustion &amp; thermodynamics</span>
+          <span class="cs-tag">Indirect-method efficiency</span>
+          <span class="cs-tag">Boiler / pressure vessel (NR 13)</span>
+          <span class="cs-tag">Engineering verification</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-tight" style="border-top: 1px solid var(--line); text-align:center;">
+  <div class="container">
+    <h2 class="section-title" style="max-width: 800px; margin: 0 auto 18px;">Your project could be the next one.</h2>
+    <p class="section-sub" style="max-width: 640px; margin: 0 auto 32px;">Send a brief, a sketch or a folder of drawings. Free 30-minute scoping call, written fixed-scope proposal back within 48 hours.</p>
+    <a href="contact.html" class="btn btn-primary">Bring us your project
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/></svg>
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <img class="foot-logo" src="images/logo-stacked-light.png" alt="Senger Engineering" />
+      <p class="foot-tagline">Mechanical engineering, technical documentation and shop drawings for the people who build.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Practice</h4>
+      <ul>
+        <li><a href="engineering.html">Engineering</a></li>
+        <li><a href="renders.html">Renders</a></li>
+        <li><a href="projects.html">Capabilities</a></li>
+        <li><a href="case-studies.html">Case studies</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="mechanical-engineering">Mechanical engineering</a></li>
+        <li><a href="fabrication-drawings">Fabrication drawings</a></li>
+        <li><a href="product-development">Product development</a></li>
+        <li><a href="renders.html">3D renders</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Studio</h4>
+      <ul>
+        <li><a href="mailto:info@senger.com.au">info@senger.com.au</a></li>
+        <li><a href="tel:+61413886800">+61 0413 886 800</a></li>
+        <li>Perth, WA, Australia</li>
+        <li>ABN 12 326 601 680</li>
+        <li><a href="https://www.linkedin.com/company/senger-engineering-aus/" target="_blank" rel="noopener" aria-label="Senger Engineering on LinkedIn" style="display:inline-flex; align-items:center; gap:7px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.73v20.54C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.73V1.73C24 .78 23.2 0 22.22 0z"/></svg>LinkedIn</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bot">
+    <span>© Senger Engineering · 2026</span>
+    <span>Engineered in Western Australia</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
