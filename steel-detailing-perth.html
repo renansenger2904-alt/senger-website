@@ -120,6 +120,33 @@
     </div>
   </div>
 </header>
+
+<!-- OFFER BAND -->
+<section class="offer-band">
+  <div class="container">
+    <div class="offer-band-inner">
+      <div class="offer-item"><strong>Fixed price</strong><span>quoted upfront, no surprises</span></div>
+      <div class="offer-item"><strong>First revision in 48 to 72 hours</strong><span>for when you're waiting to fabricate</span></div>
+      <div class="offer-item"><strong>50% to start</strong><span>simple deposit, balance on delivery</span></div>
+      <div class="offer-cta"><a href="contact.html?project=Steel%20detailing%20quote">Send your sketch or PDF, get a quote</a></div>
+    </div>
+  </div>
+</section>
+<style>
+  .offer-band { background: var(--accent); color: #fff; padding: clamp(26px, 3.5vw, 38px) 0; }
+  .offer-band-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: clamp(18px, 3vw, 36px); }
+  .offer-item { display: flex; flex-direction: column; gap: 4px; }
+  .offer-item strong { font-family: var(--serif); font-size: clamp(18px, 1.8vw, 22px); font-weight: 400; letter-spacing: -0.01em; }
+  .offer-item span { font-size: 12.5px; color: rgba(255,255,255,0.82); line-height: 1.4; }
+  .offer-cta a { display: inline-flex; align-items: center; gap: 8px; background: #fff; color: var(--accent); font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 600; padding: 13px 22px; border-radius: 4px; text-decoration: none; transition: opacity 0.25s ease; white-space: nowrap; }
+  .offer-cta a:hover { opacity: 0.9; }
+  @media (max-width: 820px) {
+    .offer-band-inner { flex-direction: column; align-items: flex-start; }
+    .offer-cta { width: 100%; }
+    .offer-cta a { width: 100%; justify-content: center; }
+  }
+</style>
+
 <section class="section">
   <div class="container">
     <div class="section-head">
