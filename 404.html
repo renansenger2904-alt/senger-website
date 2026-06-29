@@ -17,7 +17,13 @@
     <img src="images/logo-horizontal-transparent.png" alt="Senger Engineering" />
   </a>
   <a href="contact.html" class="nav-cta">Request a quote</a>
+  <a href="contact.html" style="display:none;" class="nav-404-contact">Contact</a>
 </nav>
+<style>
+  @media (max-width: 980px) {
+    .nav-404-contact { display: inline-block !important; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: var(--accent); text-decoration: none; }
+  }
+</style>
 
 <section style="min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 80px var(--gutter); text-align: center;">
   <div style="max-width: 600px;">
@@ -33,5 +39,6 @@
   </div>
 </section>
 
+<script src="script.js"></script>
 </body>
 </html>
