@@ -1122,7 +1122,7 @@
         // on success, or { success: false, message: "..." } on validation/quota failure.
         var bodyOk = r.body && (r.body.success === true || r.body.success === 'true');
         if (r.ok && bodyOk) {
-          fireConversion();
+          // Conversion fires once on /thank-you, gated by ?sent=1 (single source of truth).
           window.location.href = '/thank-you?sent=1';
           return;
         }
