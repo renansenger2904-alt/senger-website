@@ -26,13 +26,19 @@
 </script>
 
 <!-- ============================================================
-     LEAD CONVERSION, fires on every load of /thank-you
-     "Quote Request" conversion (Submit lead form, count: One).
-     Ads dedupes the duplicate fire from contact.html on submit.
+     LEAD CONVERSION, fires ONLY on a genuine form submit.
+     Gated by ?sent=1 (set by the Web3Forms success redirect).
+     Direct visits, reloads, bookmarks and ad-bot scans of
+     /thank-you must NOT convert. Strips the param so a reload
+     can't re-fire. Ads action: Submit lead form, count: One.
      ============================================================ -->
 <script>
-  try { gtag('event', 'conversion', { 'send_to': 'AW-18153072870/BR-GCPH54L4cEObRh9BD' }); } catch (e) {}
-  try { gtag('event', 'generate_lead', { 'value': 1.0, 'currency': 'AUD' }); } catch (e) {}
+  (function () {
+    if (window.location.search.indexOf('sent=1') === -1) return;
+    try { gtag('event', 'conversion', { 'send_to': 'AW-18153072870/BR-GCPH54L4cEObRh9BD', 'value': 250.0, 'currency': 'AUD' }); } catch (e) {}
+    try { gtag('event', 'generate_lead', { 'value': 250.0, 'currency': 'AUD' }); } catch (e) {}
+    if (window.history && history.replaceState) { history.replaceState({}, '', window.location.pathname); }
+  })();
 </script>
 
 <style>
