@@ -78,7 +78,8 @@
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mechanical engineering", "url": "https://senger.com.au/mechanical-engineering.html" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fabrication and shop drawings", "url": "https://senger.com.au/fabrication-drawings.html" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Product development", "url": "https://senger.com.au/product-development.html" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D renders and visualisation", "url": "https://senger.com.au/renders.html" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "3D renders and visualisation", "url": "https://senger.com.au/renders.html" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen exhaust, ventilation and air conditioning design", "url": "https://senger.com.au/ventilation-air-conditioning-perth" } }
         ]
       }
     },
@@ -345,7 +346,7 @@
         <span class="line"><span class="line-inner">site walk.</span></span>
       </h1>
       <p class="page-hero-lede">
-        We design mechanical and structural steelwork, check it properly by hand or FEA, and hand over drawings the workshop can build from straight away. Based in Perth, working across WA for industrial, mining and architectural clients. You deal with the engineer doing the work, not a sales desk.
+        We design mechanical and structural steelwork, check it properly by hand or FEA, and hand over drawings the workshop can build from straight away. We also design kitchen exhaust, ventilation and air conditioning for fit-outs and plants. Based in Perth, working across WA for industrial, mining and architectural clients. You deal with the engineer doing the work, not a sales desk.
       </p>
       <div style="display:flex; gap:14px; flex-wrap:wrap; margin-top:36px; opacity:0; animation: fadeUp 1s var(--ease) 0.8s forwards;">
         <a href="contact.html" class="btn btn-primary">
@@ -406,11 +407,13 @@
     <span class="ticker-item">Product development</span>
     <span class="ticker-item">FEA &amp; engineering calculations</span>
     <span class="ticker-item">3D renders</span>
+    <span class="ticker-item">Kitchen exhaust &amp; ventilation</span>
     <span class="ticker-item">Mechanical engineering</span>
     <span class="ticker-item">Fabrication drawings</span>
     <span class="ticker-item">Product development</span>
     <span class="ticker-item">FEA &amp; engineering calculations</span>
     <span class="ticker-item">3D renders</span>
+    <span class="ticker-item">Kitchen exhaust &amp; ventilation</span>
   </div>
 </div>
 
@@ -486,7 +489,7 @@
       <div class="eyebrow"><span class="num">01</span>Engineering</div>
       <div>
         <h2 class="section-title">Engineering, documentation and visuals, <span class="it">from one studio.</span></h2>
-        <p class="section-sub">Three services that carry a job from the first sketch to the fabricator, plus the 3D visuals that help get it approved and sold along the way.</p>
+        <p class="section-sub">Services that carry a job from the first sketch to the fabricator, ventilation design for kitchens and plants, and the 3D visuals that help get it approved and sold along the way.</p>
       </div>
     </div>
 
@@ -518,6 +521,15 @@
         <h3 class="svc-title">3D renders &amp; <span class="it">visualisation</span></h3>
         <p class="svc-desc">Photoreal renders produced from native 3D models, for sales, marketing, approvals and proposals where a drawing isn't enough.</p>
         <div class="svc-link">Explore service →</div>
+      </a>
+      <a href="ventilation-air-conditioning-perth" class="svc-card svc-card--wide reveal">
+        <div class="svc-img svc-img--diagram"><img src="images/kitchen-exhaust-system.svg" alt="Diagram of a commercial kitchen exhaust and make-up air system" loading="lazy" /></div>
+        <div>
+          <div class="svc-num">05</div>
+          <h3 class="svc-title">Ventilation &amp; <span class="it">air conditioning</span></h3>
+          <p class="svc-desc">Commercial kitchen exhaust, make-up air, general and industrial ventilation and heat loads. Calculations, fan duties and drawings to AS 1668.2 that mechanical contractors can price and build from.</p>
+          <div class="svc-link">Explore service →</div>
+        </div>
       </a>
     </div>
 
@@ -609,8 +621,14 @@
     transition: letter-spacing 0.5s var(--ease);
   }
   .svc-card:hover .svc-link { letter-spacing: 0.2em; }
+  .svc-card--wide { grid-column: 1 / -1; display: grid; grid-template-columns: 1.2fr 1fr; gap: clamp(28px, 4vw, 56px); align-items: center; }
+  .svc-card--wide .svc-img { margin-bottom: 0; }
+  .svc-img--diagram { aspect-ratio: auto; background: #fff; border: 1px solid var(--line); padding: 12px; }
+  .svc-img--diagram img { height: auto; object-fit: contain; }
   @media (max-width: 760px) {
     .services-grid { grid-template-columns: 1fr; }
+    .svc-card--wide { grid-template-columns: 1fr; gap: 0; }
+    .svc-card--wide .svc-img { margin-bottom: 28px; }
   }
 </style>
 
@@ -725,6 +743,8 @@
       <div class="std-cell"><div class="std-c">AS/NZS 5131</div><div class="std-l">Fabrication compliance</div></div>
       <div class="std-cell"><div class="std-c">AS 1657</div><div class="std-l">Platforms &amp; walkways</div></div>
       <div class="std-cell"><div class="std-c">AS 1100</div><div class="std-l">Technical drawing</div></div>
+      <div class="std-cell"><div class="std-c">AS 1668.2</div><div class="std-l">Mechanical ventilation</div></div>
+      <div class="std-cell"><div class="std-c">AS/NZS 5601.1</div><div class="std-l">Gas installations</div></div>
     </div>
 
     <p class="std-note reveal">
@@ -736,7 +756,7 @@
 <style>
   .std-strip {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 1px;
     background: var(--line);
     border: 1px solid var(--line);

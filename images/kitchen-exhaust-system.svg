@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" role="img" aria-labelledby="kexTitle kexDesc">
+        <title id="kexTitle">Commercial kitchen exhaust and make-up air system</title>
+        <desc id="kexDesc">Section through a kitchen: a canopy over the cooking line captures heat and grease, a grease duct rises through the ceiling to a roof exhaust fan with vertical discharge. A roof supply fan brings make-up air back into the room. The exhaust fan, supply fan and gas valve are interlocked.</desc>
+        <style>text{font-family:Inter,Arial,sans-serif;fill:#2A2D33}</style>
+        <defs>
+          <marker id="arH" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C97B3F"/></marker>
+          <marker id="arC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4A6FA5"/></marker>
+        </defs>
+        <!-- roof, ceiling, floor -->
+        <rect x="40" y="110" width="880" height="14" fill="#E8E5DD"/>
+        <line x1="40" y1="190" x2="920" y2="190" stroke="#D6D3CC" stroke-width="2" stroke-dasharray="8 6"/>
+        <text x="900" y="183" font-size="12" text-anchor="end" fill="#6B6E75">ceiling</text>
+        <text x="900" y="104" font-size="12" text-anchor="end" fill="#6B6E75">roof</text>
+        <rect x="40" y="430" width="880" height="10" fill="#E8E5DD"/>
+        <!-- appliances -->
+        <rect x="150" y="360" width="250" height="70" fill="#fff" stroke="#2A2D33" stroke-width="2"/>
+        <text x="275" y="400" font-size="13" text-anchor="middle">fryers / cooking line</text>
+        <!-- canopy -->
+        <path d="M120 260 L430 260 L400 300 L150 300 Z" fill="#F2F0EC" stroke="#1F3A5F" stroke-width="2.5"/>
+        <line x1="190" y1="275" x2="360" y2="275" stroke="#1F3A5F" stroke-width="1.5" stroke-dasharray="4 4"/>
+        <!-- hot plume -->
+        <path d="M230 355 C220 330 250 320 240 305" stroke="#C97B3F" stroke-width="2" fill="none" marker-end="url(#arH)"/>
+        <path d="M320 355 C330 330 300 320 310 305" stroke="#C97B3F" stroke-width="2" fill="none" marker-end="url(#arH)"/>
+        <!-- grease duct -->
+        <rect x="255" y="40" width="40" height="220" fill="#fff" stroke="#1F3A5F" stroke-width="2.5"/>
+        <path d="M275 245 L275 150" stroke="#C97B3F" stroke-width="2" marker-end="url(#arH)"/>
+        <!-- exhaust fan -->
+        <rect x="235" y="60" width="80" height="44" rx="4" fill="#1F3A5F"/>
+        <text x="275" y="87" font-size="13" text-anchor="middle" fill="#fff" style="fill:#fff" font-weight="600">EF</text>
+        <path d="M275 56 L275 14" stroke="#C97B3F" stroke-width="2.5" marker-end="url(#arH)"/>
+        <!-- supply fan -->
+        <rect x="660" y="60" width="80" height="44" rx="4" fill="#4A6FA5"/>
+        <text x="700" y="87" font-size="13" text-anchor="middle" fill="#fff" style="fill:#fff" font-weight="600">SF</text>
+        <path d="M800 82 L748 82" stroke="#4A6FA5" stroke-width="2.5" marker-end="url(#arC)"/>
+        <text x="808" y="86" font-size="12" fill="#6B6E75">outdoor air</text>
+        <rect x="680" y="104" width="40" height="120" fill="#fff" stroke="#4A6FA5" stroke-width="2.5"/>
+        <rect x="660" y="224" width="80" height="12" fill="#4A6FA5"/>
+        <path d="M680 245 C660 290 600 320 520 330" stroke="#4A6FA5" stroke-width="2" fill="none" marker-end="url(#arC)"/>
+        <path d="M720 245 C730 300 700 350 640 380" stroke="#4A6FA5" stroke-width="2" fill="none" marker-end="url(#arC)"/>
+        <!-- interlock -->
+        <path d="M315 70 L660 70" stroke="#6B6E75" stroke-width="1.5" stroke-dasharray="3 5"/>
+        <rect x="560" y="398" width="90" height="28" rx="3" fill="#fff" stroke="#6B6E75" stroke-width="1.5"/>
+        <text x="605" y="417" font-size="12" text-anchor="middle">gas valve</text>
+        <path d="M605 398 L605 250 L760 250 L760 70 L740 70" stroke="#6B6E75" stroke-width="1.5" stroke-dasharray="3 5" fill="none"/>
+        <text x="470" y="62" font-size="12" text-anchor="middle" fill="#6B6E75">interlock</text>
+        <!-- callouts -->
+        <g font-size="12" font-weight="600">
+          <circle cx="330" cy="26" r="13" fill="#C97B3F"/><text x="330" y="30" text-anchor="middle" style="fill:#fff">1</text>
+          <circle cx="220" cy="150" r="13" fill="#1F3A5F"/><text x="220" y="154" text-anchor="middle" style="fill:#fff">2</text>
+          <circle cx="455" cy="280" r="13" fill="#1F3A5F"/><text x="455" y="284" text-anchor="middle" style="fill:#fff">3</text>
+          <circle cx="840" cy="130" r="13" fill="#4A6FA5"/><text x="840" y="134" text-anchor="middle" style="fill:#fff">4</text>
+          <circle cx="490" cy="355" r="13" fill="#4A6FA5"/><text x="490" y="359" text-anchor="middle" style="fill:#fff">5</text>
+          <circle cx="680" cy="412" r="13" fill="#6B6E75"/><text x="680" y="416" text-anchor="middle" style="fill:#fff">6</text>
+        </g>
+      </svg>

@@ -530,6 +530,7 @@ button { font: inherit; border: none; background: none; color: inherit; cursor: 
 .reveal-stagger.in > *:nth-child(4) { opacity: 1; transform: translateY(0); transition-delay: 0.29s; }
 .reveal-stagger.in > *:nth-child(5) { opacity: 1; transform: translateY(0); transition-delay: 0.37s; }
 .reveal-stagger.in > *:nth-child(6) { opacity: 1; transform: translateY(0); transition-delay: 0.45s; }
+.reveal-stagger.in > *:nth-child(n+7) { opacity: 1; transform: translateY(0); transition-delay: 0.53s; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
