@@ -13,6 +13,7 @@ ABN: 12 326 601 680
 - [Fabrication and shop drawings](https://senger.com.au/fabrication-drawings.html): Manufacturing-ready drawings to AS 1100, including weld schedules, bolt callouts and BOMs ready for direct release to the fabricator.
 - [Product development](https://senger.com.au/product-development.html): End-to-end mechanical product engineering — concept, DFM/DFA, FEA verification, prototyping and manufacture for founders, OEMs and industrial businesses.
 - [3D renders and visualisation](https://senger.com.au/renders.html): Photoreal renders produced from native engineering models, for client approvals, design validation, marketing, tender submissions and proposal support.
+- [Kitchen exhaust, ventilation and air conditioning](https://senger.com.au/ventilation-air-conditioning-perth): Commercial kitchen exhaust hoods, grease ducts and fan duties, make-up air, general and industrial ventilation and heat loads, issued as a calculation note and drawing package to AS 1668.2 and AS/NZS 5601.1.
 
 ## Engineering capability
 
