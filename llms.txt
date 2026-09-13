@@ -15,6 +15,8 @@ ABN: 12 326 601 680
 - [3D renders and visualisation](https://senger.com.au/renders.html): Photoreal renders produced from native engineering models, for client approvals, design validation, marketing, tender submissions and proposal support.
 - [Kitchen exhaust, ventilation and air conditioning](https://senger.com.au/ventilation-air-conditioning-perth): Commercial kitchen exhaust hoods, grease ducts and fan duties, make-up air, general and industrial ventilation and heat loads, issued as a calculation note and drawing package to AS 1668.2 and AS/NZS 5601.1.
 - [Guide: what sets the cost of a commercial kitchen exhaust in WA](https://senger.com.au/kitchen-exhaust-cost-guide-wa): Seven design decisions from a Perth bakery fit-out (fan above the hood, hood sized to the line, discharge grouping and 5 m/s at the outlet, the 3 m stack rule for Type B exhaust, gas oven ventilation air under AS/NZS 5601.1, make-up air balance, independent checking), with clauses and numbers.
+- [Guide: getting a commercial kitchen exhaust approved in WA](https://senger.com.au/kitchen-exhaust-council-approval-wa): The building permit (NCC F6D12, AS 1668.2) and the council health approval (Food Act 2008, Standard 3.2.3), hood triggers, which AS 1668.2 edition applies, how 24 WA council guidelines differ, what to lodge, who certifies, and noise limits for roof fans.
+- [Guide: reusing a kitchen exhaust left by a previous tenant](https://senger.com.au/reuse-kitchen-exhaust-previous-tenant-wa): Item-by-item check of an existing canopy, filters, grease duct, exhaust fan, roof outlet, make-up air and interlocks against AS 1668.2-2012 for the new equipment, with what usually stays and what usually goes.
 
 ## Engineering capability
 
