@@ -125,3 +125,29 @@
     document.body.appendChild(wrap);
   }
 })();
+
+/* ============================================================
+   Phone click tracking
+   Fires a GA4 event whenever someone taps a phone number, so calls
+   from the site are measurable. data-track-call marks where the click
+   happened (hero, close, footer, floating button).
+   To count these as a Google Ads conversion as well, create a
+   conversion action in Google Ads and put its send_to value in
+   ADS_CALL_SEND_TO below.
+   ============================================================ */
+(function () {
+  var ADS_CALL_SEND_TO = '';
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if (!a) return;
+    var where = a.getAttribute('data-track-call') || 'other';
+    try {
+      if (typeof gtag === 'function') {
+        gtag('event', 'phone_click', { 'event_category': 'contact', 'event_label': where });
+        if (ADS_CALL_SEND_TO) {
+          gtag('event', 'conversion', { 'send_to': ADS_CALL_SEND_TO, 'value': 100.0, 'currency': 'AUD' });
+        }
+      }
+    } catch (err) {}
+  }, true);
+})();
