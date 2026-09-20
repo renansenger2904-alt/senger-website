@@ -4,8 +4,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-<title>Kitchen Exhaust, Ventilation &amp; Air Conditioning Design in Perth | Senger Engineering</title>
-<meta name="description" content="Mechanical ventilation and air conditioning design in Perth, WA. Commercial kitchen exhaust, make-up air, general and industrial ventilation, heat loads. Calcs, fan duties and drawings to AS 1668.2 that mechanical contractors can price and build from." />
+<title>Commercial Kitchen Exhaust Design, Perth | AS 1668.2 | Senger Engineering</title>
+<meta name="description" content="Commercial kitchen exhaust and ventilation design for Perth fit-outs. Canopy and fan sizing, make-up air, gas interlocks and roof discharge to AS 1668.2 and AS/NZS 5601.1." />
 <meta property="og:title" content="Kitchen Exhaust, Ventilation &amp; Air Conditioning Design in Perth | Senger Engineering" />
 <meta property="og:description" content="Kitchen exhaust, ventilation and air conditioning design to AS 1668.2 and AS/NZS 5601.1. Calculation note, fan duties and drawings ready for contractor pricing." />
 <meta property="og:url" content="https://senger.com.au/ventilation-air-conditioning-perth" />
@@ -51,6 +51,59 @@
       "provider": { "@id": "https://senger.com.au/#business" },
       "areaServed": { "@type": "State", "name": "Western Australia" },
       "description": "Mechanical ventilation and air conditioning design for WA commercial kitchens, workshops and buildings: kitchen exhaust hoods, grease ducts, fan duties, make-up air, general and industrial ventilation and heat load calculations, delivered as a calculation note and drawing package to AS 1668.2 and AS/NZS 5601.1."
+    },
+{
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can I reuse the canopy and ducts the last tenant left behind?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Often yes, and it is usually the single biggest saving on the job. But it is a check, not an assumption. What matters is whether the canopy still suits your appliances, whether the filter bank geometry meets the current standard, whether the duct route and riser can carry the airflow your equipment now needs, and whether the roof discharge still clears every air intake. On a recent job the existing canopy was kept, but its filter bank sat outside the prescriptive angle limit, so it needed a documented equivalence case rather than a shrug. What to check before you reuse a kitchen exhaust in WA"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is AS 1668.2, and why does everyone keep saying it?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It is the Australian standard for mechanical ventilation. It sets how much air a canopy has to pull for your particular appliances, how ducts and discharges have to be arranged, and how far a discharge must sit from any fresh‑air intake. Your building surveyor and your council environmental health officer will expect the design to meet it. Alongside it sits AS/NZS 5601.1, the gas standard, which governs combustion air and the interlock that stops the burners if the ventilation fails. The catch is that local guidelines sometimes name an older edition of AS 1668.2 than the one currently published, and the two can give materially different airflows for the same kitchen. That is worth knowing before a fan is ordered."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need an engineer, or can my mechanical contractor sort it out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plenty of straightforward kitchens get built well by a good mechanical contractor. Where a design earns its keep is when the answer is contested: a council asking which edition of the standard you used, a gas inspector asking how the combustion air figure was reached, an existing canopy you want to keep, a tight roof where discharges and intakes are fighting for space, or two contractors returning prices that are thousands apart because they each guessed at a different scope. To be straight with you about credentials: I am a member of Engineers Australia (MIEAust). Western Australia’s registration scheme for building engineers does not take full effect until 1 July 2027. If your project specifically requires a Chartered or registered engineer’s signature today, say so early and I will tell you plainly whether I am the right fit."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you supply or install the canopy and fans?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. I design, you build. I do not sell equipment, so there is no margin riding on which fan gets specified, and no reason to size anything larger than the calculation says. The package is written so your contractor, or three competing contractors, can price the same scope from the same drawings. Installation, gasfitting and commissioning stay with the licensed trades."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A preliminary concept, enough to size the fans, fix the roof penetrations and unblock the builder, usually comes back in days from your equipment list and floor plan. The full package follows once the appliance data sheets are in and I have measured the site. The honest variable is not my drawing time, it is how quickly the equipment supplier sends real airflow figures and how quickly decisions get made on reuse and canopy height."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does it cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Fixed fee, agreed in writing before anything starts, after a free scoping call. I do not publish a rate card because the honest range is wide. A reuse check on one canopy and a full kitchen with multiple gas appliances, a gas interlock and a congested roof are different jobs. Send the equipment list and the floor plan and you will have a number and a scope, not an hourly rate that drifts. If you want to understand what actually drives the cost of the installation, which is the much bigger number, that is written up here."
+          }
+        }
+      ]
     }
   ]
 }
@@ -73,9 +126,10 @@
   .svc-card li { font-size: 14px; color: var(--muted); line-height: 1.45; padding-left: 16px; position: relative; }
   .svc-card li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 7px; height: 1px; background: var(--accent); }
 
-  .kex-fig { background: #fff; border: 1px solid var(--line); padding: clamp(14px, 2vw, 28px); overflow-x: auto; }
+  .kex-fig { background: var(--bg); border: 1px solid var(--line); padding: clamp(14px, 2vw, 28px); overflow-x: auto; }
   .kex-fig svg { display: block; width: 100%; min-width: 640px; height: auto; }
   .kex-fig text { font-family: var(--sans); fill: var(--ink-2); }
+  .kex-cap { margin-top: 18px; font-size: 14.5px; line-height: 1.65; color: var(--ink-2); max-width: 74ch; }
   .kex-legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px 32px; margin-top: 26px; list-style: none; counter-reset: k; }
   .kex-legend li { counter-increment: k; display: grid; grid-template-columns: 28px 1fr; gap: 10px; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); }
   .kex-legend li::before { content: counter(k); width: 24px; height: 24px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 12px; font-weight: 600; display: grid; place-items: center; }
@@ -91,7 +145,42 @@
   .std-list li { border: 1px solid var(--line-2); padding: 8px 14px; font-size: 13.5px; color: var(--ink-2); background: var(--bg); }
   .std-list strong { color: var(--accent); font-weight: 600; margin-right: 6px; }
 
+  .proof-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+  .proof-card { background: var(--bg); padding: clamp(24px, 2.6vw, 34px); display: flex; flex-direction: column; gap: 12px; }
+  .proof-stat { font-family: var(--serif); font-weight: 400; font-size: clamp(30px, 3.4vw, 44px); line-height: 1; letter-spacing: -0.02em; color: var(--accent); }
+  .proof-stat span { font-family: var(--sans); font-size: 13px; font-weight: 500; letter-spacing: 0.02em; color: var(--muted); }
+  .proof-card h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(20px, 2vw, 24px); line-height: 1.25; letter-spacing: -0.01em; color: var(--ink); }
+  .proof-card p { color: var(--ink-2); font-size: 14.5px; line-height: 1.65; }
+  .proof-card strong { color: var(--ink); font-weight: 600; }
+  .proof-fig { margin-top: 40px; border: 1px solid var(--line-2); background: var(--bg); padding: clamp(12px, 1.6vw, 20px); }
+  .proof-fig img { display: block; width: 100%; height: auto; }
+  .proof-fig figcaption { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.6; color: var(--muted); max-width: 74ch; }
+  .proof-shape { margin-top: 40px; border: 1px solid var(--line-2); background: var(--bg); padding: clamp(24px, 3vw, 40px); }
+  .proof-shape h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(22px, 2.2vw, 28px); color: var(--ink); margin-bottom: 20px; }
+  .proof-docs { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px 32px; }
+  .proof-docs li { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); padding-left: 16px; position: relative; }
+  .proof-docs li::before { content: ''; position: absolute; left: 0; top: 0.62em; width: 7px; height: 1px; background: var(--accent); }
+  .proof-docs strong { color: var(--ink); font-weight: 600; }
+  .proof-foot { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 14.5px; line-height: 1.65; color: var(--ink-2); max-width: 78ch; }
+  .proof-foot strong { color: var(--ink); font-weight: 600; }
+
+  .faq { border-top: 1px solid var(--line-2); }
+  .faq-item { border-bottom: 1px solid var(--line-2); }
+  .faq-item summary { cursor: pointer; list-style: none; padding: 22px 44px 22px 0; position: relative; font-family: var(--serif); font-weight: 400; font-size: clamp(19px, 1.9vw, 24px); line-height: 1.3; color: var(--ink); transition: color 0.2s var(--ease); }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary:hover { color: var(--accent); }
+  .faq-item summary:focus-visible { color: var(--accent); outline: 2px solid var(--accent); outline-offset: 3px; }
+  .faq-item summary::after { content: ''; position: absolute; right: 8px; top: 50%; width: 11px; height: 11px; border-right: 1.5px solid var(--muted); border-bottom: 1.5px solid var(--muted); transform: translateY(-70%) rotate(45deg); transition: transform 0.25s var(--ease); }
+  .faq-item[open] summary::after { transform: translateY(-30%) rotate(225deg); }
+  .faq-a { padding: 0 44px 26px 0; max-width: 82ch; }
+  .faq-a p { font-size: 16px; line-height: 1.75; color: var(--ink-2); }
+  .faq-a p + p { margin-top: 14px; }
+  .faq-a a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .lp-cta-alt { margin-top: 20px; font-size: 14.5px; color: var(--muted); }
+  .lp-cta-alt a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+
   @media (max-width: 820px) {
+    .proof-grid { grid-template-columns: 1fr; }
     .svc-grid { grid-template-columns: 1fr; }
     .offer-band-inner { flex-direction: column; align-items: flex-start; }
     .offer-cta { width: 100%; }
@@ -138,7 +227,7 @@
 <header class="lp-hero">
   <div class="lp-hero-inner">
     <div class="lp-eyebrow">Kitchen exhaust · Ventilation · Air con · Perth, WA</div>
-    <h1 class="lp-h1">Ventilation &amp; <span class="it">Air Conditioning</span>, Perth</h1>
+    <h1 class="lp-h1">Kitchen Exhaust &amp; <span class="it">Ventilation Design</span>, Perth</h1>
     <p class="lp-lede">
       Mechanical services design for <strong>commercial kitchens</strong>, workshops and buildings. Airflow calculations, fan duties, duct sizing, make-up air and gas interlocks, issued as a calculation note and drawing package that mechanical contractors can price and build from. Designed to <strong>AS 1668.2</strong> and <strong>AS/NZS 5601.1</strong>.
     </p>
@@ -155,6 +244,10 @@
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         Preliminary concept first, then the full package
       </div>
+      <div class="lp-trust-item">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 21h18M6 21V9l6-5 6 5v12"/><path d="M10 21v-6h4v6"/></svg>
+        Design only. Your contractor builds, no equipment margin
+      </div>
     </div>
     <div class="lp-cta">
       <a href="contact.html?project=Ventilation%20%2F%20air%20conditioning" class="btn btn-primary">
@@ -163,8 +256,9 @@
           <path d="M3 11 L11 3 M11 3 H5 M11 3 V9" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"/>
         </svg>
       </a>
-      <a href="tel:+61413886800" class="btn btn-secondary" data-track-call="hero">Call +61 413 886 800</a>
+      <a href="tel:+61413886800" class="btn btn-secondary" data-track-call="hero">Free scoping call &middot; +61 413 886 800</a>
     </div>
+    <p class="lp-cta-alt">Not ready to brief yet? <a href="kitchen-exhaust-cost-guide-wa">Read what actually drives the cost of a kitchen exhaust in WA</a>.</p>
   </div>
 </header>
 
@@ -206,7 +300,7 @@
       <article class="svc-card">
         <div class="svc-num">02</div>
         <h3>Make-up air &amp; general ventilation</h3>
-        <p>The other half of every exhaust system, plus the everyday ventilation a building needs to pass approval.</p>
+        <p>The other half of every exhaust system, plus the everyday ventilation a building is assessed against.</p>
         <ul>
           <li>Make-up air and room pressure balance</li>
           <li>Toilets, change rooms, stores and plant rooms</li>
@@ -230,7 +324,7 @@
       <article class="svc-card">
         <div class="svc-num">04</div>
         <h3>Industrial ventilation &amp; fume extraction</h3>
-        <p>Workshops and plants where the air carries welding fume, dust or process vapour, drawing on years of industrial plant engineering.</p>
+        <p>Workshops and plants where the air carries welding fume, dust or process vapour, drawing on industrial plant engineering practice.</p>
         <ul>
           <li>Local exhaust hoods and capture velocity</li>
           <li>Welding fume and dust extraction</li>
@@ -253,61 +347,92 @@
         <p class="section-sub">Most problems on site come from designing one part at a time. I design the whole loop so the numbers agree with each other.</p>
       </div>
     </div>
-    <figure class="kex-fig">
-      <svg viewBox="0 0 960 470" role="img" aria-labelledby="kexTitle kexDesc">
-        <title id="kexTitle">Commercial kitchen exhaust and make-up air system</title>
-        <desc id="kexDesc">Section through a kitchen: a canopy over the cooking line captures heat and grease, a grease duct rises through the ceiling to a roof exhaust fan with vertical discharge. A roof supply fan brings make-up air back into the room. The exhaust fan, supply fan and gas valve are interlocked.</desc>
+    <figure class="kex-fig" tabindex="0" role="group" aria-label="Kitchen exhaust and make-up air system diagram, scrolls horizontally on small screens">
+      <svg viewBox="0 0 980 520" role="img" aria-labelledby="kexTitle kexDesc">
+        <title id="kexTitle">Section through a commercial kitchen: the exhaust and make-up air loop</title>
+        <desc id="kexDesc">A canopy over the cooking line captures heat, grease and steam. A grease duct carries it up through the roof to an exhaust fan that discharges vertically. A separate supply fan draws outdoor air in, ducts it through the ceiling void and returns it to the room through diffusers placed away from the canopy. A control line ties both fans to the gas valve, so the burners cannot fire without airflow.</desc>
         <defs>
-          <marker id="arH" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C97B3F"/></marker>
-          <marker id="arC" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4A6FA5"/></marker>
+          <marker id="aEx" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#C97B3F"/></marker>
+          <marker id="aSu" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" fill="#4A6FA5"/></marker>
         </defs>
-        <!-- roof, ceiling, floor -->
-        <rect x="40" y="110" width="880" height="14" fill="#E8E5DD"/>
-        <line x1="40" y1="190" x2="920" y2="190" stroke="#D6D3CC" stroke-width="2" stroke-dasharray="8 6"/>
-        <text x="900" y="183" font-size="12" text-anchor="end" fill="#6B6E75">ceiling</text>
-        <text x="900" y="104" font-size="12" text-anchor="end" fill="#6B6E75">roof</text>
-        <rect x="40" y="430" width="880" height="10" fill="#E8E5DD"/>
-        <!-- appliances -->
-        <rect x="150" y="360" width="250" height="70" fill="#fff" stroke="#2A2D33" stroke-width="2"/>
-        <text x="275" y="400" font-size="13" text-anchor="middle">fryers / cooking line</text>
-        <!-- canopy -->
-        <path d="M120 260 L430 260 L400 300 L150 300 Z" fill="#F2F0EC" stroke="#1F3A5F" stroke-width="2.5"/>
-        <line x1="190" y1="275" x2="360" y2="275" stroke="#1F3A5F" stroke-width="1.5" stroke-dasharray="4 4"/>
-        <!-- hot plume -->
-        <path d="M230 355 C220 330 250 320 240 305" stroke="#C97B3F" stroke-width="2" fill="none" marker-end="url(#arH)"/>
-        <path d="M320 355 C330 330 300 320 310 305" stroke="#C97B3F" stroke-width="2" fill="none" marker-end="url(#arH)"/>
-        <!-- grease duct -->
-        <rect x="255" y="40" width="40" height="220" fill="#fff" stroke="#1F3A5F" stroke-width="2.5"/>
-        <path d="M275 245 L275 150" stroke="#C97B3F" stroke-width="2" marker-end="url(#arH)"/>
-        <!-- exhaust fan -->
-        <rect x="235" y="60" width="80" height="44" rx="4" fill="#1F3A5F"/>
-        <text x="275" y="87" font-size="13" text-anchor="middle" fill="#fff" style="fill:#fff" font-weight="600">EF</text>
-        <path d="M275 56 L275 14" stroke="#C97B3F" stroke-width="2.5" marker-end="url(#arH)"/>
-        <!-- supply fan -->
-        <rect x="660" y="60" width="80" height="44" rx="4" fill="#4A6FA5"/>
-        <text x="700" y="87" font-size="13" text-anchor="middle" fill="#fff" style="fill:#fff" font-weight="600">SF</text>
-        <path d="M800 82 L748 82" stroke="#4A6FA5" stroke-width="2.5" marker-end="url(#arC)"/>
-        <text x="808" y="86" font-size="12" fill="#6B6E75">outdoor air</text>
-        <rect x="680" y="104" width="40" height="120" fill="#fff" stroke="#4A6FA5" stroke-width="2.5"/>
-        <rect x="660" y="224" width="80" height="12" fill="#4A6FA5"/>
-        <path d="M680 245 C660 290 600 320 520 330" stroke="#4A6FA5" stroke-width="2" fill="none" marker-end="url(#arC)"/>
-        <path d="M720 245 C730 300 700 350 640 380" stroke="#4A6FA5" stroke-width="2" fill="none" marker-end="url(#arC)"/>
-        <!-- interlock -->
-        <path d="M315 70 L660 70" stroke="#6B6E75" stroke-width="1.5" stroke-dasharray="3 5"/>
-        <rect x="560" y="398" width="90" height="28" rx="3" fill="#fff" stroke="#6B6E75" stroke-width="1.5"/>
-        <text x="605" y="417" font-size="12" text-anchor="middle">gas valve</text>
-        <path d="M605 398 L605 250 L760 250 L760 70 L740 70" stroke="#6B6E75" stroke-width="1.5" stroke-dasharray="3 5" fill="none"/>
-        <text x="470" y="62" font-size="12" text-anchor="middle" fill="#6B6E75">interlock</text>
-        <!-- callouts -->
-        <g font-size="12" font-weight="600">
-          <circle cx="330" cy="26" r="13" fill="#C97B3F"/><text x="330" y="30" text-anchor="middle" style="fill:#fff">1</text>
-          <circle cx="220" cy="150" r="13" fill="#1F3A5F"/><text x="220" y="154" text-anchor="middle" style="fill:#fff">2</text>
-          <circle cx="455" cy="280" r="13" fill="#1F3A5F"/><text x="455" y="284" text-anchor="middle" style="fill:#fff">3</text>
-          <circle cx="840" cy="130" r="13" fill="#4A6FA5"/><text x="840" y="134" text-anchor="middle" style="fill:#fff">4</text>
-          <circle cx="490" cy="355" r="13" fill="#4A6FA5"/><text x="490" y="359" text-anchor="middle" style="fill:#fff">5</text>
-          <circle cx="680" cy="412" r="13" fill="#6B6E75"/><text x="680" y="416" text-anchor="middle" style="fill:#fff">6</text>
+
+        <!-- building fabric -->
+        <rect x="40" y="120" width="900" height="14" fill="#E8E5DD"/>
+        <line x1="40" y1="216" x2="940" y2="216" stroke="#D6D3CC" stroke-width="2" stroke-dasharray="8 6"/>
+        <rect x="40" y="470" width="900" height="10" fill="#E8E5DD"/>
+        <g font-size="12" fill="#A8AAAE">
+          <text x="46" y="114">ROOF</text>
+          <text x="46" y="210">CEILING</text>
+          <text x="46" y="464">FLOOR</text>
+        </g>
+
+        <!-- control line: both fans and the gas valve -->
+        <g stroke="#6B6E75" stroke-width="1.4" stroke-dasharray="4 5" fill="none">
+          <path d="M292 77 L682 77"/>
+          <path d="M482 77 L482 436 L500 436"/>
+        </g>
+
+        <!-- extract side -->
+        <path d="M250 58 L250 20" stroke="#C97B3F" stroke-width="3" marker-end="url(#aEx)"/>
+        <text x="266" y="30" font-size="12.5" fill="#6B6E75">vertical discharge, clear of intakes</text>
+        <rect x="214" y="98" width="72" height="22" fill="#1F3A5F" opacity="0.85"/>
+        <rect x="208" y="56" width="84" height="42" rx="4" fill="#1F3A5F"/>
+        <text x="250" y="83" font-size="13" text-anchor="middle" font-weight="600" style="fill:#fff">EF</text>
+        <text x="198" y="82" font-size="12.5" text-anchor="end" fill="#2A2D33">exhaust fan</text>
+
+        <rect x="228" y="120" width="44" height="180" fill="#fff" stroke="#1F3A5F" stroke-width="2.5"/>
+        <path d="M250 288 L250 152" stroke="#C97B3F" stroke-width="2.5" marker-end="url(#aEx)"/>
+        <line x1="288" y1="178" x2="276" y2="178" stroke="#A8AAAE" stroke-width="1"/>
+        <text x="294" y="182" font-size="12.5" fill="#2A2D33">grease duct</text>
+        <text x="294" y="232" font-size="12" fill="#6B6E75">grease-laden air</text>
+
+        <path d="M186 300 L434 300 L470 346 L150 346 Z" fill="#F2F0EC" stroke="#1F3A5F" stroke-width="2.5"/>
+        <path d="M200 338 L310 312 L420 338" fill="none" stroke="#1F3A5F" stroke-width="1.5" stroke-dasharray="5 4"/>
+        <line x1="452" y1="316" x2="488" y2="306" stroke="#A8AAAE" stroke-width="1"/>
+        <text x="494" y="310" font-size="12.5" fill="#2A2D33">canopy</text>
+        <line x1="420" y1="338" x2="488" y2="348" stroke="#A8AAAE" stroke-width="1"/>
+        <text x="494" y="352" font-size="12.5" fill="#2A2D33">baffle filters</text>
+
+        <rect x="200" y="396" width="230" height="74" fill="#fff" stroke="#2A2D33" stroke-width="2"/>
+        <text x="315" y="439" font-size="13" text-anchor="middle" fill="#2A2D33">cooking line</text>
+        <path d="M262 390 L262 358" stroke="#C97B3F" stroke-width="2.5" marker-end="url(#aEx)"/>
+        <path d="M368 390 L368 358" stroke="#C97B3F" stroke-width="2.5" marker-end="url(#aEx)"/>
+        <text x="190" y="378" font-size="12" text-anchor="end" fill="#6B6E75">heat, grease, steam</text>
+
+        <!-- supply side -->
+        <text x="720" y="44" font-size="12.5" text-anchor="middle" fill="#2A2D33">supply air fan</text>
+        <path d="M846 78 L768 78" stroke="#4A6FA5" stroke-width="3" marker-end="url(#aSu)"/>
+        <text x="854" y="82" font-size="12.5" fill="#6B6E75">outdoor air</text>
+        <rect x="688" y="98" width="64" height="22" fill="#4A6FA5" opacity="0.85"/>
+        <rect x="682" y="56" width="76" height="42" rx="4" fill="#4A6FA5"/>
+        <text x="720" y="83" font-size="13" text-anchor="middle" font-weight="600" style="fill:#fff">SF</text>
+
+        <path d="M698 120 L698 180 L500 180 L500 202 L742 202 L742 120 Z" fill="#fff" stroke="#4A6FA5" stroke-width="2.5"/>
+        <path d="M720 132 L720 168" stroke="#4A6FA5" stroke-width="2" marker-end="url(#aSu)"/>
+        <path d="M512 202 L556 202 L564 216 L504 216 Z" fill="#F2F0EC" stroke="#4A6FA5" stroke-width="1.5"/>
+        <path d="M612 202 L656 202 L664 216 L604 216 Z" fill="#F2F0EC" stroke="#4A6FA5" stroke-width="1.5"/>
+        <line x1="496" y1="192" x2="484" y2="192" stroke="#A8AAAE" stroke-width="1"/>
+        <text x="478" y="196" font-size="12.5" text-anchor="end" fill="#2A2D33">ceiling diffusers</text>
+        <path d="M534 226 L534 300" stroke="#4A6FA5" stroke-width="2.5" marker-end="url(#aSu)"/>
+        <path d="M634 226 L634 300" stroke="#4A6FA5" stroke-width="2.5" marker-end="url(#aSu)"/>
+        <text x="584" y="326" font-size="12.5" text-anchor="middle" fill="#2A2D33">make-up air</text>
+
+        <!-- gas -->
+        <rect x="500" y="420" width="104" height="32" rx="3" fill="#fff" stroke="#6B6E75" stroke-width="1.5"/>
+        <text x="552" y="441" font-size="12.5" text-anchor="middle" fill="#2A2D33">gas valve</text>
+        <text x="474" y="262" font-size="12.5" text-anchor="end" fill="#6B6E75">interlock: no airflow, no gas</text>
+
+        <!-- key -->
+        <g font-size="12" fill="#6B6E75">
+          <line x1="48" y1="500" x2="76" y2="500" stroke="#C97B3F" stroke-width="3"/>
+          <text x="84" y="504">extract</text>
+          <line x1="150" y1="500" x2="178" y2="500" stroke="#4A6FA5" stroke-width="3"/>
+          <text x="186" y="504">make-up air</text>
+          <line x1="278" y1="500" x2="306" y2="500" stroke="#6B6E75" stroke-width="1.4" stroke-dasharray="4 5"/>
+          <text x="314" y="504">control</text>
         </g>
       </svg>
+      <figcaption class="kex-cap">Every litre the canopy pulls out has to come back in, and the gas cannot fire unless both fans prove airflow. Size one part on its own and the other two stop agreeing with it.</figcaption>
     </figure>
     <ol class="kex-legend">
       <li><span><strong>Roof discharge.</strong> Vertical, at velocity, and clear of air intakes, openings and boundaries, so neighbours and your own supply fan don't breathe it.</span></li>
@@ -344,18 +469,76 @@
       <li><strong>AS 1668.2</strong>Mechanical ventilation</li>
       <li><strong>AS/NZS 5601.1</strong>Gas installations</li>
       <li><strong>NCC Vol. One</strong>Part F6 and Section J</li>
-      <li><strong>AS 4254</strong>Ductwork</li>
+      <li><strong>AS 4254.1 / .2</strong>Ductwork</li>
       <li><strong>AIRAH</strong>Design data and load estimation</li>
       <li><strong>WA councils</strong>EHO and local guidelines</li>
     </ul>
   </div>
 </section>
 
-<!-- 04 PROCESS -->
+<!-- 04 INSIDE A REAL PACKAGE -->
 <section class="section section-soft">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow"><span class="num">04</span>How we work</div>
+      <div class="eyebrow"><span class="num">04</span>Inside a real package</div>
+      <div>
+        <h2 class="section-title">What &ldquo;checked&rdquo; actually <span class="it">means.</span></h2>
+        <p class="section-sub">Every firm says its work is checked. Here is what that word bought on a recent bakery fit&#8209;out in the Perth metro area, issued for pricing. Client, site and equipment brands withheld.</p>
+      </div>
+    </div>
+
+    <div class="proof-grid">
+      <article class="proof-card">
+        <div class="proof-stat">521 <span>rows</span></div>
+        <h3>Every number calculated twice, by two different methods</h3>
+        <p>Airflow, duct velocity, fan pressure, gas ventilation, noise, support loads. Each quantity was worked a second time from first principles, with its own friction&#8209;factor iteration, so the check could not inherit the first calculation&rsquo;s mistake. The two were compared line by line: <strong>521 rows, zero differences.</strong></p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-stat">32<span>% more air</span></div>
+        <h3>Two editions of the same standard disagreed by 32%</h3>
+        <p>The current AS 1668.2 gave 934 L/s for that canopy. The older edition named by the local government food guideline gave 1229 L/s for the identical canopy. A fan selected on the lower number would have been signed off, installed, and then failed the council check. The higher figure was adopted, rounded to <strong>1250 L/s</strong>, with both calculations printed side by side so the choice is auditable.</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-stat">240 <span>N</span></div>
+        <h3>A fire&#8209;mode assumption that would have trapped people</h3>
+        <p>The obvious fire logic is to stop the supply fan. Run the exhaust without make&#8209;up air, on a tight envelope with the make&#8209;up air path shut, and the room goes to roughly <strong>240 Pa negative</strong>. That is about 240 N at the handle of a 920 mm leaf, before any door closer. More than double the 110 N door opening force AS 1668.1 sets for pressurised stair doors, on the doors people leave through. The design keeps both fans running and a hold point blocks construction until the building&rsquo;s fire strategy confirms it.</p>
+      </article>
+
+      <article class="proof-card">
+        <div class="proof-stat">0.48 <span>m</span></div>
+        <h3>The cheap idea, killed with measurements instead of opinion</h3>
+        <p>Reusing the old riser as the fresh&#8209;air intake would have saved an entire roof penetration. Six metres was the minimum separation. It was sized, checked, and rejected: the closest discharge came out at <strong>0.48 m</strong>, the furthest at 4.12 m, and the discharges could not move because the appliances fix them. The reasoning is written down, so nobody proposes it again in six months.</p>
+      </article>
+    </div>
+
+    <figure class="proof-fig">
+      <img src="images/kitchen-exhaust-duct-layout.png" width="1800" height="1111" loading="lazy" decoding="async"
+           alt="Duct layout plan from a commercial kitchen exhaust package: canopy, grease riser, supply main, ceiling diffusers and combustion air branch, each run tagged with its airflow in litres per second, with a keyed schedule of notes down the right hand side." />
+      <figcaption>A sheet from the drawing set, title block removed. Every run carries its airflow, every item carries a note number, and the note says who owns it. This is what a contractor prices from, instead of guessing.</figcaption>
+    </figure>
+
+    <div class="proof-shape">
+      <h3>What was actually handed over</h3>
+      <ul class="proof-docs">
+        <li><strong>Design report.</strong> What is built, why, which clause it answers to, and who owns each part of the work.</li>
+        <li><strong>Calculation note.</strong> Every number from first principles, with the independent check bound in behind it.</li>
+        <li><strong>Drawing set.</strong> Layouts, canopy details, bill of materials, hold&#8209;point sheet, commissioning test sheet.</li>
+        <li><strong>Tender annexes.</strong> Scope, pricing basis, assumptions, and a responsibility matrix with one owner per line.</li>
+        <li><strong>Options memorandum.</strong> Three ways to bring in outdoor air, sized side by side, with the decision and the reasons in plain words.</li>
+        <li><strong>Design statement and transmittal.</strong> For the building surveyor, plus instructions on what goes to tenderers and what does not.</li>
+      </ul>
+      <p class="proof-foot">Carried forward after issue: <strong>20 hold points and 18 open coordination items</strong>, each with a named responsible party and a note on what it blocks. Fabrication, order, construction, commissioning or handover. That register is the difference between a design that is finished and a design that is merely delivered.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 05 PROCESS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span class="num">05</span>How we work</div>
       <div>
         <h2 class="section-title">From equipment list to <span class="it">issued package.</span></h2>
       </div>
@@ -370,11 +553,11 @@
   </div>
 </section>
 
-<!-- 05 WHAT TO SEND + SCOPE -->
-<section class="section">
+<!-- 06 WHAT TO SEND + SCOPE -->
+<section class="section section-soft">
   <div class="container">
     <div class="section-head">
-      <div class="eyebrow"><span class="num">05</span>Getting started</div>
+      <div class="eyebrow"><span class="num">06</span>Getting started</div>
       <div>
         <h2 class="section-title">What helps me quote <span class="it">fast.</span></h2>
       </div>
@@ -397,6 +580,67 @@
       <p>
         Typical clients: <strong>builders and fit-out companies</strong>, <strong>restaurant, cafe and bakery owners</strong>, <strong>mechanical contractors</strong> who need a design to price against, and <strong>workshops and plants</strong> with fume or heat problems. NDA on request.
       </p>
+    </div>
+  </div>
+</section>
+
+<!-- 07 QUESTIONS -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="eyebrow"><span class="num">07</span>Before you call</div>
+      <div>
+        <h2 class="section-title">The six questions I get <span class="it">every time.</span></h2>
+        <p class="section-sub">Straight answers, including the ones that might talk you out of hiring me.</p>
+      </div>
+    </div>
+
+    <div class="faq">
+      <details class="faq-item">
+        <summary>Can I reuse the canopy and ducts the last tenant left behind?</summary>
+        <div class="faq-a">
+          <p>Often yes, and it is usually the single biggest saving on the job. But it is a check, not an assumption. What matters is whether the canopy still suits <em>your</em> appliances, whether the filter bank geometry meets the current standard, whether the duct route and riser can carry the airflow your equipment now needs, and whether the roof discharge still clears every air intake. On a recent job the existing canopy was kept, but its filter bank sat outside the prescriptive angle limit, so it needed a documented equivalence case rather than a shrug.</p>
+          <p><a href="reuse-kitchen-exhaust-previous-tenant-wa.html">What to check before you reuse a kitchen exhaust in WA</a></p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What is AS 1668.2, and why does everyone keep saying it?</summary>
+        <div class="faq-a">
+          <p>It is the Australian standard for mechanical ventilation. It sets how much air a canopy has to pull for your particular appliances, how ducts and discharges have to be arranged, and how far a discharge must sit from any fresh&#8209;air intake. Your building surveyor and your council environmental health officer will expect the design to meet it. Alongside it sits AS/NZS 5601.1, the gas standard, which governs combustion air and the interlock that stops the burners if the ventilation fails.</p>
+          <p>The catch is that local guidelines sometimes name an older edition of AS 1668.2 than the one currently published, and the two can give materially different airflows for the same kitchen. That is worth knowing before a fan is ordered.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need an engineer, or can my mechanical contractor sort it out?</summary>
+        <div class="faq-a">
+          <p>Plenty of straightforward kitchens get built well by a good mechanical contractor. Where a design earns its keep is when the answer is contested: a council asking which edition of the standard you used, a gas inspector asking how the combustion air figure was reached, an existing canopy you want to keep, a tight roof where discharges and intakes are fighting for space, or two contractors returning prices that are thousands apart because they each guessed at a different scope.</p>
+          <p>To be straight with you about credentials: I am a member of Engineers Australia (MIEAust). Western Australia&rsquo;s registration scheme for building engineers does not take full effect until 1 July 2027. If your project specifically requires a Chartered or registered engineer&rsquo;s signature today, say so early and I will tell you plainly whether I am the right fit.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do you supply or install the canopy and fans?</summary>
+        <div class="faq-a">
+          <p>No. I design, you build. I do not sell equipment, so there is no margin riding on which fan gets specified, and no reason to size anything larger than the calculation says. The package is written so your contractor, or three competing contractors, can price the same scope from the same drawings. Installation, gasfitting and commissioning stay with the licensed trades.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long does it take?</summary>
+        <div class="faq-a">
+          <p>A preliminary concept, enough to size the fans, fix the roof penetrations and unblock the builder, usually comes back in days from your equipment list and floor plan. The full package follows once the appliance data sheets are in and I have measured the site. The honest variable is not my drawing time, it is how quickly the equipment supplier sends real airflow figures and how quickly decisions get made on reuse and canopy height.</p>
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>What does it cost?</summary>
+        <div class="faq-a">
+          <p>Fixed fee, agreed in writing before anything starts, after a free scoping call. I do not publish a rate card because the honest range is wide. A reuse check on one canopy and a full kitchen with multiple gas appliances, a gas interlock and a congested roof are different jobs. Send the equipment list and the floor plan and you will have a number and a scope, not an hourly rate that drifts.</p>
+          <p>If you want to understand what actually drives the cost of the <em>installation</em>, which is the much bigger number, <a href="kitchen-exhaust-cost-guide-wa.html">that is written up here</a>.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -431,6 +675,7 @@
         <li><a href="shop-drawings-perth">Shop drawings</a></li>
         <li><a href="machine-safety-perth">Machine safety</a></li>
         <li><a href="ventilation-air-conditioning-perth">Ventilation &amp; air con</a></li>
+        <li><a href="cantilever-rack-engineering-perth">Cantilever racks</a></li>
       </ul>
     </div>
     <div class="foot-col">
